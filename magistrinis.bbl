@@ -1,0 +1,187 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{cnnExp2}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6d0811bf8221745aee167eb9aa9f8069}{%
+           family={Massa},
+           familyi={M\bibinitperiod},
+           given={F.\bibnamedelimi Vitor\bibnamedelima Suzano},
+           giveni={F\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d0811bf8221745aee167eb9aa9f8069}
+      \strng{fullhash}{6d0811bf8221745aee167eb9aa9f8069}
+      \strng{bibnamehash}{6d0811bf8221745aee167eb9aa9f8069}
+      \strng{authorbibnamehash}{6d0811bf8221745aee167eb9aa9f8069}
+      \strng{authornamehash}{6d0811bf8221745aee167eb9aa9f8069}
+      \strng{authorfullhash}{6d0811bf8221745aee167eb9aa9f8069}
+      \field{labelalpha}{Mas18}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://pastel.archives-ouvertes.fr/tel-01762533/document}}
+      \field{langid}{english}
+      \field{note}{7.917 KB, accessed 2020-05-23.}
+      \field{title}{Relating images and 3D models with convolutional neural networks}
+      \field{year}{2018}
+    \endentry
+    \entry{capsNet}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=de3ba0f08f867612fb422383234962bd}{%
+           family={N.\bibnamedelimi Frosst},
+           familyi={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={S.\bibnamedelimi Sabour},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           prefix={nad},
+           prefixi={n\bibinitperiod}}}%
+        {{hash=9c5f7dcfa6f8cfad7a98e00d2c3b338d}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{3817077a5d9bf6f08db2e774c0ff4a4f}
+      \strng{fullhash}{3817077a5d9bf6f08db2e774c0ff4a4f}
+      \strng{bibnamehash}{3817077a5d9bf6f08db2e774c0ff4a4f}
+      \strng{authorbibnamehash}{3817077a5d9bf6f08db2e774c0ff4a4f}
+      \strng{authornamehash}{3817077a5d9bf6f08db2e774c0ff4a4f}
+      \strng{authorfullhash}{3817077a5d9bf6f08db2e774c0ff4a4f}
+      \field{labelalpha}{nNH17}
+      \field{sortinit}{n}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/1710.09829.pdf}}
+      \field{langid}{english}
+      \field{note}{899 KB, accessed 2020-05-23.}
+      \field{title}{Dynamic Routing Between Capsules}
+      \field{year}{2017}
+    \endentry
+    \entry{cnnExp1}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=6e01ea27993d7bf118b61b083fcf92ff}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b1fb544937854da3ec8ec4f8109e846d}{%
+           family={Maji},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e2bbd191d28f5ecb3f11cc0f530ff257}{%
+           family={Kalogerakis},
+           familyi={K\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=dca18e646b008d22fd7f4147756d05e4}{%
+           family={Learned-Miller},
+           familyi={L\bibinithyphendelim M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0cd6299874015aa0d8834ab7131a1d6}
+      \strng{fullhash}{a0cd6299874015aa0d8834ab7131a1d6}
+      \strng{bibnamehash}{a0cd6299874015aa0d8834ab7131a1d6}
+      \strng{authorbibnamehash}{a0cd6299874015aa0d8834ab7131a1d6}
+      \strng{authornamehash}{a0cd6299874015aa0d8834ab7131a1d6}
+      \strng{authorfullhash}{a0cd6299874015aa0d8834ab7131a1d6}
+      \field{labelalpha}{SMK\textsuperscript {+}15}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Su_Multi-View_Convolutional_Neural_ICCV_2015_paper.pdf}}
+      \field{langid}{english}
+      \field{note}{1.439 KB, accessed 2020-05-23.}
+      \field{title}{Multi-view Convolutional Neural Networks for 3D Shape Recognition}
+      \field{year}{2015}
+    \endentry
+    \entry{dbnExp}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=de75d8e160ca13e48c143cc033f970f1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=daa5169fadd185fea57e78b8a50a40c4}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=de59eee2b2ef5c1e127adeb2766afebf}{%
+           family={Khosla},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8c0c1a40af04f944681595127a82b7a7}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=6d96d6fbd106e2ffd88ad23ce0119654}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f5b6a698669c62232fdf42115d528d64}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=68f0988326aeeca2e5444dcaf314ca52}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{53e89b3d67776ebcc905c1e9a5d7dc30}
+      \strng{fullhash}{53e89b3d67776ebcc905c1e9a5d7dc30}
+      \strng{bibnamehash}{53e89b3d67776ebcc905c1e9a5d7dc30}
+      \strng{authorbibnamehash}{53e89b3d67776ebcc905c1e9a5d7dc30}
+      \strng{authornamehash}{53e89b3d67776ebcc905c1e9a5d7dc30}
+      \strng{authorfullhash}{53e89b3d67776ebcc905c1e9a5d7dc30}
+      \field{labelalpha}{WSK\textsuperscript {+}15}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Wu_3D_ShapeNets_A_2015_CVPR_paper.pdf}}
+      \field{langid}{english}
+      \field{note}{2.451 KB, accessed 2020-05-23.}
+      \field{title}{3D ShapeNets: A Deep Representation for Volumetric Shapes}
+      \field{year}{2015}
+    \endentry
+  \enddatalist
+  \missing{PvzElPubEn}
+  \missing{PvzElPubLt}
+  \missing{PvzKnygEn}
+  \missing{PvzKnygLt}
+  \missing{PvzKonfEn}
+  \missing{PvzKonfLt}
+  \missing{PvzMagistrLt}
+  \missing{PvzPhdEn}
+  \missing{PvzStraipsnEn}
+  \missing{PvzStraipsnLt}
+\endrefsection
+\endinput
+
