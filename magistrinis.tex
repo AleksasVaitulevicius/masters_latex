@@ -17,7 +17,6 @@
 \titleineng{3D object recognition from 2D images}
 \status{2 kurso 1 grupės studentas}
 \author{Aleksas Vaitulevičius}
-% \secondauthor{Vardonis Pavardonis}   % Pridėti antrą autorių
 \supervisor{prof. habil. dr. Olga Kurasova}
 \reviewer{doc. dr. Vardauskas Pavardauskas}
 \date{Vilnius – \the\year}
@@ -35,7 +34,7 @@ išvados. Santraukos apimtis ne didesnė nei 0,5 puslapio. Santraukų gale
 nurodomi darbo raktiniai žodžiai. 
 % Nurodomi iki 5 svarbiausių temos raktinių žodžių (terminų).
 % Vienas terminas gali susidėti iš kelių žodžių.
-\raktiniaizodziai{raktinis žodis 1, raktinis žodis 2, raktinis žodis 3, raktinis žodis 4, raktinis žodis 5}   
+\raktiniaizodziai{Klasifikavimo uždavinys, 3D objektai, dirbtiniai neuroniniai tinklai, CapsNet neuroniniai tinklai, Konvoliuciniai neuroniniai tinklai}   
 
 \sectionnonumnocontent{Summary}
 Santrauka anglų kalba.
@@ -46,24 +45,20 @@ Santrauka anglų kalba.
 \sectionnonum{Įvadas}
 \input{intro.tex}
 
-\section{Medžiagos darbo tema dėstymo skyriai}
-Medžiagos darbo tema dėstymo skyriuose pateikiamos nagrinėjamos temos detalės:
-pradiniai duomenys, analizės ir apdorojimo metodai, sprendimų įgyvendinimas,
-gautų rezultatų apibendrinimas.
+\section{3D objektų atpažinimo iš 2D nuotraukų uždavinys}
+\input{3d.object.recognition.task.tex}
 
-\subsection{Poskyris}
-Citavimo pavyzdžiai: cituojamas vienas šaltinis \cite{PvzStraipsnLt}; cituojami
-keli šaltiniai \cite{PvzStraipsnEn, PvzKonfLt, PvzKonfEn, PvzKnygLt, PvzKnygEn,
-PvzElPubLt, PvzElPubEn, PvzMagistrLt, PvzPhdEn}.
+\section{CapsNet dirbtinių neuroninių tinklų apžvalga ir kalibracija}
+\input{capsnet.tex}
 
-\subsubsection{Skirsnis}
-\subsubsubsection{Straipsnis}
-\subsubsection{Skirsnis}
-\section{Skyrius}
-\subsection{Poskyris}
-\subsection{Poskyris}
+\section{Konvoliucinių dirbtinių neuroninių tinklų apžvalga}
+\input{cnn.tex}
+
+\section{CapsNet ir konvoliucinių neuroninių tinklų eksperimentiniai tyrimai}
+\input{experiments.tex}
 
 \sectionnonum{Rezultatai ir išvados}
+\input{conclusion.tex}
 Rezultatų ir išvadų dalyje išdėstomi pagrindiniai darbo rezultatai (kažkas
 išanalizuota, kažkas sukurta, kažkas įdiegta), pateikiamos išvados (daromi
 nagrinėtų problemų sprendimo metodų palyginimai, siūlomos rekomendacijos,
@@ -89,7 +84,6 @@ santrumpos.
 % Tekstas su priedais siejamas nuorodomis.
 
 \section{Niauroninio tinklo struktūra}
-
 
 \section{Eksperimentinio palyginimo rezultatai}
 % tablesgenerator.com - converts calculators (e.g. excel) tables to LaTeX

@@ -7,4 +7,38 @@ Gana dažnai naudojamas metodas, šiam uždaviniui spręsti, yra dirbtiniai gili
 
 Šiuo metu, šiam uždaviniui spręsti, optimaliausius  rezultatus, laiko ir tikslumo atžvilgiu, pasiekusi dirbtinio neuroninio tinklo architektūra yra konvoliuciniai neuroniniai tinklai. Tyrimai, kuriuose ši architektūra buvo išbandyta, yra aprašyta darbuose \cite{cnnExp1, cnnExp2}. Darbe \cite{dbnExp} atlikto tyrimo rezultatai parodo, kad pateiktas sprendimas, kuriame 3D objektų atpažinimas yra konstruojamas naudojantis tik 2D nuotraukomis, yra tikslesnis 8\% (77\% → 85\%). Todėl šiame darbe bus daromi eksperimentai su dirbtinio neuroninio tinklo architektūrų įgyvendinimais, kurie yra pagrįsti būtent šiuo metodu. Tad šiam darbui, vienas iš pasirinktų metodų yra konvoliuciniai neuroniniai tinklai, kurio įgyvendinimas ir tyrimai yra aprašyti darbe \cite{cnnExp1}. Mat šio darbo įgyvendinimas naudoja tik 2D nuotraukas, konstruojant 3D objektų atpažinimo algoritmą.
 
-Kita tiriama dirbtinio neuroninio tinklo architektūra yra CapsNet. Lyginant su konvoliuciniu neuroniniu tinklu, tai gana nauja architektūra. Aprašyta 2017 metais darbe \cite{capsNet} CapsNet architektūros veikimo principas tiksliau imituoja žmogaus rega, remiantis faktu, kad žmogaus rega ignoruoja nereikšmingas vaizdo detales, naudodama tik seką fokusuotų taškų, taip apdorodama tik dalį vaizdinės informacijos su labai aukšta rezoliucija. \cite{capsNet} darbe atliktas tyrimas parodo, kad ši architektūra atlieka skaičių klasifikavimo užduotį tiksliau nei konvoliucinis neuroninis tinklas. Tad 
+Kita tiriama dirbtinio neuroninio tinklo architektūra yra CapsNet. Lyginant su konvoliuciniu neuroniniu tinklu, tai gana nauja architektūra. Aprašyta 2017 metais darbe \cite{capsNet} CapsNet architektūros veikimo principas tiksliau imituoja žmogaus rega, remiantis faktu, kad žmogaus rega ignoruoja nereikšmingas vaizdo detales, naudodama tik seką fokusuotų taškų, taip apdorodama tik dalį vaizdinės informacijos su labai aukšta rezoliucija. \cite{capsNet} darbe atliktas tyrimas parodo, kad ši architektūra atlieka skaičių klasifikavimo užduotį tiksliau nei konvoliucinis neuroninis tinklas. Kitas tyrimas, kuris yra atliktas darbe \cite{capsCNN} su 4 duomenų rinkiniais, kuriuose yra veidai, kelio ženklai ir kasdienius objektus, parodo, kad dabartinis CapsNet neuroninis tinklas nevisąlaiką yra pranašesnis už konvoliucinį neuroninį tinklą. Parinkus geresnius parametrus arba sukūrus geresnį dizainą, konvoliucinis tinklas dar vis būna pranašesnis už CapsNet neuroninį tinklą. Tačiau taip pat šiame darbe yra teigiama, kad CapsNet neuroniniai tinklai dar nėra pasiekę pilno savo potencialo ir tolimesni tyrimai turi būti atlikti.
+
+Tad šiame darbe yra keliama tokia \textbf{hipotezė}:
+
+\textit{CapsNet neuroninis tinklas sprendžia 3D objektų atpažinimo iš 2D nuotraukų uždavinį efektyviau nei konvoliucinis neuroninis tinklas remiantis apmokymo laiko ir tikslumo kriterijais}.
+
+Tikimasi, kad, sprendžiant 3D objektų atpažinimo iš 2D nuotraukų uždavinį, CapsNet neuroninio tinklo mokymas truks trumpiau nei konvoliucinio neuroninio tinklo. Taip pat, kad apmokytas CapsNet neuroninis tinklas vykdys klasifikavimą tiksliau nei konvoliucinis neuroninis tinklas.
+
+Siekiant patikrinti iškeltą hipotezę reikia atlikti šiuos uždavinius:
+
+\begin{enumerate}
+	\item Išanalizuoti ir nustatyti dabartinį efektyviausią 3D objektų atpažinimo iš 2D nuotraukų uždavinio sprendinį, remiantis literatūra.
+	\item Išanalizuoti CapsNet neuroninio tinklo veikimą, remiantis literatūra.
+	\item Surasti duomenis, skirtus spręsti 3D objektų atpažinimo iš 2D nuotraukų uždaviniui.
+	\item Eksperimentiškai nustatyti efektyviausius parametrus ir konfigūracijas, skirtus spręsti 3D objektų atpažinimo iš 2D nuotraukų uždaviniui, CapsNet neuroninio tinklo implementacijai, remiantis apmokymo laiko ir tikslumo kriterijais.
+	\item Eksperimentiškai palyginti 1. užduoties rezultatą su 3. užduoties.
+\end{enumerate}
+
+Šiame darbe atlikta:
+
+\begin{enumerate}
+	\item Nustatyta, kad šiuo metu efektyviausiausias 3D objektų atpažinimo iš 2D nuotraukų uždavinio sprendinys yra konvoliuciniai neuroniniai tinklai, lyginant eksperimentų, aprašytų skirtinguose literatūros šaltiniuose, rezultatus. Šiuose šaltiniuose buvo surasta konvoliucinio neuroninio tinklo implementaciją ir duomenys skirti apmokymui ir testavimui.
+	\item Išanalizuotas CapsNet neuroninio tinklo veikimas, surasta jo implementacija.
+	\item Eksperimentiškai nustatyti efektyviausią konfigūraciją CapsNet neuroniniui tinklui sprendžiant 3D objektų atpažinimo iš 2D nuotraukų uždaviniui, naudojantis apmokymo laiko ir tikslumo kriterijais.
+	\item Eksperimentiškai palyginti CapsNet neuroninio tinklo tiklsumas ir apmokymo laikas su konvoliuciniu neuroniniu tinklu, naudojantis apmokymo laiko ir tikslumo kriterijais.
+\end{enumerate}
+
+Darbas remiasi šiomis prielaidomis:
+
+\begin{enumerate}
+	\item Kiekvienam 2D paveikslėliui yra priskirta jam jį atitinkantis 3D objektas.
+	\item Kiekvienas 3D objektas turi bent po vieną jį atitinkantį 2D paveikslėlį.
+\end{enumerate}
+
+Šio darbo turinys yra pateiktas taip. Pradedama nuo 3D objektų atpažinimo iš 2D nuotraukų uždavinio aprašymo ir pristatymo pirmame skyriuje. Tada yra pateikiamas CapsNet veikimo aprašymas, išbandytos konfigūracijos ir jų rezultatai antrame skyriuje. Toliau trečiame skyriuje yra konvoliucinio neuroninio tinklo veikimo aprašymas. Ketvirtame skyriuje yra aprašomi duomenys naudoti eksperimentams ir patys eksperimentai ir jų rezultatai. Paskutiniame skyriuje yra pateikiamos išvados.
