@@ -2133,16 +2133,15 @@
     <bcf:citekey order="3">dbnExp</bcf:citekey>
     <bcf:citekey order="4">cnnExp1</bcf:citekey>
     <bcf:citekey order="5">capsNet</bcf:citekey>
-    <bcf:citekey order="6">PvzStraipsnLt</bcf:citekey>
-    <bcf:citekey order="7">PvzStraipsnEn</bcf:citekey>
-    <bcf:citekey order="7">PvzKonfLt</bcf:citekey>
-    <bcf:citekey order="7">PvzKonfEn</bcf:citekey>
-    <bcf:citekey order="7">PvzKnygLt</bcf:citekey>
-    <bcf:citekey order="7">PvzKnygEn</bcf:citekey>
-    <bcf:citekey order="7">PvzElPubLt</bcf:citekey>
-    <bcf:citekey order="7">PvzElPubEn</bcf:citekey>
-    <bcf:citekey order="7">PvzMagistrLt</bcf:citekey>
-    <bcf:citekey order="7">PvzPhdEn</bcf:citekey>
+    <bcf:citekey order="6">capsNet</bcf:citekey>
+    <bcf:citekey order="7">capsCNN</bcf:citekey>
+    <bcf:citekey order="8">dbnExp</bcf:citekey>
+    <bcf:citekey order="9">cnnExp1</bcf:citekey>
+    <bcf:citekey order="10">prevWparEig</bcf:citekey>
+    <bcf:citekey order="11">prevWLightFld</bcf:citekey>
+    <bcf:citekey order="12">prevWShockGraph</bcf:citekey>
+    <bcf:citekey order="13">prevWSimMet</bcf:citekey>
+    <bcf:citekey order="14">cnnExp1</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

@@ -19,6 +19,76 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{prevWSimMet}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=d956ed24f759e6ff5a0b4edcb20a74d0}{%
+           family={Cyr},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=967ba856c81de7192da05d715795ec93}{%
+           family={Kimia},
+           familyi={K\bibinitperiod},
+           given={B.\bibnamedelimi B.},
+           giveni={B\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bb13dec74eeefdd9719fee4ceb503df}
+      \strng{fullhash}{7bb13dec74eeefdd9719fee4ceb503df}
+      \strng{bibnamehash}{7bb13dec74eeefdd9719fee4ceb503df}
+      \strng{authorbibnamehash}{7bb13dec74eeefdd9719fee4ceb503df}
+      \strng{authornamehash}{7bb13dec74eeefdd9719fee4ceb503df}
+      \strng{authorfullhash}{7bb13dec74eeefdd9719fee4ceb503df}
+      \field{labelalpha}{CK04}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.124.4344&rep=rep1&type=pdf}}
+      \field{langid}{english}
+      \field{note}{3820 KB, accessed 2020-08-15.}
+      \field{title}{A similarity-based aspect-graph approach to 3D object recognition}
+      \field{year}{2004}
+    \endentry
+    \entry{prevWLightFld}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=80489b75bcde120c9f335f4995d789c2}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2a2452bd0cc9c48a0178ef0c091f9456}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c683dca86043405be8fb1d3009bc1604}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6034f289c851deb8f7d5a7c55e559681}{%
+           family={Ouhyoung},
+           familyi={O\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3e3513b4d8079b0c6953b25e101920d}
+      \strng{fullhash}{a3e3513b4d8079b0c6953b25e101920d}
+      \strng{bibnamehash}{a3e3513b4d8079b0c6953b25e101920d}
+      \strng{authorbibnamehash}{a3e3513b4d8079b0c6953b25e101920d}
+      \strng{authornamehash}{a3e3513b4d8079b0c6953b25e101920d}
+      \strng{authorfullhash}{a3e3513b4d8079b0c6953b25e101920d}
+      \field{labelalpha}{CTS\textsuperscript {+}03}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://www.cs.jhu.edu/~misha/Papers/Chen03.pdf}}
+      \field{langid}{english}
+      \field{note}{1910 KB, accessed 2020-08-15.}
+      \field{title}{On Visual Similarity Based 3D Model Retrieval}
+      \field{year}{2003}
+    \endentry
     \entry{cnnExp2}{misc}{}
       \name{author}{1}{}{%
         {{hash=6d0811bf8221745aee167eb9aa9f8069}{%
@@ -43,6 +113,111 @@
       \field{note}{7.917 KB, accessed 2020-05-23.}
       \field{title}{Relating images and 3D models with convolutional neural networks}
       \field{year}{2018}
+    \endentry
+    \entry{capsCNN}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=5fb2a77c765836600410701aa93b70eb}{%
+           family={Mukhometzianov},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d38e7b33207af625f21f859e234ebd53}{%
+           family={Carrillo},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c6fb75b9cfaf2da8734588c50ee0231}
+      \strng{fullhash}{6c6fb75b9cfaf2da8734588c50ee0231}
+      \strng{bibnamehash}{6c6fb75b9cfaf2da8734588c50ee0231}
+      \strng{authorbibnamehash}{6c6fb75b9cfaf2da8734588c50ee0231}
+      \strng{authornamehash}{6c6fb75b9cfaf2da8734588c50ee0231}
+      \strng{authorfullhash}{6c6fb75b9cfaf2da8734588c50ee0231}
+      \field{labelalpha}{MC17}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/ftp/arxiv/papers/1805/1805.11195.pdf}}
+      \field{langid}{english}
+      \field{note}{899 KB, accessed 2020-05-23.}
+      \field{title}{CapsNet comparative performance evaluation for image classification}
+      \field{year}{2017}
+    \endentry
+    \entry{prevWparEig}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=b254639c0a0347818f21152d323475c1}{%
+           family={Murase},
+           familyi={M\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=53c8ae00cd637567251205d47d90f593}{%
+           family={Nayar},
+           familyi={N\bibinitperiod},
+           given={S.\bibnamedelimi K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{60113f8d5078b93344b9d38366b015fc}
+      \strng{fullhash}{60113f8d5078b93344b9d38366b015fc}
+      \strng{bibnamehash}{60113f8d5078b93344b9d38366b015fc}
+      \strng{authorbibnamehash}{60113f8d5078b93344b9d38366b015fc}
+      \strng{authornamehash}{60113f8d5078b93344b9d38366b015fc}
+      \strng{authorfullhash}{60113f8d5078b93344b9d38366b015fc}
+      \field{labelalpha}{MN95}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://murase.m.is.nagoya-u.ac.jp/~murase/pdf/704-pdf.pdf}}
+      \field{langid}{english}
+      \field{note}{3041 KB, accessed 2020-08-15.}
+      \field{title}{Visual Learning and Recognition of 3-D Objects from Appearance}
+      \field{year}{1995}
+    \endentry
+    \entry{prevWShockGraph}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=57ef2ae2f8835f57f99d637a0cdb8e01}{%
+           family={Macrini},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=de773fbd8af8b2fcffa4d842e66b570d}{%
+           family={Shokoufandeh},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1d3149fa157fba31426cad1eac9633b8}{%
+           family={Dickinson},
+           familyi={D\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=738290b91c9f5e6ad4e549871d75c880}{%
+           family={Siddiqi},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=cee7f6d0a40d6d91f25fddb6934ea7b1}{%
+           family={Zucker},
+           familyi={Z\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{26840275c2d281eca38228feed1af899}
+      \strng{fullhash}{26840275c2d281eca38228feed1af899}
+      \strng{bibnamehash}{26840275c2d281eca38228feed1af899}
+      \strng{authorbibnamehash}{26840275c2d281eca38228feed1af899}
+      \strng{authornamehash}{26840275c2d281eca38228feed1af899}
+      \strng{authorfullhash}{26840275c2d281eca38228feed1af899}
+      \field{labelalpha}{MSD\textsuperscript {+}02}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.852&rep=rep1&type=pdf}}
+      \field{langid}{english}
+      \field{note}{155 KB, accessed 2020-08-15.}
+      \field{title}{View-Based 3-D Object Recognition using Shock Graphs}
+      \field{year}{2002}
     \endentry
     \entry{capsNet}{misc}{}
       \name{author}{2}{}{%
@@ -172,16 +347,6 @@
       \field{year}{2015}
     \endentry
   \enddatalist
-  \missing{PvzElPubEn}
-  \missing{PvzElPubLt}
-  \missing{PvzKnygEn}
-  \missing{PvzKnygLt}
-  \missing{PvzKonfEn}
-  \missing{PvzKonfLt}
-  \missing{PvzMagistrLt}
-  \missing{PvzPhdEn}
-  \missing{PvzStraipsnEn}
-  \missing{PvzStraipsnLt}
 \endrefsection
 \endinput
 

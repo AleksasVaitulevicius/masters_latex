@@ -4,25 +4,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Įvadas}{4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.}Medžiagos darbo tema dėstymo skyriai}{6}%
+\contentsline {section}{\numberline {1.}3D objektų atpažinimo iš 2D nuotraukų uždavinys, jo sprendinių pavyzdžiai}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.}Poskyris}{6}%
+\contentsline {section}{\numberline {2.}Konvoliucinių dirbtinių neuroninių tinklų apžvalga}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.1.}Skirsnis}{6}%
+\contentsline {section}{\numberline {3.}Kapsulinių dirbtinių neuroninių tinklų apžvalga ir kalibracija}{10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\numberline {1.1.1.1.}Straipsnis}{6}%
+\contentsline {section}{\numberline {4.}Kapsulinių ir konvoliucinių neuroninių tinklų eksperimentiniai tyrimai}{11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.1.2.}Skirsnis}{6}%
+\contentsline {section}{Rezultatai ir išvados}{12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Skyrius}{7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.}Poskyris}{7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Poskyris}{7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{9}%
+\contentsline {section}{Literatūra}{13}%
 \defcounter {refsection}{0}\relax 
 \bgroup 
 \defcounter {refsection}{0}\relax 
@@ -56,7 +48,47 @@
 \defcounter {refsection}{0}\relax 
 \selectlanguage *{lithuanian}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{10}%
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
+\defcounter {refsection}{0}\relax 
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
+\defcounter {refsection}{0}\relax 
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
+\defcounter {refsection}{0}\relax 
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
+\defcounter {refsection}{0}\relax 
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Santrumpos}{14}%
 \defcounter {refsection}{0}\relax 
 \def \@dotsep {1000}
 \defcounter {refsection}{0}\relax 
