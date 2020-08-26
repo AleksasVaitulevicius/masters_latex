@@ -2135,13 +2135,14 @@
     <bcf:citekey order="5">capsNet</bcf:citekey>
     <bcf:citekey order="6">capsNet</bcf:citekey>
     <bcf:citekey order="7">capsCNN</bcf:citekey>
-    <bcf:citekey order="8">dbnExp</bcf:citekey>
-    <bcf:citekey order="9">cnnExp1</bcf:citekey>
-    <bcf:citekey order="10">prevWparEig</bcf:citekey>
-    <bcf:citekey order="11">prevWLightFld</bcf:citekey>
-    <bcf:citekey order="12">prevWShockGraph</bcf:citekey>
-    <bcf:citekey order="13">prevWSimMet</bcf:citekey>
-    <bcf:citekey order="14">cnnExp1</bcf:citekey>
+    <bcf:citekey order="8">capsCNN</bcf:citekey>
+    <bcf:citekey order="9">dbnExp</bcf:citekey>
+    <bcf:citekey order="10">cnnExp1</bcf:citekey>
+    <bcf:citekey order="11">prevWparEig</bcf:citekey>
+    <bcf:citekey order="12">prevWLightFld</bcf:citekey>
+    <bcf:citekey order="13">prevWShockGraph</bcf:citekey>
+    <bcf:citekey order="14">prevWSimMet</bcf:citekey>
+    <bcf:citekey order="15">cnnExp1</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
