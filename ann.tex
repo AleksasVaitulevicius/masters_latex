@@ -45,11 +45,9 @@ Dažniausiai yra naudojamos šios aktyvacijos funkcijos: slenkstinė (angl. unit
 
 Perceptronas yra skirtas spręsti klasifikavimo uždavinius. Tam kad perceptronas spręstų konkretų klasifikavimo uždavinį, jis turi būti apmokytas. Perceptrono apmokymas yra iteratyvus procesas, kuriame randami svoriai $W = \{w_{0}, w_{1}, w_{2}, ..., w_{n}\}$, su kuriais funkcijos \ref{eqn:mse} rezultatas įgyja apytiksliai mažiausią reikšmę. Funkcijoje \ref{eqn:mse} $y_i$ yra perceptrono i-tasis išėjimas ir $t_i$ - i-tojo įėjimo norima klasė.
 
-% coming up next: rasyk kad generuoja random pirminius svorius, tada minimizavimo funkcija
-
 \begin{equation}
 	\label{eqn:mse}
-	e(w) = \dfrac{1}{n}\sum_{i=1}^{n}(y_i - t_i)^2
+	e(w) = \dfrac{1}{m}\sum_{i=1}^{m}(y_i - t_i)^2
 \end{equation}
 
 Apmokymo pradžioje pradiniai svoriai yra parenkami atsitiktinai. Toliau gradientinio nusileidimo algoritmu judant antigradiento kryptimi, svorių reikšmės perskaičiuojamos naudojantis funkcija \ref{eqn:w_recalc}, kur $\Delta w_k(t)$ yra funkcija \ref{eqn:w_change}, $t$ - iteracijos numeris, $\eta \in [0, +\infty]$ - parinktas mokymo greitis (angl. learning rate), ir vieną įėjimo vektorių iš duomenų aibės. Svoriai yra perskaičiuojami norima skaičių kartų.
@@ -68,17 +66,24 @@ Iš \ref{eqn:activ_arg} gaunama lygybė \ref{activ_arg_per_i}, kur $a_i$ yra i-t
 
 \begin{equation}
 	\label{eqn:activ_arg_per_i}
-	a_i = \sum_{k = 1}^{n} w_{k}x_{ik}
+	a_i = \sum_{k = 1}^{m} w_{k}x_{ik}
 \end{equation}
 
-Tada iš lygybės \ref{eqn:activ_arg_per_i} gaunama lygybė \ref{eqn:activ_arg_per_i}
+Tad i-tasis perceptrono išėjimas $y_i$ yra $y_i = f(a_i)$. Tada, naudojantis funkcija \ref{eqn:mse}, gaunama \ref{eqn:expanded}.
 
 \begin{equation}
-	\label{eqn:activ_arg_per_i}
-	a_i = \sum_{k = 1}^{n} w_{k}x_{ik}
+	\label{eqn:expanded}
+	\dfrac{\partial e(w)}{\partial w_k} = \dfrac{1}{m}\sum_{i=1}^{m} (y_i - t_i)^2
+		= \dfrac{2}{m}\sum_{i=1}^{m}
+			((y_i - t_i)(f'(a_i))(\sum_{k = 1}^{n} x_{ik}))
 \end{equation}
 
-Įsistačius \ref{eqn:mse} ir \ref{eqn:} į \ref{eqn:w_change}
+Tada bendru atveju perceptrono mokymo taisyklė \ref{eqn:w_recalc} yra \ref{eqn:general}.
+
+\begin{equation}
+	\label{eqn:general}
+	w_k(t + 1) = w_k(t) - \eta \dfrac{2}{m}\sum_{i=1}^{m} ((y_i - t_i)(f'(a_i))(\sum_{k = 1}^{n} x_{ik}))
+\end{equation}
 
 % išsivedamas bendras atvejis ------------------------------------------------------------------------------------------------------------------------
 Naudojantis apmokytu perceptronu galima nustatyti duoto duomenų vektoriaus $\boldsymbol{x}'$ klasę. Klasė nustatoma randant reikšmę $a$ iš lygties \ref{eqn:activ_arg}, kur $\{w_{0}, w_{1}, w_{2}, ..., w_{n}\}$ yra apmokyto perceptrono svoriai ir $\{x_{0}, x_{1}, x_{2}, ..., x_{n}\} = $\boldsymbol{x}'$. $\boldsymbol{x}'$ vektoriaus klasė atitiks intervalo $b_c$, į kurį patenka reikšmė $a$, klasė $c$. Klasių intervalai $b_c \in \R$ yra paskaičiuojami, padalinant $\R$ su skiriamuoju paviršiumi (angl. decision boundary), o skiriamasis paviršius yra nustatomas pagal aktyvacijos funkciją.
