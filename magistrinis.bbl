@@ -251,6 +251,33 @@
       \field{title}{Dynamic Routing Between Capsules}
       \field{year}{2017}
     \endentry
+    \entry{rosenPerc}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1750cd87a34d44119e7a4aab9b8012c6}{%
+           family={Rosenblatt},
+           familyi={R\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cornell Aeronautical Laboratory.}%
+      }
+      \strng{namehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{fullhash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{bibnamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authorbibnamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authornamehash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \strng{authorfullhash}{1750cd87a34d44119e7a4aab9b8012c6}
+      \field{labelalpha}{Ros57}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{note}{386–408 p.}
+      \field{title}{The Perceptron—a perceiving and recognizing automaton}
+      \field{year}{1957}
+    \endentry
     \entry{cnnExp1}{misc}{}
       \name{author}{4}{}{%
         {{hash=6e01ea27993d7bf118b61b083fcf92ff}{%
