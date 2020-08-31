@@ -1,3 +1,13 @@
 \subsubsection{Dirbtiniai neuroniniai tinklai}
 
-To be cont
+Dirbtiniai neuroniniai tinklai (angl. artificial neural networks) yra jungus tinklas, kurio viršūnės yra perceptronai, ir kurio orientuotos briaunos sujungia 2 perceptronus, iš kurių vieno perceptrono išėjimas yra naudojamas kaip kito perceptrono įėjimas. Dirbtinio neuroninio tinklo paskirtis yra spręsti klasifikavimo uždavinius.
+
+Pagal tinklo struktūrą dirbtiniai neuroniniai tinklai yra skirstomi į tiesioginio sklidimo (angl. feedfoward)ir grįžtamojo ryšio (angl. feedback). Grįžtamojo ryšio dirbtiniai neuroniniai tinklai turi bent vieną ciklą, o tiesioginio sklidimo neturi nei vieno ciklo. Tiesioginio sklidimo neuroniniai tinklai, dėl savo paprastumo, reikalauja trumpesnio apmokymo laiko nei grįžtamojo ryšio neuroniai tinklai. Todėl jie yra dažniausiai naudojami praktiniuose taikymuose.
+
+Tiesioginio sklidimo tinklai yra grupuojami į vienasluoksnius perceptronus, daugiasluoksnius perceptronus ir radialinių funkcijų tinklus. Šiame darbe tiriami dirbtiniai neuroniniai tinklai, konvoliuciniai ir kapsuliniai neuroniniai tinklai, yra daugiasluoksnių perceptronų modifikacijos. Daugiasluoksnis perceptronas (angl. multilayer perceptron) yra dirbtinis neuroninis tinklas, kurio perceptronai yra sugrupuoti į sluoksnius, kuriuose gali būti skirtingas skaičius perceptronų. Kiekviename sluoksnyje esantys perceptronai turi tą pačią aktyvavimo funkciją.
+
+Daugiasluoksnio perceptrono sluoksniai yra išsidėstę eilėje ir kiekviename sluoksnyje esančių visų perceptronų įšėjimai yra tolimesnio sluoksnio visų perceptronų įėjimai. Pirmasis sluoksnis  yra vadinamas įėjimo sluoksniu ir jis susideda ne iš perceptronų, o iš mokymo duomenų vektoriaus $\boldsymbol{x}$ komponenčių. Paskutinis sluoksnis yra išėjimo sluoksnis ir jame yra tiek perceptronų kiek yra nagrinėjamų klasių, kiekvienai klasei yra priskiriamas ją atitinkantis preceptronas. Išėjimo sluoksnio perceptronų išėjimų reikšmės priklauso nuo juose naudojamos aktyvacijos funkcijos. Likę sluoksniai yra vadinami paslėptaisiais sluoksniais. Daugiasluoksnis perceptronas yra pavaizduotas paveikslėlyje \ref{}.
+
+Daugiasluoksnis perceptronas pateiktam vektoriui $\boldsymbol{x}'$ priskira klasę, kuri buvo priskirta išėjimo sluoksnio perceptronui, kurio išėjimo reikšmė buvo didžiausia iš visų išėjimo sluoksnio perceptronų.
+
+Tam kad daugiasluoksnis perceptronas galėtų atlikti klasifikavimą, jis turi būti apmokytas. Kaip ir perceptronas, daugiasluoksnis perceptronas yra apmokomas iteratyviai keičiant visų perceptronų svorius naudojant formulę \ref{eqn:w_recalc}. Išėjimo sluoksnio perceptronams yra naudojama bendra formulė \ref{eqn:general}. Tačiau paslėptųjų sluoksnių perceptronams šios funkcijos naudoti negalima, nes nėra apibrėžta nuostolių funkcija $e(w)$, mat šių perceptronų išėjimai yra nežinomi. Tad paslėptųjų perceptronų % Toliau rasyk apie back propagation algoritma
