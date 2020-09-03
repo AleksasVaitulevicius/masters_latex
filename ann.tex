@@ -15,8 +15,8 @@ Daugiasluoksnio perceptrono sluoksniai yra išsidėstę eilėje ir kiekviename s
 	\label{img:nn}
 \end{figure}
 
-Daugiasluoksnis perceptronas pateiktam vektoriui $\boldsymbol{x}'$ priskiria klasę, kuri buvo priskirta išėjimo sluoksnio perceptronui, kurio išėjimo reikšmė buvo didžiausia iš visų išėjimo sluoksnio perceptronų.
+Daugiasluoksnis perceptronas pateiktam vektoriui $\boldsymbol{x}'$ priskiria klasę, kuri buvo priskirta išėjimo sluoksnio perceptronui, kurio išėjimo reikšmė buvo didžiausia iš visų išėjimo sšluoksnio perceptronų.
 
 Tam kad daugiasluoksnis perceptronas galėtų atlikti klasifikavimą, jis turi būti apmokytas. Kaip ir perceptronas, daugiasluoksnis perceptronas yra apmokomas iteratyviai keičiant visų perceptronų svorius naudojant formulę \ref{eqn:w_recalc}. Išėjimo sluoksnio perceptronams yra naudojama bendra formulė \ref{eqn:general}. Tačiau ši funkcija, paslėptųjų sluoksnių perceptronų mokymui, yra nenaudojama, nes nėra apibrėžta nuostolių funkcija $e(w)$, mat funkcijai $e(w)$ yra reikalingi perceptronų išėjimai, kurie yra nežinomi. Tad paslėptųjų perceptronų apmokymas yra vykdomas naudojant klaidos sklidimo atgal algoritmą (angl. back-propagation learning algorithm).
 
-Klaidos sklidimo atgal algoritmas yra gradientinio nusileidimo strategijos realizacija daugiasluoksniam perceptronui.
+Klaidos sklidimo atgal algoritmas yra gradientinio nusileidimo strategijos realizacija daugiasluoksniam perceptronui. Šis algoritmo veikimo santrauka: randamas išėjimo vektorius, apskaičiuojama išėjimo sluoksnio perceptronų paklaidos ir apskaičiuojami paslėptųjų sluoksnių perceptronų paklaidos, kiekvienam sluoksniui naudojant jo tolimesnių sluoksnių perceptronų paklaidas.
