@@ -47,7 +47,7 @@ Perceptronas yra skirtas spręsti klasifikavimo uždavinius. Tam kad perceptrona
 
 \begin{equation}
 	\label{eqn:mse}
-	e(w) = \dfrac{1}{m}\sum_{i=1}^{m}(y_i - t_i)^2
+	e(w) = \dfrac{1}{n}\sum_{i=1}^{n}(y_i - t_i)^2
 \end{equation}
 
 Apmokymo pradžioje pradiniai svoriai yra parenkami atsitiktinai. Toliau gradientinio nusileidimo algoritmu judant antigradiento kryptimi, svorių reikšmės perskaičiuojamos naudojantis funkcija \ref{eqn:w_recalc}, kur $\Delta w_k(t)$ yra funkcija \ref{eqn:w_change}, $t$ - iteracijos numeris, $\eta \in [0, +\infty]$ - parinktas mokymo greitis (angl. learning rate), ir vieną įėjimo vektorių iš duomenų aibės. Svoriai yra perskaičiuojami norima skaičių kartų.
@@ -62,7 +62,7 @@ Apmokymo pradžioje pradiniai svoriai yra parenkami atsitiktinai. Toliau gradien
 	\Delta w_k(t) = - \eta \dfrac{\partial e(w)}{\partial w_k}
 \end{equation}
 % išsivedamas bendras atvejis ------------------------------------------------------------------------------------------------------------------------
-Pakeitus, kai kurių kintamųjų žymėjimą, iš lygties \ref{eqn:activ_arg} gaunama lygtis \ref{eqn:activ_arg_per_i}, kur $a_i$ yra i-tojo įėjimo vektoriaus aktyvacijos funkcijos argumentas, $x_{ik}$ yra i-tojo įėjimo vektoriaus k-atoji komponentė.
+Pakeitus, kai kurių kintamųjų žymėjimą, iš lygties \ref{eqn:activ_arg} gaunama lygtis \ref{eqn:activ_arg_per_i}, kur $a_i$ yra i-tojo įėjimo vektoriaus aktyvacijos funkcijos argumentas, $x_{ik}$ yra i-tojo įėjimo vektoriaus k-atoji komponentė ir $m$ - įėjimo vektoriaus dimensijų skaičius.
 
 \begin{equation}
 	\label{eqn:activ_arg_per_i}
@@ -73,16 +73,16 @@ Tad i-tasis perceptrono išėjimas $y_i$ yra $y_i = f(a_i)$. Tada funkcijos \ref
 
 \begin{equation}
 	\label{eqn:expanded}
-	\dfrac{\partial e(w)}{\partial w_k} = (\dfrac{1}{m}\sum_{i=1}^{m} (y_i - t_i)^2)'
-		= \dfrac{2}{m}\sum_{i=1}^{m}
-			((y_i - t_i)(f'(a_i))(\sum_{k = 1}^{n} x_{ik}))
+	\dfrac{\partial e(w)}{\partial w_k} = (\dfrac{1}{n}\sum_{i=1}^{n} (y_i - t_i)^2)'
+		= \dfrac{2}{n}\sum_{i=1}^{n}
+			((y_i - t_i)(f'(a_i))(\sum_{k = 1}^{m} x_{ik}))
 \end{equation}
 
 Tada bendru atveju perceptrono mokymo taisyklė \ref{eqn:w_recalc} yra funkcija \ref{eqn:general}.
 
 \begin{equation}
 	\label{eqn:general}
-	w_k(t + 1) = w_k(t) - \eta \dfrac{2}{m}\sum_{i=1}^{m} ((y_i - t_i)(f'(a_i))(\sum_{k = 1}^{n} x_{ik}))
+	w_k(t + 1) = w_k(t) - \eta \dfrac{2}{n}\sum_{i=1}^{n} ((y_i - t_i)(f'(a_i))(\sum_{k = 1}^{m} x_{ik}))
 \end{equation}
 
 % išsivedamas bendras atvejis ------------------------------------------------------------------------------------------------------------------------
