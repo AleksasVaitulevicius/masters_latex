@@ -19,9 +19,30 @@ Daugiasluoksnis perceptronas pateiktam vektoriui $\boldsymbol{x}'$ priskiria kla
 
 Tam kad daugiasluoksnis perceptronas galėtų atlikti klasifikavimą, jis turi būti apmokytas. Kaip ir perceptronas, daugiasluoksnis perceptronas yra apmokomas iteratyviai keičiant visų perceptronų svorius naudojant formulę \ref{eqn:w_recalc}. Išėjimo sluoksnio perceptronams yra naudojama bendra formulė \ref{eqn:general}. Tačiau ši funkcija, paslėptųjų sluoksnių perceptronų mokymui, yra nenaudojama, nes nėra apibrėžta nuostolių funkcija $e(w)$, mat funkcijai $e(w)$ yra reikalingi perceptronų išėjimai, kurie yra nežinomi. Tad paslėptųjų perceptronų apmokymas yra vykdomas naudojant klaidos sklidimo atgal algoritmą (angl. back-propagation learning algorithm).
 
-Klaidos sklidimo atgal algoritmas yra gradientinio nusileidimo strategijos realizacija daugiasluoksniam perceptronui. Šis algoritmo veikimo santrauka: randamas i-tosios iteracijos išėjimo vektorius $Y_i = (y_{i1}, y_{i2}, ..., y_{id})$, apskaičiuojama i-tosios iteracijos išėjimo sluoksnio perceptronų paklaidos, naudojant formulę \ref{eqn:mse_out_layer}, ir apskaičiuojami paslėptųjų sluoksnių perceptronų paklaidos, kiekvienam sluoksniui naudojant jo tolimesnių sluoksnių perceptronų paklaidas.
+Klaidos sklidimo atgal algoritmas yra gradientinio nusileidimo strategijos realizacija daugiasluoksniam perceptronui. Šio algoritmo veikimo santrauka: randamas i-tosios iteracijos išėjimo vektorius $Y_i = (y_{i1}, y_{i2}, ..., y_{id})$, apskaičiuojama i-tosios iteracijos išėjimo sluoksnio perceptronų paklaidos $e_i(w)$, apskaičiuojami paslėptųjų sluoksnių perceptronų paklaidos, kiekvienam sluoksniui naudojant jo tolimesnių sluoksnių perceptronų paklaidas, ir pakeičiant svorius naudojantis gautomis paklaidomis.
+
+Išėjimo perceptronų paklaidos randamos naudojant formulę \ref{eqn:mse}. Tad bendru atveju išėjimo sluoksnių svoriai yra keičiami naudojant formulę \ref{eqn:general}. Įvedamas lokalaus gradiento žymėjimas \ref{eqn:loc_grad}, kur $y_{ij}$ yra gauta išėjimo reikšmė, $t_{ij}$ - norima išėjimo reikšmė su i-tuoju įėjimo vektoriumi j-tajam perceptronui, $a_{ij}$ apskaičiuojamas pagal lygtį \ref{eqn:activ_arg} naudojant j-tojo perceptrono svorius ir i-tąjį įėjimo vektorių ir f - aktyvacijos funkcija. Įsistačius šį žymėjimą į formulę \ref{eqn:general} gaunama funkcija \ref{eqn:general_with_loc_grad}.
 
 \begin{equation}
-\label{eqn:mse_out_layer}
-e_i(w) = \dfrac{1}{d}\sum_{j=1}^{d}(y_{ij} - t_{ij})^2
+\label{eqn:loc_grad}
+	\xi^j_i = (y_{ij} - t_{ij})(f'(a_{ij})
+\end{equation}
+
+\begin{equation}
+\label{eqn:general_with_loc_grad}
+	w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} \xi^j_i(\sum_{k = 1}^{m} x_{ik}))
+\end{equation}
+
+Remiantis darbu \cite{feedbackAlg}, lokalus gradientas $\xi^j$ yra apskaičiuojamas pagal formulę \ref{eqn:loc_grad_calc}, kur $P_j$ yra aibė perceptronų, prijungtų prie j-tojo perceptrono išėjimo, $w_{bj}$ - b-tojo ir j-tojo perceptronų jungties svoris.
+
+\begin{equation}
+\label{eqn:loc_grad_calc}
+	\xi^j_i = f'(a_{ij})\sum_{b \in P_j}\xi^b_i w_{bj}
+\end{equation}
+
+Tad bendru atveju daugiasluoksnio perceptrono apmokymo funkcija yra formulė \ref{eqn:general_mlp}.
+
+\begin{equation}
+\label{eqn:general_mlp}
+w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} (f'(a_{ij})(\sum_{b \in P_j}\xi^b_i w_{bj})(\sum_{k = 1}^{m} x_{ik}))
 \end{equation}

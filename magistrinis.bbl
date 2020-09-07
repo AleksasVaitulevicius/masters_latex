@@ -89,6 +89,33 @@
       \field{title}{On Visual Similarity Based 3D Model Retrieval}
       \field{year}{2003}
     \endentry
+    \entry{feedbackAlg}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a82c75a42f733f690fc4303be716c96b}{%
+           family={Haykin},
+           familyi={H\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall PTR}%
+      }
+      \strng{namehash}{a82c75a42f733f690fc4303be716c96b}
+      \strng{fullhash}{a82c75a42f733f690fc4303be716c96b}
+      \strng{bibnamehash}{a82c75a42f733f690fc4303be716c96b}
+      \strng{authorbibnamehash}{a82c75a42f733f690fc4303be716c96b}
+      \strng{authornamehash}{a82c75a42f733f690fc4303be716c96b}
+      \strng{authorfullhash}{a82c75a42f733f690fc4303be716c96b}
+      \field{labelalpha}{Hay04}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{note}{volume 2}
+      \field{title}{Neural Networks: A Comprehensive Foundation}
+      \field{year}{2004}
+    \endentry
     \entry{cnnExp2}{misc}{}
       \name{author}{1}{}{%
         {{hash=6d0811bf8221745aee167eb9aa9f8069}{%

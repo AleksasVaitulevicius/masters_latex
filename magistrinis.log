@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  4 SEP 2020 21:49
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  7 SEP 2020 21:06
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1192,14 +1192,18 @@ Package biblatex Info: Reference segment=0 on input line 30.
 ]) (perceptron.tex [8]) (ann.tex [9]
 File: img/neural_network.png Graphic file (type bmp)
 <img/neural_network.png>
- [10]) (cnn.tex) (capsnet.tex) [11]
-[12
+ [10]) (deep_learning.tex) (cnn.tex)
+(capsnet.tex) [11] [12
 
 ] (experiments.tex) [13
 
 ] (conclusion.tex) [14
 
 ]
+
+Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
 
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
@@ -1302,10 +1306,10 @@ Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26552 strings out of 427272
- 526510 string characters out of 3146596
- 1062656 words of memory out of 3000000
- 30747 multiletter control sequences out of 15000+200000
+ 26561 strings out of 427272
+ 526720 string characters out of 3146596
+ 1062742 words of memory out of 3000000
+ 30753 multiletter control sequences out of 15000+200000
  546857 words of font info for 100 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,11n,104p,1516b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s
