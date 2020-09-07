@@ -2145,6 +2145,7 @@
     <bcf:citekey order="15">cnnExp1</bcf:citekey>
     <bcf:citekey order="16">rosenPerc</bcf:citekey>
     <bcf:citekey order="17">feedbackAlg</bcf:citekey>
+    <bcf:citekey order="18">deepNN</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
