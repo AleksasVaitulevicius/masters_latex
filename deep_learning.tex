@@ -1,7 +1,26 @@
 \subsubsection{Gilieji neuroniniai tinklai}
 
-Kaip jau minėta praeitame poskyryje tiek konvoliuciniai tiek kapsuliniai neuroniniai tinklai yra daugiasluoksnio perceptrono plėtiniai. Abu šie plėtiniai priklauso daugiasluoksnio perceptrono plėtinių klasei, giliesiems neuroniniams tinklams (angl. deep neural networks). Pirmasis giliojo dirbtinio neuroninio tinklo aprašymas yra pateiktas darbe \cite{deepNN}. Gilusis neuroninis tinklas tai daugiasluoksnis perceptronas, turintis daugiau nei vieną paslėptąjį sluoksnį.
+Kaip jau minėta praeitame poskyryje tiek konvoliuciniai tiek kapsuliniai neuroniniai tinklai yra daugiasluoksnio perceptrono plėtiniai. Abu šie plėtiniai priklauso daugiasluoksnio perceptrono plėtinių klasei, giliesiems neuroniniams tinklams (angl. deep neural networks). Pirmasis giliojo dirbtinio neuroninio tinklo aprašymas yra pateiktas darbe \cite{deepNN}. Gilusis neuroninis tinklas tai daugiasluoksnis perceptronas, turintis daugiau nei vieną paslėptąjį sluoksnį. Šie neuroniniai tinklai dažniausiai būna žymiai sudėtingesni nei paprasti daugiasluoksniai perceptronai. Tad jų apmokymas trunka ilgiau, bet jų tikslumas yra ženkliai didesnis nei paprastų daugiasluoksnių perceptronų.
 
-Šie neuroniniai tinklai dažniausiai būna žymiai sudėtingesni nei paprasti daugiasluoksniai perceptronai. Todėl jų skaičiavimai reikalauja didesnių resursų. Tad 
+Šių neuroninių tinklų apmokymuose gradientinio nusileidimo strategija grįstas algoritmas, klaidos sklidimo atgal, gali būti pakeistas algoritmu, grįstu stochastinio gradientinio nusileidimo strategija. Pagrindinis skirtumas tarp algoritmų grįstų gradientinio nusileidimo strategija ir stochastinio gradientinio nusileidimo strategija yra funkcija naudojama svorių keitimui. Gradientinio nusileidimo strategija naudoja funkciją \ref{eqn:w_change}, o stochastinio gradientinio nusileidimo strategija grįsti algoritmai naudoja funkciją \ref{eqn:sgd}, kur $\Delta e_i(w)$ yra i-tojo įėjimo vektoriaus paklaidos išvestinė svoriams $\Delta e_i(w) = \dfrac{\partial e_(w)}{\partial w}$.
 
-% Apmokymas vyksta epochomis, batcho dydis, duomenų atskyrimas į training, testing ir validation, adam optimizer
+\begin{equation}
+\label{eqn:sgd}
+	w_k(t + 1) = w_k(t) - \eta \Delta e_i(w)
+\end{equation}
+
+Labai dažnai giliųjų neuronų apmokymuose stochastinio gradientinio nusileidimo strategija yra praplečiama inercijos (angl. momentum) metodu. Tokiu atveju svoriai keičiami pagal funkciją \ref{eqn:sgdm}, kur $\Delta w$ yra svorių pokytis praeitoje iteracijoje, o $\alpha$ - teigiama konstanta intervale (0, 1), vadinama inercijos konstanta (angl. momentum constant).
+
+\begin{equation}
+\label{eqn:sgdm}
+	w_k(t + 1) = w_k(t) - \eta \Delta e_i(w) + \alpha \Delta w
+\end{equation}
+
+Taip pat labai dažnai šių neuroninių tinklų vienoje iteracijoje yra naudojamas ne vienas įėjimo vektorius, bet apmokymo duomenų poaibis, vadinamas duomenų rinkiniu (angl. batch). Duomenų rinkiniai sudaromi parenkant iš apmokymo duomenų nurodytą skaičių vektorių, kurie nebuvo naudojami praeitose iteracijose n-tąjį kartą. Jei tokių vektorių nėra arba yra nepakankamai, kad sudaryti naują duomenų rinkinį su nurodytu dydžiu, tai trūkstami vektoriai yra parenkami tokie, kurie nebuvo naudoti praeitose iteracijose $(n + 1)$-tąjį kartą. $n$ pradedamas skaičiuoti nuo vieneto. Šiame darbe apmokymai yra vykdomi naudojant duomenų rinkinius.
+
+Jei dirbtinio neuroninio tinklo apmokyme yra naudojami duomenų rinkiniai, kurių dydis yra didesnis negu 1, tai tada yra naudojama modifikuota stochastinio gradientinio nusileidimo strategija, kurioje gradientas yra apskaičiuojamas naudojantis ne visus apmokymo duomenis, bet tik iteracijos duomenų rinkinio. Stochastinio gradientinio nusileidimo strategija ir jos modifikacijos yra vadinamos optimizavimo algoritmais. Šių algoritmų pavyzdžiai yra AdaGrad, prisitaikančio gradiento (angl. adaptive gradient); RMSProp, šaknies vidurkio kvadrato išskleidimo (angl. root mean square propagation); AdaDelta ir Adam, prisitaikančios inercijos apskaičiavimo (angl. adaptive moment estimation), algoritmai. Šiame darbe yra naudojamas vienas populiariausių modifikacijų - Adam algoritmas.
+
+Adam algoritmas yra aprašytas darbe \cite{adam}. Šis algoritmas apskaičiuoja 
+
+% adam optimizer
+% kas yra loss function, cross entropy? mse? <- yep reiks aprasyti, gal pabandyk abudu variantus?

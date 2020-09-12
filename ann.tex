@@ -17,7 +17,7 @@ Daugiasluoksnio perceptrono sluoksniai yra išsidėstę eilėje ir kiekviename s
 
 Daugiasluoksnis perceptronas pateiktam vektoriui $\boldsymbol{x}'$ priskiria klasę, kuri buvo priskirta išėjimo sluoksnio perceptronui, kurio išėjimo reikšmė buvo didžiausia iš visų išėjimo sluoksnio perceptronų.
 
-Tam kad daugiasluoksnis perceptronas galėtų atlikti klasifikavimą, jis turi būti apmokytas. Kaip ir perceptronas, daugiasluoksnis perceptronas yra apmokomas iteratyviai keičiant visų perceptronų svorius naudojant formulę \ref{eqn:w_recalc}. Išėjimo sluoksnio perceptronams yra naudojama bendra formulė \ref{eqn:general}. Tačiau ši funkcija, paslėptųjų sluoksnių perceptronų mokymui, yra nenaudojama, nes nėra apibrėžta nuostolių funkcija $e(w)$, mat funkcijai $e(w)$ yra reikalingi perceptronų išėjimai, kurie yra nežinomi. Tad paslėptųjų perceptronų apmokymas yra vykdomas naudojant klaidos sklidimo atgal algoritmą (angl. back-propagation learning algorithm).
+Tam kad daugiasluoksnis perceptronas galėtų atlikti klasifikavimą, jis turi būti apmokytas. Kaip ir perceptronas, daugiasluoksnis perceptronas yra apmokomas iteratyviai keičiant visų perceptronų svorius naudojant formulę \ref{eqn:w_recalc}. Išėjimo sluoksnio perceptronams yra naudojama bendra formulė \ref{eqn:general}. Tačiau ši funkcija, paslėptųjų sluoksnių perceptronų mokymui, yra nenaudojama, nes nėra apibrėžta nuostolių funkcija $e(w)$, mat funkcijai $e(w)$ yra reikalingi perceptronų išėjimai, kurie yra nežinomi. Tad paslėptųjų perceptronų svoriai yra keičiami naudojant klaidos sklidimo atgal algoritmą (angl. back-propagation learning algorithm).
 
 Klaidos sklidimo atgal algoritmas yra gradientinio nusileidimo strategijos realizacija daugiasluoksniam perceptronui. Šio algoritmo veikimo santrauka: randamas i-tosios iteracijos išėjimo vektorius $Y_i = (y_{i1}, y_{i2}, ..., y_{id})$, apskaičiuojama i-tosios iteracijos išėjimo sluoksnio perceptronų paklaidos $e_i(w)$, apskaičiuojami paslėptųjų sluoksnių perceptronų paklaidos, kiekvienam sluoksniui naudojant jo tolimesnių sluoksnių perceptronų paklaidas, ir pakeičiant svorius naudojantis gautomis paklaidomis.
 
@@ -30,7 +30,7 @@ Išėjimo perceptronų paklaidos randamos naudojant formulę \ref{eqn:mse}. Tad 
 
 \begin{equation}
 \label{eqn:general_with_loc_grad}
-	w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} \xi^j_i(\sum_{k = 1}^{m} x_{ik}))
+	w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} \xi^j_i(\sum_{k = 1}^{p} x_{ik}))
 \end{equation}
 
 Remiantis darbu \cite{feedbackAlg}, lokalus gradientas $\xi^j$ yra apskaičiuojamas pagal formulę \ref{eqn:loc_grad_calc}, kur $P_j$ yra aibė perceptronų, prijungtų prie j-tojo perceptrono išėjimo, $w_{bj}$ - b-tojo ir j-tojo perceptronų jungties svoris.
@@ -40,9 +40,17 @@ Remiantis darbu \cite{feedbackAlg}, lokalus gradientas $\xi^j$ yra apskaičiuoja
 	\xi^j_i = f'(a_{ij})\sum_{b \in P_j}\xi^b_i w_{bj}
 \end{equation}
 
-Tad bendru atveju daugiasluoksnio perceptrono apmokymo funkcija yra formulė \ref{eqn:general_mlp}.
+Tad bendru atveju daugiasluoksnio perceptrono svoriai yra keičiami naudojantis formule \ref{eqn:general_mlp}.
 
 \begin{equation}
 \label{eqn:general_mlp}
-w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} (f'(a_{ij})(\sum_{b \in P_j}\xi^b_i w_{bj})(\sum_{k = 1}^{m} x_{ik}))
+w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} (f'(a_{ij})(\sum_{b \in P_j}\xi^b_i w_{bj})(\sum_{k = 1}^{p} x_{ik}))
 \end{equation}
+
+Egzistuoja įvairūs metodai naudojami pradinių svorių parinkimui. Tačiau analizuoto šaltinio \cite{initNN} tyrimai neįrodė, kad vienas iš jų būtų pranašesnis už kitus. Todėl šio darbo tyrimams pradiniai svoriai yra parenkami atsitiktinai.
+
+Procesas, kurio metu yra įvykdomas klaidos sklidimo atgal algoritmas su kiekvienu įėjimo vektoriumi iš mokymo duomenų aibės po vieną kartą, yra vadinamas epocha. Daugiasluoksnio perceptrono apmokymas gali būti vykdomas nurodytą kiekį epochų arba perceptrono apmokymo epochos gali būti vykdomos tol kol nepasiekiamas norimas tikslumas naudojantis validacijos duomenimis. Šiame darbe dirbtinių neuroninių tinklų palyginimui yra naudojami tik apmokymo laiko ir tikslumo kriterijai. Tad tyrime vykdomų epochų skaičiai yra konstantos. Naudojant tą patį epochų skaičių dviems skirtingiems dirbtiniams neuroniniams tinklams, dėl skirtingos tinklų struktūros, apmokymo epochos laikas skiriasi. Tad nurodant tą patį kiekį epochų skirtinguose dirbtinių neuroninių tinklų apmokymuose galima palyginti jų tikslumą ir apmokymo laiką.
+
+Su kiekviena epocha dirbtinis neuroninis tinklas vis tiksliau klasifikuoja apmokymo duomenų vektorius. Tačiau apmokymo duomenys tėra tik poaibis realaus pasaulio duomenų, vadinamų populiacija. Apmokymo duomenys niekada nėra pilnai reprezentatyvūs populiacijai. Todėl po tam tikro skaičiaus epochų, dirbtinio neuroninio tinklo tikslumas priskiriant populiacijos vektorius, kurie nepriklauso apmokymo duomenims, ima mažėti. Ši problema yra vadinama persimokymu (angl. overfitting). Tad dirbtinio neuroninio tinklo tikslumo, kuris būtų reprezentatyvus populiacijai, nustatymui, yra taikomi įvairūs metodai. Du populiariausi šių metodų pavyzdžiai yra n-perlenkimų kryžminis validavimas (angl. n-folds cross validation) ir validavimas su testiniais duomenimis. Šiame darbe naudojamas metodas yra validavimas su testiniais duomenimis, nes šiuo metodu apskaičiuotų dviejų dirbtinių neuroninių tinklų tikslumų palyginimas yra lengviau interpretuojamas.
+
+Apmokytų Dirbtinių neuroninių tinklų tikslumo nustatymui, naudojant validavimą su testiniais duomenimis, turimų duomenų aibė yra padalinama į du poaibius: apmokymo duomenis ir testavimo duomenis.  Apmokymo duomenys yra naudojami tik apmokymo procesui. Tuo metu testavimo duomenys yra naudojami apskaičiuoti tikslumui. Šių duomenų vektoriams apmokyti dirbtiniai neuroniniai tinklai priskiria po klasę, kuri yra palyginama su tikrąja vektoriaus klase. Tada apskaičiuojamas tikslumas, naudojantis formule $acc = \dfrac{m}{n}$, kur $m$ yra skaičius vektorių, kuriems priskirta klasė sutapo su jų tikrąja klase ir $n$ - testavimo duomenų vektorių kiekis.

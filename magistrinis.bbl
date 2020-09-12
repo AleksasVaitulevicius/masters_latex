@@ -147,6 +147,36 @@
       \field{title}{Cybernetic Predicting Devices}
       \field{year}{1965}
     \endentry
+    \entry{adam}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=d09e09d2cd56777abc7316017cc5b054}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={D.\bibnamedelimi P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=6183292552949b2610c803ef54437b24}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={J.\bibnamedelimi L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{912b5dff248c1f4281ec1f58e71f54d9}
+      \strng{fullhash}{912b5dff248c1f4281ec1f58e71f54d9}
+      \strng{bibnamehash}{912b5dff248c1f4281ec1f58e71f54d9}
+      \strng{authorbibnamehash}{912b5dff248c1f4281ec1f58e71f54d9}
+      \strng{authornamehash}{912b5dff248c1f4281ec1f58e71f54d9}
+      \strng{authorfullhash}{912b5dff248c1f4281ec1f58e71f54d9}
+      \field{labelalpha}{KB15}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/1412.6980.pdf}}
+      \field{langid}{english}
+      \field{note}{571 KB, accessed 2020-09-12.}
+      \field{title}{Adam: a method for stochastic optimization}
+      \field{year}{2015}
+    \endentry
     \entry{cnnExp2}{misc}{}
       \name{author}{1}{}{%
         {{hash=6d0811bf8221745aee167eb9aa9f8069}{%
@@ -335,6 +365,33 @@
       \field{note}{386–408 p.}
       \field{title}{The Perceptron—a perceiving and recognizing automaton}
       \field{year}{1957}
+    \endentry
+    \entry{initNN}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=6460b88e2815926a12c066758ada3a8d}{%
+           family={Rountree},
+           familyi={R\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Otago, Dunedin, New Zealand}%
+      }
+      \strng{namehash}{6460b88e2815926a12c066758ada3a8d}
+      \strng{fullhash}{6460b88e2815926a12c066758ada3a8d}
+      \strng{bibnamehash}{6460b88e2815926a12c066758ada3a8d}
+      \strng{authorbibnamehash}{6460b88e2815926a12c066758ada3a8d}
+      \strng{authornamehash}{6460b88e2815926a12c066758ada3a8d}
+      \strng{authorfullhash}{6460b88e2815926a12c066758ada3a8d}
+      \field{labelalpha}{Rou06}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Initialising Neural Networks with Prior Knowledge}
+      \field{type}{phdthesis}
+      \field{year}{2006}
     \endentry
     \entry{cnnExp1}{misc}{}
       \name{author}{4}{}{%

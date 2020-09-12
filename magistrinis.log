@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  7 SEP 2020 21:58
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  12 SEP 2020 21:19
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1189,14 +1189,19 @@ Package biblatex Info: Reference segment=0 on input line 30.
 ] [5]) [6] (3d.object.recognition.task.tex
 [7
 
-]) (perceptron.tex [8]) (ann.tex [9]
+]) (perceptron.tex
+File: img/perceptron.png Graphic file (type bmp)
+<img/perceptron.png>
+ [8]) (ann.tex [9]
 File: img/neural_network.png Graphic file (type bmp)
 <img/neural_network.png>
- [10]) (deep_learning.tex) [11] (cnn.tex) (capsnet.tex) [12] [13
+ [10] [11]) (deep_learning.tex [12])
+[13] (cnn.tex) (capsnet.tex) [14] [15
 
-] (experiments.tex) [14
+] (experiments.tex) [16
 
-] (conclusion.tex) [15
+] (conclusion.tex)
+[17
 
 ]
 
@@ -1247,11 +1252,19 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[16
 
-] [17
+Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
 
-] [18
+
+Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
+[18
+
+] [19] [20
+
+] [21
 
 ]
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1301,7 +1314,7 @@ braces):
 >  {english/babelname}  =>  {english}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [19
+ [22
 
 ] (magistrinis.aux)
 Package logreq Info: Writing requests to 'magistrinis.run.xml'.
@@ -1309,12 +1322,12 @@ Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26563 strings out of 427272
- 526798 string characters out of 3146596
- 1062788 words of memory out of 3000000
- 30755 multiletter control sequences out of 15000+200000
+ 26576 strings out of 427272
+ 527108 string characters out of 3146596
+ 1063904 words of memory out of 3000000
+ 30768 multiletter control sequences out of 15000+200000
  546857 words of font info for 100 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,11n,104p,1516b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,12n,104p,1516b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on magistrinis.pdf (20 pages).
+Output written on magistrinis.pdf (23 pages).
