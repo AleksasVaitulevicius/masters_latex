@@ -2,12 +2,14 @@
 
 Kaip jau minėta praeitame poskyryje tiek konvoliuciniai tiek kapsuliniai neuroniniai tinklai yra daugiasluoksnio perceptrono plėtiniai. Abu šie plėtiniai priklauso daugiasluoksnio perceptrono plėtinių klasei, giliesiems neuroniniams tinklams (angl. deep neural networks). Pirmasis giliojo dirbtinio neuroninio tinklo aprašymas yra pateiktas darbe \cite{deepNN}. Gilusis neuroninis tinklas tai daugiasluoksnis perceptronas, turintis daugiau nei vieną paslėptąjį sluoksnį. Šie neuroniniai tinklai dažniausiai būna žymiai sudėtingesni nei paprasti daugiasluoksniai perceptronai. Tad jų apmokymas trunka ilgiau, bet jų tikslumas yra ženkliai didesnis nei paprastų daugiasluoksnių perceptronų.
 
-Šių neuroninių tinklų apmokymuose gradientinio nusileidimo strategija grįstas algoritmas, klaidos sklidimo atgal, gali būti pakeistas algoritmu, grįstu stochastinio gradientinio nusileidimo strategija. Pagrindinis skirtumas tarp algoritmų grįstų gradientinio nusileidimo strategija ir stochastinio gradientinio nusileidimo strategija yra funkcija naudojama svorių keitimui. Gradientinio nusileidimo strategija naudoja funkciją \ref{eqn:w_change}, o stochastinio gradientinio nusileidimo strategija grįsti algoritmai naudoja funkciją \ref{eqn:sgd}, kur $\Delta e_i(w)$ yra i-tojo įėjimo vektoriaus paklaidos išvestinė svoriams $\Delta e_i(w) = \dfrac{\partial e_(w)}{\partial w}$.
+Šių neuroninių tinklų apmokymuose gradientinio nusileidimo strategija grįstas algoritmas, klaidos sklidimo atgal, gali būti pakeistas algoritmu, grįstu stochastinio gradientinio nusileidimo strategija. Pagrindinis skirtumas tarp algoritmų grįstų gradientinio nusileidimo strategija ir stochastinio gradientinio nusileidimo strategija yra funkcija naudojama svorių keitimui. Gradientinio nusileidimo strategija naudoja funkciją \ref{eqn:w_change}, o stochastinio gradientinio nusileidimo strategija grįsti algoritmai naudoja funkciją \ref{eqn:sgd}, kur gradientas $\Delta e_i(w)$, yra i-tojo įėjimo vektoriaus paklaidos išvestinė svoriams $\Delta e_i(w) = \dfrac{\partial e_(w)}{\partial w}$.
 
 \begin{equation}
 \label{eqn:sgd}
 	w_k(t + 1) = w_k(t) - \eta \Delta e_i(w)
 \end{equation}
+
+
 
 Labai dažnai giliųjų neuronų apmokymuose stochastinio gradientinio nusileidimo strategija yra praplečiama inercijos (angl. momentum) metodu. Tokiu atveju svoriai keičiami pagal funkciją \ref{eqn:sgdm}, kur $\Delta w$ yra svorių pokytis praeitoje iteracijoje, o $\alpha$ - teigiama konstanta intervale (0, 1), vadinama inercijos konstanta (angl. momentum constant).
 
@@ -18,9 +20,46 @@ Labai dažnai giliųjų neuronų apmokymuose stochastinio gradientinio nusileidi
 
 Taip pat labai dažnai šių neuroninių tinklų vienoje iteracijoje yra naudojamas ne vienas įėjimo vektorius, bet apmokymo duomenų poaibis, vadinamas duomenų rinkiniu (angl. batch). Duomenų rinkiniai sudaromi parenkant iš apmokymo duomenų nurodytą skaičių vektorių, kurie nebuvo naudojami praeitose iteracijose n-tąjį kartą. Jei tokių vektorių nėra arba yra nepakankamai, kad sudaryti naują duomenų rinkinį su nurodytu dydžiu, tai trūkstami vektoriai yra parenkami tokie, kurie nebuvo naudoti praeitose iteracijose $(n + 1)$-tąjį kartą. $n$ pradedamas skaičiuoti nuo vieneto. Šiame darbe apmokymai yra vykdomi naudojant duomenų rinkinius.
 
-Jei dirbtinio neuroninio tinklo apmokyme yra naudojami duomenų rinkiniai, kurių dydis yra didesnis negu 1, tai tada yra naudojama modifikuota stochastinio gradientinio nusileidimo strategija, kurioje gradientas yra apskaičiuojamas naudojantis ne visus apmokymo duomenis, bet tik iteracijos duomenų rinkinio. Stochastinio gradientinio nusileidimo strategija ir jos modifikacijos yra vadinamos optimizavimo algoritmais. Šių algoritmų pavyzdžiai yra AdaGrad, prisitaikančio gradiento (angl. adaptive gradient); RMSProp, šaknies vidurkio kvadrato išskleidimo (angl. root mean square propagation); AdaDelta ir Adam, prisitaikančios inercijos apskaičiavimo (angl. adaptive moment estimation), algoritmai. Šiame darbe yra naudojamas vienas populiariausių modifikacijų - Adam algoritmas.
+Jei dirbtinio neuroninio tinklo apmokyme yra naudojami duomenų rinkiniai, kurių dydis yra didesnis negu 1, tai tada yra naudojama modifikuota stochastinio gradientinio nusileidimo strategija, kurioje gradientas yra apskaičiuojamas naudojantis ne visus apmokymo duomenis, bet tik iteracijos duomenų rinkinio. Stochastinio gradientinio nusileidimo strategija ir jos modifikacijos yra vadinamos optimizavimo algoritmais, nes nuo pasirinkto algoritmo priklauso apmokymo trukmė. Šių algoritmų pavyzdžiai yra AdaGrad, prisitaikančio gradiento (angl. adaptive gradient); RMSProp, šaknies vidurkio kvadrato išskleidimo (angl. root mean square propagation); AdaDelta ir Adam, prisitaikančios inercijos apskaičiavimo (angl. adaptive moment estimation), algoritmai. Šiame darbe yra naudojamas vienas populiariausių modifikacijų - Adam algoritmas.
 
-Adam algoritmas yra aprašytas darbe \cite{adam}. Šis algoritmas apskaičiuoja 
+Adam algoritmas yra aprašytas darbe \cite{adam}. Šis algoritmas apjungia algoritmų RMSProp ir AdaGrad privalumus bei darbe \cite{adam} yra pateikiamas empirinis įrodymas, kad Adam algoritmas veikimas yra sparčiausias iš tame darbe nagrinėtų algoritmų. Pirmas Adam algoritmo žingsnis yra apskaičiuoti gradientą t-ajai iteracijai $g_t$, naudojantis formulę \ref{eqn:grad}, kur $\Delta lf(g_{t-1})$ yra funkcijos $lf$ išvestinė svoriams ir $lf$ yra nuostolių funkcija (angl. loss function, cost function, objective function).
 
-% adam optimizer
+\begin{equation}
+\label{eqn:grad}
+	g_t = \Delta lf(g_{t-1})
+\end{equation}
+
+Antras šio algoritmo žingsnis yra apskaičiuoti t-ajai iteracijai eksponentiškai mažėjantį praeitų kvadratu pakeltų gradientų vidurkį $v_t$, naudojantis formulę \ref{eqn:v_t}, ir eksponentiškai mažėjantį praeitų gradientų vidurkį, naudojantis formulę \ref{eqn:m_t}, kur $\beta_1$ ir $\beta_2$ yra nurodomos konstantos.
+
+\begin{equation}
+\label{eqn:m_t}
+	m_t = \beta_1 m_{t-1} + (1 - \beta_1)g_t
+\end{equation}
+
+\begin{equation}
+\label{eqn:v_t}
+	v_t = \beta_2 v_{t-1} + (1 - \beta_2)g_t^2
+\end{equation}
+
+Pirmojoje iteracijoje $t = 1$ naudojami $m_0 = 0$ ir $v_0 = 0$. Darbe \cite{adam} pateikiama, kad parametrai $v_t$ ir $m_t$ yra linkę konverguoti į 0. Tad tolimesnis Adam algoritmo žingsnis apskaičiuoja koreguotas šių parametrų reikšmes $\hat{v_t}$ ir $\hat{m_t}$ naudodamas formules \ref{eqn:corr_v_t} ir \ref{eqn:corr_m_t}.
+
+\begin{equation}
+\label{eqn:corr_m_t}
+	\hat{m_t} = \dfrac{m_t}{1 - \beta_1^t}
+\end{equation}
+
+\begin{equation}
+\label{eqn:corr_v_t}
+	\hat{v_t} = \dfrac{v_t}{1 - \beta_2^t}
+\end{equation}
+
+Paskutinis šio algoritmo žingsnis yra svorių korekcija naudojantis formule \ref{eqn:adam}, kur $w_t$ yra t-osios iteracijos svorių aibė, $\alpha$ nurodyta konstanta, vadinama mokymosi žingsnio dydžiu (angl. learning step size), ir $\epsilon$ yra labai mažas skaičius, naudojamas tam kad išvengti dalybos iš 0.
+
+\begin{equation}
+\label{eqn:adam}
+	w_t = w_{t-1} - \alpha \dfrac{\hat{m_t}}{\sqrt{\hat{v_t}} + \epsilon}
+\end{equation}
+
+Darbe \cite{adam} atlikti tyrimai parodė, kad Adam algoritmas veikia sparčiausiai su parametrų reikšmėmis - $\alpha = 0.001$, $\beta_1 = 0.9$, $\beta_2 = 0.999$ ir $\epsilon = 10^{-8}$. Tad šiame darbe yra naudojami būtent šitos parametrų reikšmės.
+
 % kas yra loss function, cross entropy? mse? <- yep reiks aprasyti, gal pabandyk abudu variantus?

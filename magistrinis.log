@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  12 SEP 2020 21:19
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  13 SEP 2020 16:03
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1195,13 +1195,12 @@ File: img/perceptron.png Graphic file (type bmp)
  [8]) (ann.tex [9]
 File: img/neural_network.png Graphic file (type bmp)
 <img/neural_network.png>
- [10] [11]) (deep_learning.tex [12])
-[13] (cnn.tex) (capsnet.tex) [14] [15
+ [10] [11]) (deep_learning.tex [12]
+[13]) (cnn.tex) (capsnet.tex) [14] [15
 
 ] (experiments.tex) [16
 
-] (conclusion.tex)
-[17
+] (conclusion.tex) [17
 
 ]
 
@@ -1322,10 +1321,10 @@ Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26576 strings out of 427272
- 527108 string characters out of 3146596
- 1063904 words of memory out of 3000000
- 30768 multiletter control sequences out of 15000+200000
+ 26582 strings out of 427272
+ 527174 string characters out of 3146596
+ 1063964 words of memory out of 3000000
+ 30774 multiletter control sequences out of 15000+200000
  546857 words of font info for 100 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,12n,104p,1516b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s

@@ -2148,6 +2148,9 @@
     <bcf:citekey order="18">initNN</bcf:citekey>
     <bcf:citekey order="19">deepNN</bcf:citekey>
     <bcf:citekey order="20">adam</bcf:citekey>
+    <bcf:citekey order="21">adam</bcf:citekey>
+    <bcf:citekey order="22">adam</bcf:citekey>
+    <bcf:citekey order="23">adam</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
