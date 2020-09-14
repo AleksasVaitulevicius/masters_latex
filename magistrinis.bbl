@@ -177,6 +177,61 @@
       \field{title}{Adam: a method for stochastic optimization}
       \field{year}{2015}
     \endentry
+    \entry{cnn}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=9ae8dc3a930d73e11e1b22a9ef065055}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7eacb03f7d28612977f50d8cb1be0bad}{%
+           family={Boser},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2ff32262125f2230f4fdc214030486c4}{%
+           family={Denker},
+           familyi={D\bibinitperiod},
+           given={J.\bibnamedelimi S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1d66cfa216fa640e918783d1c120463c}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1c36863cdb1999c03faa3c243dcda1a3}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={R.\bibnamedelimi E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=ebda9ed808cef915758a63247dd83737}{%
+           family={Hubbard},
+           familyi={H\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=d1aa31ea5533302c18283f093ceec347}{%
+           family={Jackel},
+           familyi={J\bibinitperiod},
+           given={L.\bibnamedelimi D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ffc15443f8a7fdf7e6f50273527fa0b5}
+      \strng{fullhash}{ffc15443f8a7fdf7e6f50273527fa0b5}
+      \strng{bibnamehash}{ffc15443f8a7fdf7e6f50273527fa0b5}
+      \strng{authorbibnamehash}{ffc15443f8a7fdf7e6f50273527fa0b5}
+      \strng{authornamehash}{ffc15443f8a7fdf7e6f50273527fa0b5}
+      \strng{authorfullhash}{ffc15443f8a7fdf7e6f50273527fa0b5}
+      \field{labelalpha}{LBD\textsuperscript {+}89}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf}}
+      \field{langid}{english}
+      \field{note}{5530 KB, accessed 2020-09-14.}
+      \field{title}{Backpropagation Applied to Handwritten Zip Code Recognition}
+      \field{year}{1989}
+    \endentry
     \entry{cnnExp2}{misc}{}
       \name{author}{1}{}{%
         {{hash=6d0811bf8221745aee167eb9aa9f8069}{%
