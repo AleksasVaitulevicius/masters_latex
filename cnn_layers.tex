@@ -1,5 +1,14 @@
 \subsubsection{Konvoliucinio neuroninio tinklo sluoksnių tipai}
 
-Konvoliucinio neuroninio tinklo sluoksniai yra skirstomi į tipus. Pagrindinis konvoliucinio neuroninio tinklo sluoksnio tipas yra konvoliucijos sluoksnis. 
+Konvoliucinio neuroninio tinklo sluoksniai yra skirstomi į tipus. Pagrindinis konvoliucinio neuroninio tinklo sluoksnio tipas yra konvoliucijos sluoksnis. Šio sluoksnio paskirtis yra padalinti kiekvieną įėjimo vaizdą į lokalius fragmentus ir nustatyti kiekvieno fragmento atitikimą kiekvienam požymiui naudojantis konvoliucija. Konvoliucijos sluoksnio rezultatas yra požymių žemėlapiai (angl. feature map). Šiuose žemėlapiuose yra saugoma informacija - kiekvieno fragmento atitikimas konkrečiam požymiui. Kiekvienas požymių žemėlapis yra sudaromas naudojantis unikalų, tik jam priskirtą filtrą. I-tasis požymių žemėlapis $Y_i^{(l)}$, priklausantis l-tajam sluoksniui, yra apskaičiuojamas pagal formulę \ref{eqn:feature_map}, kur $Y_j^{l-1}$ yra j-tasis praeitas sluoksnis, $m_1^{(l-1)}$ - praeito sluoksnio perceptronų išėjimų skaičius, $K_{i,j}^{(l)}$ - naudojamas filtras l-tajame sluoksnyje apskaičiuoti i-tąjį požymių žemėlapį j-tajam įėjimo vaizdui, ir $B_i^{(l)}$ - tai i-toji l-sluoksnio postūmio matrica (angl. bias matrix). Konvoliucijos sluoksnio perceptronų išėjimai yra šie žemėlapiai.
 
-% cont from 30 slide
+
+\begin{equation}
+\label{eqn:feature_map}
+	Y_i^{(l)} = B_i^{(l)} + \sum_{j = 1}^{m_1^{(l-1)}} K_{i,j}^{(l)} * Y_j^{l-1}
+\end{equation}
+
+Po konvoliucijos sluoksnio tolimesnis sluoksnio tipas konvoliuciniame neuroniniame tinkle yra netiesiškumo sluoksnis (angl. non-linearity layer). Šis sluoksnis yra sudarytas iš aktyvacijos funkcijos ir šio sluoksnio rezultatas yra šios funkcijos rezultatas, vadinamas aktyvacijos žemėlapiu. Netiesiškumo sluoksnio aktyvacijos funkcija gali būti bet kuri funkcija, kuri taip pat yra naudojama ir vienasluoksniame perceptrone, ir kurios argumentas yra matrica ir rezultatas yra matrica, kurios matmenys yra lygūs argumento matricos matmenims. Dažniausiai aktyvacijos funkcijos yra sigmoidinė, hiperbolinio tangento ir ištaisymo tiesinė (angl. rectified linear function (ReLu)) funkcijos.
+
+% cont 36 slide
+
