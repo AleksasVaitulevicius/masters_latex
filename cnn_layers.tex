@@ -8,7 +8,26 @@ Konvoliucinio neuroninio tinklo sluoksniai yra skirstomi į tipus. Pagrindinis k
 	Y_i^{(l)} = B_i^{(l)} + \sum_{j = 1}^{m_1^{(l-1)}} K_{i,j}^{(l)} * Y_j^{l-1}
 \end{equation}
 
-Po konvoliucijos sluoksnio tolimesnis sluoksnio tipas konvoliuciniame neuroniniame tinkle yra netiesiškumo sluoksnis (angl. non-linearity layer). Šis sluoksnis yra sudarytas iš aktyvacijos funkcijos ir šio sluoksnio rezultatas yra šios funkcijos rezultatas, vadinamas aktyvacijos žemėlapiu. Netiesiškumo sluoksnio aktyvacijos funkcija gali būti bet kuri funkcija, kuri taip pat yra naudojama ir vienasluoksniame perceptrone, ir kurios argumentas yra matrica ir rezultatas yra matrica, kurios matmenys yra lygūs argumento matricos matmenims. Dažniausiai aktyvacijos funkcijos yra sigmoidinė, hiperbolinio tangento ir ištaisymo tiesinė (angl. rectified linear function (ReLu)) funkcijos.
+Po konvoliucijos sluoksnio tolimesnio sluoksnio tipas konvoliuciniame neuroniniame tinkle yra netiesiškumo sluoksnis (angl. non-linearity layer). Šis sluoksnis yra sudarytas iš aktyvacijos funkcijos ir šio sluoksnio rezultatas yra šios funkcijos rezultatas, vadinamas aktyvacijos žemėlapiu. Kitaip tariant netiesiškumo sluoksnis yra formulė $Y_i^{(l)} = f(Y_i^{(l - 1)})$. Netiesiškumo sluoksnio aktyvacijos funkcija gali būti bet kuri funkcija, kuri taip pat yra naudojama ir vienasluoksniame perceptrone, ir kurios argumentas yra matrica ir rezultatas yra matrica, kurios matmenys yra lygūs argumento matricos matmenims. Dažniausiai aktyvacijos funkcijos yra sigmoidinė, hiperbolinio tangento ir ištaisymo tiesinė (angl. rectified linear function (ReLu)) funkcijos.
 
-% cont 36 slide
+Po netiesiškumo sluoksnio tolimesnis sluoksnis konvoliuciniame neuroniniame yra ištaisymo sluoksnis (angl. rectification layer). Šiame sluoksnyje aktyvacijos žemėlapio reikšmės yra padaromos absoliučiomis. Kitaip tariant ištaisymo sluoksnis yra formulė $Y_i^{(l)} = |Y_i^{(l - 1)}|$.
 
+Dažniausiai konvoliuciniuose tinkluose netiesiškumo ir ištaisymo sluoksniai yra apjungiami į vieną. Pats paprasčiausias šių sluoksnių apjungimas yra formulė  $Y_i^{(l)} = |f(Y_i^{(l - 1)})|$. Kitas labai populiarus apjungimo metodas yra naudoti ištaisymo tiesinę funkciją (angl. rectified linear unit (ReLU)) kaip aktyvacijos funkciją. Ištaisymo tiesinė funkcija yra $f(x) = max(0, x)$. Ši funkcija yra gana paprasta. Tad jos naudojimas paspartina apmokymo procesą. Taip pat ištaisymo tiesinė funkcija padaro išretinimą dar aktualesniu, nes neigiamas reikšmes ši funkcija pakeičia nuliais. Dažniausiai konvoliuciniuose neuroniniuose tinkluose yra taikomos ištaisymo tiesinės funkcijos variacijos - su triukšmu (angl. noisy ReLU), pavaizduota lygtyje \ref{eqn:noisy_ReLU}, kur $Y$ yra normalioji distribucija ($Y \textasciitilde \mathcal{N}(0, \sigma(x))$), ir nesandari (angl. leaky ReLU), pavaizduota formulėje \ref{eqn:leaky_ReLU},  ištaisymo tiesinės funkcijos.
+
+\begin{equation}
+\label{eqn:noisy_ReLU}
+	f(x) = max(0, x + Y)
+\end{equation}
+
+\begin{equation}
+\label{eqn:leaky_ReLU}
+	f(x) = 
+	\begin{cases}
+	x, & \mbox{jei } x > 0 \\
+	0.01x, & \mbox{jei } x \leq 0
+	\end{cases}
+\end{equation}
+
+Taip pat dažnai kaip aktyvacijos funkcija yra naudojama softplus funkcija. Softplus funkcija yra $f(x) = ln(1 + e^x)$. Šios funkcijos patenkina lygybę $f(x) > 0$. Tad šių funkcijų rezultatai yra lygūs absoliučioms reikšmėms. Todėl ištaisymo sluoksnis patampa nereikšmingas.
+
+Po kelių konvoliucinių, netiesiškumo ir ištaisymo sluoksnių dažniausiai konvoliuciniame neuroniniame tinkle tolimesnis sluoksnis yra sujungimo sluoksnis (angl. pooling layer). Šio sluoksnio tikslas yra sumažinti aktyvacijos žemėlapių dydžius. Tokiu būdu pagreitinant apmokymo procesą ir sumažinant persimokymą. Šio sluoksnio įvestis yra trimatis vaizdas, kurio dimensijos yra $m_1 \times m_2 \times m_3$.
