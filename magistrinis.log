@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  18 SEP 2020 23:34
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  19 SEP 2020 20:23
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1201,13 +1201,14 @@ File: img/sparsity.png Graphic file (type bmp)
 <img/sparsity.png>
 ) (cnn_layers.tex [16]
 
-LaTeX Warning: Command \textasciitilde invalid in math mode on input line 15.
+LaTeX Warning: Command \textasciitilde invalid in math mode on input line 16.
 
-) (capsnet.tex) [17] [18] [19
+[17] [18]) (mvcnn.tex) (capsnet.tex) [19] [20
 
-] (experiments.tex) [20
+] (experiments.tex) [21
 
-] (conclusion.tex) [21
+]
+(conclusion.tex) [22
 
 ]
 
@@ -1266,16 +1267,16 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[22
+[23
 
 ]
 
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[23] [24
+[24] [25
 
-] [25
+] [26
 
 ]
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1325,7 +1326,7 @@ braces):
 >  {english/babelname}  =>  {english}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [26
+ [27
 
 ] (magistrinis.aux)
 Package logreq Info: Writing requests to 'magistrinis.run.xml'.
@@ -1333,12 +1334,12 @@ Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26603 strings out of 427272
- 527604 string characters out of 3146596
- 1064083 words of memory out of 3000000
- 30791 multiletter control sequences out of 15000+200000
+ 26614 strings out of 427272
+ 527776 string characters out of 3146596
+ 1065153 words of memory out of 3000000
+ 30799 multiletter control sequences out of 15000+200000
  546857 words of font info for 100 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,12n,104p,1516b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,17n,104p,1516b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on magistrinis.pdf (27 pages).
+Output written on magistrinis.pdf (28 pages).

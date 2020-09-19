@@ -1,12 +1,13 @@
 \subsubsection{Konvoliucinio neuroninio tinklo sluoksnių tipai}
 
-Konvoliucinio neuroninio tinklo sluoksniai yra skirstomi į tipus. Pagrindinis konvoliucinio neuroninio tinklo sluoksnio tipas yra konvoliucijos sluoksnis. Šio sluoksnio paskirtis yra padalinti kiekvieną įėjimo vaizdą į lokalius fragmentus ir nustatyti kiekvieno fragmento atitikimą kiekvienam požymiui naudojantis konvoliucija. Konvoliucijos sluoksnio rezultatas yra požymių žemėlapiai (angl. feature map). Šiuose žemėlapiuose yra saugoma informacija - kiekvieno fragmento atitikimas konkrečiam požymiui. Kiekvienas požymių žemėlapis yra sudaromas naudojantis unikalų, tik jam priskirtą filtrą. I-tasis požymių žemėlapis $Y_i^{(l)}$, priklausantis l-tajam sluoksniui, yra apskaičiuojamas pagal formulę \ref{eqn:feature_map}, kur $Y_j^{l-1}$ yra j-tasis praeitas sluoksnis, $m_1^{(l-1)}$ - praeito sluoksnio perceptronų išėjimų skaičius, $K_{i,j}^{(l)}$ - naudojamas filtras l-tajame sluoksnyje apskaičiuoti i-tąjį požymių žemėlapį j-tajam įėjimo vaizdui, ir $B_i^{(l)}$ - tai i-toji l-sluoksnio postūmio matrica (angl. bias matrix). Konvoliucijos sluoksnio perceptronų išėjimai yra šie žemėlapiai.
-
+Konvoliucinio neuroninio tinklo sluoksniai yra skirstomi į tipus. Pagrindinis konvoliucinio neuroninio tinklo sluoksnio tipas yra konvoliucijos sluoksnis. Šio sluoksnio paskirtis yra padalinti kiekvieną įėjimo vaizdą į lokalius fragmentus ir nustatyti kiekvieno fragmento atitikimą kiekvienam požymiui naudojantis konvoliucija. Konvoliucijos sluoksnio parametrai yra filtrų skaičius ir jų dimensijos bei lango žingsnis - per kiek pozicijų langas yra paslenkamas kuriant lokalius vaizdo fragmentus. Šio sluoksnio rezultatas yra požymių žemėlapiai (angl. feature map). Šiuose žemėlapiuose yra saugoma informacija - kiekvieno fragmento atitikimas konkrečiam požymiui. Kiekvienas požymių žemėlapis yra sudaromas naudojantis unikalų, tik jam priskirtą filtrą. I-tasis požymių žemėlapis $Y_i^{(l)}$, priklausantis l-tajam sluoksniui, yra apskaičiuojamas pagal formulę \ref{eqn:feature_map}, kur $Y_j^{l-1}$ yra j-tasis praeitas sluoksnis, $m_1^{(l-1)}$ - praeito sluoksnio perceptronų išėjimų skaičius, $K_{i,j}^{(l)}$ - naudojamas filtras l-tajame sluoksnyje apskaičiuoti i-tąjį požymių žemėlapį j-tajam įėjimo vaizdui, ir $B_i^{(l)}$ - tai i-toji l-sluoksnio postūmio matrica (angl. bias matrix).
 
 \begin{equation}
 \label{eqn:feature_map}
 	Y_i^{(l)} = B_i^{(l)} + \sum_{j = 1}^{m_1^{(l-1)}} K_{i,j}^{(l)} * Y_j^{l-1}
 \end{equation}
+
+Konvoliucijos sluoksnio perceptronų išėjimai yra šie žemėlapiai.
 
 Po konvoliucijos sluoksnio tolimesnio sluoksnio tipas konvoliuciniame neuroniniame tinkle yra netiesiškumo sluoksnis (angl. non-linearity layer). Šis sluoksnis yra sudarytas iš aktyvacijos funkcijos ir šio sluoksnio rezultatas yra šios funkcijos rezultatas, vadinamas aktyvacijos žemėlapiu. Kitaip tariant netiesiškumo sluoksnis yra formulė $Y_i^{(l)} = f(Y_i^{(l - 1)})$. Netiesiškumo sluoksnio aktyvacijos funkcija gali būti bet kuri funkcija, kuri taip pat yra naudojama ir vienasluoksniame perceptrone, ir kurios argumentas yra matrica ir rezultatas yra matrica, kurios matmenys yra lygūs argumento matricos matmenims. Dažniausiai aktyvacijos funkcijos yra sigmoidinė, hiperbolinio tangento ir ištaisymo tiesinė (angl. rectified linear function (ReLu)) funkcijos.
 
@@ -28,6 +29,58 @@ Dažniausiai konvoliuciniuose tinkluose netiesiškumo ir ištaisymo sluoksniai y
 	\end{cases}
 \end{equation}
 
-Taip pat dažnai kaip aktyvacijos funkcija yra naudojama softplus funkcija. Softplus funkcija yra $f(x) = ln(1 + e^x)$. Šios funkcijos patenkina lygybę $f(x) > 0$. Tad šių funkcijų rezultatai yra lygūs absoliučioms reikšmėms. Todėl ištaisymo sluoksnis patampa nereikšmingas.
+Taip pat dažnai kaip aktyvacijos funkcija yra naudojama softplus funkcija. Softplus funkcija yra $f(x) = ln(1 + e^x)$. Šios funkcijos patenkina sąlygą $f(x) > 0$. Tad šių funkcijų rezultatai yra lygūs absoliučioms reikšmėms. Todėl ištaisymo sluoksnis patampa nereikšmingas.
 
-Po kelių konvoliucinių, netiesiškumo ir ištaisymo sluoksnių dažniausiai konvoliuciniame neuroniniame tinkle tolimesnis sluoksnis yra sujungimo sluoksnis (angl. pooling layer). Šio sluoksnio tikslas yra sumažinti aktyvacijos žemėlapių dydžius. Tokiu būdu pagreitinant apmokymo procesą ir sumažinant persimokymą. Šio sluoksnio įvestis yra trimatis vaizdas, kurio dimensijos yra $m_1 \times m_2 \times m_3$.
+Po kelių konvoliucinių, netiesiškumo ir ištaisymo sluoksnių dažniausiai konvoliuciniame neuroniniame tinkle tolimesnis sluoksnis yra sujungimo sluoksnis (angl. pooling layer). Šio sluoksnio tikslas yra sumažinti aktyvacijos žemėlapių dydžius. Tokiu būdu pagreitinant apmokymo procesą ir sumažinant persimokymą. Sujungimo sluoksnis turi 2 parametrus - filtrą $F^{(l)} \in \mathbb{N}$ ir žingsnio dydį $S^{(l)} \in \mathbb{N}$. Šio sluoksnio įvestis yra trimatis vaizdas, kurio dimensijos yra $m_1^{(l-1)} \times m_2^{(l-1)} \times m_3^{(l-1)}$, ir išvestis yra trimatis vaizdas, kurio dimensijos yra $m_1^{(l)} \times m_2^{(l)} \times m_3^{(l)}$, kurios yra paskaičiuojamos pagal formules \ref{eqn:pool_layer_dims}.
+
+\begin{equation}
+\label{eqn:pool_layer_dims}
+	\begin{split}
+		m_1^{(l)} = & m_1^{(l-1)} \\
+		m_2^{(l)} = & \dfrac{m_2^{(l-1)} - F^{(l)}}{S^{(l)}} + 1 \\
+		m_3^{(l)} = & \dfrac{m_3^{(l-1)} - F^{(l)}}{S^{(l)}} + 1
+	\end{split}
+\end{equation}
+
+Išvesties vaizdo skaičiavimas vyksta sukuriant $ F^{(l)} \times  F^{(l)}$ dydžio langą ir slenkant jį per kiekvieną įvesties matricą per $S^{(l)}$ pozicijų. Kiekvienoje lango pozicijoje yra apskaičiuojama viena skaliarinė reikšmė. Dažniausiai ši reikšmė gaunama naudojant maksimalaus sujungimo metodą (angl. max pooling). Naudojant šį metodą apskaičiuojama reikšmė lange yra lygi maksimaliai reikšmei, kuri yra lange. Kitas dažnai naudojamas metodas yra vidutinis sujungimas (angl. average pooling). Naudojant šį metodą apskaičiuojama reikšmė lange yra lygi visų lango reikšmių vidurkiui. Maksimalaus sujungimo metodas yra pranašesnis, nes apmokymo procesas yra spartesnis ir tikslesnis, kai yra naudojamas šis metodas sujungimo sluoksniuose. Jei yra patenkinama sąlyga $F^{(l)} > S^{(l)}$, tai langai persidengs ir sujungimo sluoksnis su persidengiančiais langais yra vadinamas persidengiančiu sujungimo sluoksniu (angl. overlapping pooling layer). Kitu atveju - langai nepersidengia ir toks sluoksnis vadinamas nepersidengiančiu sujungimo sluoksniu (angl. non-overlapping pooling layer).
+
+Kitas sluoksnio tipas naudojamas konvoliuciniame neuroniniame tinkle yra pilnai sujungtas sluoksnis (angl. fully connected layer). Šis sluoksnis yra daugiasluoksnis perceptronas, kurio įvestis yra trimatis vaizdas. Jei praeitas sluoksnis irgi yra pilnai sujungtas sluoksnis, tai aktyvacijos funkcijos argumentas $a_i^{(l)}$ yra gaunamas pagal formulę \ref{eqn:fcl_activation_arg}, kitu atveju naudojama formulė \ref{eqn:other_activation_arg}.
+
+
+\begin{equation}
+\label{eqn:fcl_activation_arg}
+	a_i^{(l)} = \sum_{j = 1}^{m_1^{(l-1)}} w_{ij}^{(l)}y_i^{(l-1)}
+\end{equation}
+
+\begin{equation}
+\label{eqn:other_activation_arg}
+	a_i^{(l)} = \sum_{j = 1}^{m_1^{(l-1)}} \sum_{r = 1}^{m_2^{(l-1)}} \sum_{s = 1}^{m_3^{(l-1)}} w_{ijrs}^{(l)} (y_i^{(l-1)})_{rs}
+\end{equation}
+
+Pilnai sujungto sluoksnio rezultatas yra klasių tikimybių distribucija.
+
+Konvoliucinio neuroninio tinklo apmokymas tai procesas, kurio metu yra nustatomos konvoliucijos sluoksnių filtrų ir pilnai sujungtų sluoksnių svorių reikšmės su kuriomis nuostolių funkcija įgyja apytiksliai mažiausias reikšmes. Šiame darbe tiriamo konvoliucinio neuroninio tinklo išėjimo pilnai sujungto sluoksnio aktyvacijos funkcija yra softmax. Ši funkcija yra atvaizduota formulėje \ref{eqn:softmax}, kur $i = 1, 2, ..., K - 1, K$; $K$ - klasių skaičius ir funkcijos argumentas $\boldsymbol{z} = (z_1, z_2, ..., z_{K - 1}, z_K) \in \R^K$.
+
+\begin{equation}
+\label{eqn:softmax}
+	f_i(\boldsymbol{z}) = \dfrac{e^{z_i}}{\sum_{j}^{K} e^{z_j}}
+\end{equation}
+
+Softmax funkcija yra logistinės regresijos apibendrinimas daugeliui klasių, kuri mažesnes reikšmes sumažina, o didesnes padidina. Šiai aktyvacijos funkcijai yra taikoma kryžminės entropijos (angl. cross-entropy) nuostolių funkcija, atvaizduota formulėje \ref{eqn:cross_entropy}.
+
+\begin{equation}
+\label{eqn:cross_entropy}
+	L_i = - log(\dfrac{e^{z_i}}{\sum_{j}^{K} e^{z_j}})
+\end{equation}
+
+Kryžminė entropija tarp tikrojo diskretaus pasiskirstymo $p(x)$, kur $p$ yra vektorius sudarytas iš 0 ir vieno 1 pozicijoje $x$, ir gauto diskretaus pasiskirstymo $q(x)$, atvaizduoto funkcijoje \ref{eqn:q}, yra apibrėžta formulėje \ref{eqn:comparison_cross_entropy}.
+
+\begin{equation}
+\label{eqn:comparison_cross_entropy}
+	H(p, q) = - \sum_{x = 1}^K p(x) log(q(x))
+\end{equation}
+
+\begin{equation}
+\label{eqn:q}
+	q(x) = \dfrac{e^{z_x}}{\sum_{j}^{K} e^{z_j}}
+\end{equation}

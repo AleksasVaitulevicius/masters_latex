@@ -24,29 +24,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.4.2.}Konvoliucinio neuroninio tinklo sluoksnių tipai}{16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.}Kapsulinių dirbtinių neuroninių tinklų apžvalga}{18}%
+\contentsline {subsubsection}{\numberline {1.4.3.}Daugiavaizdis konvoliucinis neuroninis tinklas}{19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Kapsulinių neuroninių tinklų modifikacijos ir parametrai}{19}%
+\contentsline {subsection}{\numberline {1.5.}Kapsulinių dirbtinių neuroninių tinklų apžvalga}{19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.}Eksperimentiniai tyrimai}{20}%
+\contentsline {section}{\numberline {2.}Kapsulinių neuroninių tinklų modifikacijos ir parametrai}{20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.}Tyrimams naudoti duomenys}{20}%
+\contentsline {section}{\numberline {3.}Eksperimentiniai tyrimai}{21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Kapsulinių neuroninių tinklų modifikacijų ir parametrų eksperimentiniai tyrimai}{20}%
+\contentsline {subsection}{\numberline {3.1.}Tyrimams naudoti duomenys}{21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.}Kapsulinių ir konvoliucinių neuroninių tinklų eksperimentiniai tyrimai}{20}%
+\contentsline {subsection}{\numberline {3.2.}Kapsulinių neuroninių tinklų modifikacijų ir parametrų eksperimentiniai tyrimai}{21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{21}%
+\contentsline {subsection}{\numberline {3.3.}Kapsulinių ir konvoliucinių neuroninių tinklų eksperimentiniai tyrimai}{21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{22}%
+\contentsline {section}{Rezultatai ir išvados}{22}%
 \defcounter {refsection}{0}\relax 
-\bgroup 
-\defcounter {refsection}{0}\relax 
-\selectlanguage *{english}
-\defcounter {refsection}{0}\relax 
-\egroup 
-\defcounter {refsection}{0}\relax 
-\selectlanguage *{lithuanian}
+\contentsline {section}{Literatūra}{23}%
 \defcounter {refsection}{0}\relax 
 \bgroup 
 \defcounter {refsection}{0}\relax 
@@ -160,7 +154,15 @@
 \defcounter {refsection}{0}\relax 
 \selectlanguage *{lithuanian}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{24}%
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Santrumpos}{25}%
 \defcounter {refsection}{0}\relax 
 \def \@dotsep {1000}
 \defcounter {refsection}{0}\relax 
