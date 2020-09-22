@@ -362,38 +362,6 @@
       \field{title}{View-Based 3-D Object Recognition using Shock Graphs}
       \field{year}{2002}
     \endentry
-    \entry{capsNet}{misc}{}
-      \name{author}{2}{}{%
-        {{hash=de3ba0f08f867612fb422383234962bd}{%
-           family={N.\bibnamedelimi Frosst},
-           familyi={N\bibinitperiod\bibinitdelim F\bibinitperiod},
-           given={S.\bibnamedelimi Sabour},
-           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
-           prefix={nad},
-           prefixi={n\bibinitperiod}}}%
-        {{hash=9c5f7dcfa6f8cfad7a98e00d2c3b338d}{%
-           family={Hinton},
-           familyi={H\bibinitperiod},
-           given={G.\bibnamedelimi E.},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-      }
-      \strng{namehash}{3817077a5d9bf6f08db2e774c0ff4a4f}
-      \strng{fullhash}{3817077a5d9bf6f08db2e774c0ff4a4f}
-      \strng{bibnamehash}{3817077a5d9bf6f08db2e774c0ff4a4f}
-      \strng{authorbibnamehash}{3817077a5d9bf6f08db2e774c0ff4a4f}
-      \strng{authornamehash}{3817077a5d9bf6f08db2e774c0ff4a4f}
-      \strng{authorfullhash}{3817077a5d9bf6f08db2e774c0ff4a4f}
-      \field{labelalpha}{nNH17}
-      \field{sortinit}{n}
-      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://arxiv.org/pdf/1710.09829.pdf}}
-      \field{langid}{english}
-      \field{note}{899 KB, accessed 2020-05-23.}
-      \field{title}{Dynamic Routing Between Capsules}
-      \field{year}{2017}
-    \endentry
     \entry{rosenPerc}{book}{}
       \name{author}{1}{}{%
         {{hash=1750cd87a34d44119e7a4aab9b8012c6}{%
@@ -447,6 +415,41 @@
       \field{title}{Initialising Neural Networks with Prior Knowledge}
       \field{type}{phdthesis}
       \field{year}{2006}
+    \endentry
+    \entry{capsNet}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=b3d6d7d8552bb9ee823823fa6afbb3ee}{%
+           family={Sabour},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b214af5babdb00061cbf87ae6a1e22b5}{%
+           family={Frosst},
+           familyi={F\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9c5f7dcfa6f8cfad7a98e00d2c3b338d}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{222d291e471bdc97f73fa82a3e8f0c53}
+      \strng{fullhash}{222d291e471bdc97f73fa82a3e8f0c53}
+      \strng{bibnamehash}{222d291e471bdc97f73fa82a3e8f0c53}
+      \strng{authorbibnamehash}{222d291e471bdc97f73fa82a3e8f0c53}
+      \strng{authornamehash}{222d291e471bdc97f73fa82a3e8f0c53}
+      \strng{authorfullhash}{222d291e471bdc97f73fa82a3e8f0c53}
+      \field{labelalpha}{SFH17}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/1710.09829.pdf}}
+      \field{langid}{english}
+      \field{note}{899 KB, accessed 2020-05-23.}
+      \field{title}{Dynamic Routing Between Capsules}
+      \field{year}{2017}
     \endentry
     \entry{cnnExp1}{misc}{}
       \name{author}{4}{}{%

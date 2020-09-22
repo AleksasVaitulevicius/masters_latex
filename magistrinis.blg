@@ -1,18 +1,18 @@
 [0] Config.pm:304> INFO - This is Biber 2.13
 [0] Config.pm:307> INFO - Logfile is 'magistrinis.blg'
-[28] biber-MSWIN64:315> INFO - === 
-[45] Biber.pm:375> INFO - Reading 'magistrinis.bcf'
-[137] Biber.pm:905> INFO - Found 15 citekeys in bib section 0
-[152] Biber.pm:4196> INFO - Processing section 0
-[153] Utils.pm:75> INFO - Globbing data source 'bibliografija.bib'
-[161] Utils.pm:91> INFO - Globbed data source 'bibliografija.bib' to bibliografija.bib
-[173] Biber.pm:4373> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
-[176] bibtex.pm:1462> INFO - LaTeX decoding ...
-[197] bibtex.pm:1281> INFO - Found BibTeX data source 'bibliografija.bib'
-[270] Utils.pm:300> WARN - BibTeX subsystem: C:\Users\Aleksas\AppData\Local\Temp\tpSBl5vrvH\bibliografija.bib_4868.utf8, line 4, warning: 148 characters of junk seen at toplevel
-[299] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[299] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[299] Biber.pm:4024> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'lt-LT'
-[314] bbl.pm:648> INFO - Writing 'magistrinis.bbl' with encoding 'UTF-8'
-[323] bbl.pm:751> INFO - Output to magistrinis.bbl
-[328] Biber.pm:110> INFO - WARNINGS: 1
+[32] biber-MSWIN64:315> INFO - === 
+[66] Biber.pm:375> INFO - Reading 'magistrinis.bcf'
+[133] Biber.pm:905> INFO - Found 15 citekeys in bib section 0
+[148] Biber.pm:4196> INFO - Processing section 0
+[167] Utils.pm:75> INFO - Globbing data source 'bibliografija.bib'
+[184] Utils.pm:91> INFO - Globbed data source 'bibliografija.bib' to bibliografija.bib
+[200] Biber.pm:4373> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
+[207] bibtex.pm:1462> INFO - LaTeX decoding ...
+[224] bibtex.pm:1281> INFO - Found BibTeX data source 'bibliografija.bib'
+[279] Utils.pm:300> WARN - BibTeX subsystem: C:\Users\Aleksas\AppData\Local\Temp\1V6j0K6xvQ\bibliografija.bib_3408.utf8, line 4, warning: 148 characters of junk seen at toplevel
+[302] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[302] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[302] Biber.pm:4024> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'lt-LT'
+[313] bbl.pm:648> INFO - Writing 'magistrinis.bbl' with encoding 'UTF-8'
+[320] bbl.pm:751> INFO - Output to magistrinis.bbl
+[323] Biber.pm:110> INFO - WARNINGS: 1
