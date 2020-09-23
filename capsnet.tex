@@ -1,15 +1,15 @@
-Kapsuliniai neuroniniai tinklai yra aprašyti darbe \cite{capsNet}. Kapsuliniai neuroniniai tinklai yra giliųjų neuroninių tinklų tipas, kurio sluoksnio perceptronai yra grupuojami į kapsules. Kiekviena kapsulė apskaičiuoja tikimybę, kad paveikslėlyje pavaizduotas objektas priklauso kažkuriai klasei, ir išgauna informaciją apie tokius objekto bruožus kaip pozicija, orientacija, mastelis, deformacija, spalva ir kitus panašius objekto bruožus. Pirminių kapsulių sluoksniuose nagrinėjami objektai yra paprastos geometrinės figūros. Tolimesniuose sluoksniuose objektai darosi sudėtingesni, jie ima atitikti realaus pasaulio objektus. Kapsulės tarp sluoksnių yra sujungiamos į hierarchiją. Taip kapsulinis neuroninis tinklas sukuria hierarchinę vaizdo reprezentaciją.
+Kapsuliniai neuroniniai tinklai yra aprašyti darbe \cite{capsNet}. Kapsuliniai neuroniniai tinklai yra giliųjų neuroninių tinklų tipas, kurio sluoksnio perceptronai yra grupuojami į kapsules. Kiekviena kapsulė apskaičiuoja tikimybę, kad paveikslėlyje pavaizduotas objektas priklauso kažkuriai klasei, ir išgauna informaciją apie tokius objekto bruožus kaip pozicija, orientacija, mastelis, deformacija, spalva ir kitus panašius objekto bruožus. Pirminių kapsulių sluoksnyje nagrinėjami objektai yra paprastos geometrinės figūros. Tolimesniuose sluoksniuose objektai darosi sudėtingesni, jie ima atitikti realaus pasaulio objektus. Kapsulės tarp sluoksnių yra sujungiamos į hierarchiją. Taip kapsulinis neuroninis tinklas sukuria hierarchinę vaizdo reprezentaciją.
 
 Pirmieji du sluoksniai kapsuliniame neuroniniame tinkle yra konvoliucijos sluoksnis ir apjungtas netiesiškumo ir ištaisymo sluoksnis su ištaisymo tiesine aktyvacijos funkcija. Šių sluoksnių tikslas yra išgauti pagrindinius požymius, kurie tolimesniame sluoksnyje yra naudojami objektų konstrukcijai.
 
-Tolimesnio sluoksnio tipas yra pirminės kapsulės (angl. primary capsules). Šiame sluoksnyje aktyvacijos žemėlapiai yra konvertuojami į vektorius. Toliau kiekvienas vektorius atskirai yra pateikiamas squash funkcijai kaip argumentai. Squash funkcija yra formulė \ref{label}, kur $||s||$ yra visų matricos $s$ narių suma.
+Tolimesnio sluoksnio tipas yra pirminių kapsulių sluoksnis (angl. primary capsules). Šiame sluoksnyje aktyvacijos žemėlapiai yra konvertuojami į vektorius. Toliau kiekvienas vektorius atskirai yra pateikiamas squash funkcijai kaip argumentai. Squash funkcija yra formulė \ref{label}, kur $||s||$ yra visų matricos $s$ narių suma.
 
 \begin{equation}
 \label{eqn:squash}
 	squash(s) = \dfrac{||s||^2}{1 + ||s||^2}\dfrac{s}{||s||}
 \end{equation}
 
-Tolimesnių sluoksnių tipai yra kapsulės. Šiuose sluoksniuose yra vykdomas dinaminis maršrutizavimas tarp kapsulių (angl. dynamic routing between capsules). Dinaminis maršrutizavimas tarp kapsulių - tai iteratyvus procesas, kurio paskirtis yra apjungti kapsules tarp dviejų sluoksnių. Prieš pradedant iteratyvią proceso dalį, kiekvienai sluoksnio $l$ kapsulei $i$ ir sluoksnio $(l + 1)$ kapsulei $j$ yra inicializuojami kintamieji $b_{ij}$ su reikšme 0. Taip pat kiekvienai kapsulių $i$ ir $j$ porai yra apskaičiuojami vektoriai $\hat{u}_{j|i}$ pagal formulę \ref{eqn:pred_vectors}, kur $W_{ij}$ yra svorio matrica tarp kapsulių $i$ ir $j$ bei $u_{i}$ - tai kapsulės $i$ išvestis.
+Tolimesnių sluoksnių tipai yra kapsuliniai sluoksniai. Šiuose sluoksniuose yra vykdomas dinaminis maršrutizavimas tarp kapsulių (angl. dynamic routing between capsules). Dinaminis maršrutizavimas tarp kapsulių - tai iteratyvus procesas, kurio paskirtis yra apjungti kapsules tarp dviejų sluoksnių. Prieš pradedant iteratyvią proceso dalį, kiekvienai sluoksnio $l$ kapsulei $i$ ir sluoksnio $(l + 1)$ kapsulei $j$ yra inicializuojami kintamieji $b_{ij}$ su reikšme 0. Taip pat kiekvienai kapsulių $i$ ir $j$ porai yra apskaičiuojami vektoriai $\hat{u}_{j|i}$ pagal formulę \ref{eqn:pred_vectors}, kur $W_{ij}$ yra svorio matrica tarp kapsulių $i$ ir $j$ bei $u_{i}$ - tai kapsulės $i$ išvestis.
 
 \begin{equation}
 \label{eqn:pred_vectors}
@@ -32,4 +32,20 @@ Tolimesnis žingsnis yra apskaičiuoti svertines sumas $s_j$ kiekvienai kapsulei
 
 Toliau yra apskaičiuojami vektoriai $v_j$ kiekvienai kapsulei $j$ naudojantis softmax funkcija su argumentu $s_j$. Kitaip tariant yra apskaičiuojama formulė $v_j = softmax(s_j)$. Paskutinis iteratyvios dalies žingsnis yra pakeisti kintamųjų $b_{ij}$ reikšmes naudojantis formulę $b_{ij} = b_{ij} + \hat{u}_{j|i} v_j$.
 
-Iteratyvi dinaminio maršrutizavimo tarp kapsulių proceso dalis yra kartojama nurodyta skaičių iteracijų ir šio proceso rezultatas yra vektorius $v_j$. Šiame vektoriuje yra tikimybės, kad objektas, nagrinėjamas kapsulės $i$, yra dalis objekto, nagrinėjamo kapsulės $j$.
+Iteratyvi dinaminio maršrutizavimo tarp kapsulių proceso dalis yra kartojama nurodyta skaičių iteracijų ir šio proceso rezultatas yra vektorius $v_j$. Šiame vektoriuje yra tikimybės, kad objektas, nagrinėjamas kapsulės $i$, yra dalis objekto, nagrinėjamo kapsulės $j$. Paskutinio kapsulinio sluoksnio kapsulės nagrinėja klases.
+
+Po visų kapsulinių sluoksnių kapsuliniame neuroniniame tinkle yra naudojamas rekonstrukcijos tinklas. Rekonstrukcijos tinklas yra sudarytas iš 3 sluoksnių. Du pirmieji sluoksniai yra apjungti netiesiškumo ir ištaisymo sluoksniai su ištaisymo tiesine aktyvacijos funkcija. Paskutinis sluoksnis yra netiesiškumo sluoksnis  su sigmoidine aktyvacijos funkcija. Šio tinklo uždavinys yra atkurti įėjimo 2D nuotrauką. Tad kapsulinio neuroninio tinklo išėjimo sluoksnio rezultatas yra ne tik priskirta klasė, bet ir atkurta įėjimo reikšmė.
+
+Kapsulinis neuroninis tinklas yra apmokomas optimizuojant 2 funkcijas. Pirmoji funkcija yra margin nuostolių funkcija, pavaizduota formulėje \ref{eqn:margin_loss}, kur $L_k$ yra funkcijos rezultatas kapsulei $k$, $||v_k||$ - visų kapsulės $k$ išėjimo $v_k$ narių suma, $T_k$ konstanta lygi 1 jei įėjimui yra priskirta klasė, kuri yra nagrinėjama kapsulėje $k$, kitu atveju - 0, $m^+ = 0.9$, $m^- = 0.1$ ir $\lambda$ yra nurodyta konstanta, skirta mažinti neteisingų klasių įtaką, šiame darbe yra $\lambda = 0.5$.
+
+\begin{equation}
+\label{eqn:margin_loss}
+	L_{k} = T_k max(0, m^+ - ||v_k||)^2 + \lambda (1 - T_k) max(0, ||v_k|| - m^-)^2
+\end{equation}
+
+Antroji nuostolių funkcija yra rekonstrukcijos nuostolių funkcija $RL$. Ši funcija yra vidutinė kvadratinė paklaida (angl. mean square error) tarp atkurtos įėjimo matricos ir originalios įėjimo matricos. Apmokyme šios 2 funkcijos yra apjungtos į funkciją pavaizduota formulėje \ref{eqn:total_margin_loss}, kur $n$ yra klasių skaičius ir $\alpha$ - tai rekonstrukcijos nuostolių funkcijos įtakos mažinimo konstanta, šiame darbe $\alpha = 0.0005$.
+
+\begin{equation}
+\label{eqn:total_margin_loss}
+	TL = \sum_{k = 1}^{n} L_{k} + \alpha RL
+\end{equation}
