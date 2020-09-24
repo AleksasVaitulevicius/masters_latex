@@ -2143,16 +2143,25 @@
     <bcf:citekey order="13">prevWShockGraph</bcf:citekey>
     <bcf:citekey order="14">prevWSimMet</bcf:citekey>
     <bcf:citekey order="15">cnnExp1</bcf:citekey>
-    <bcf:citekey order="16">rosenPerc</bcf:citekey>
-    <bcf:citekey order="17">feedbackAlg</bcf:citekey>
-    <bcf:citekey order="18">initNN</bcf:citekey>
-    <bcf:citekey order="19">deepNN</bcf:citekey>
-    <bcf:citekey order="20">adam</bcf:citekey>
-    <bcf:citekey order="21">adam</bcf:citekey>
+    <bcf:citekey order="16">cnnExp2</bcf:citekey>
+    <bcf:citekey order="17">cnnExp2</bcf:citekey>
+    <bcf:citekey order="18">rosenPerc</bcf:citekey>
+    <bcf:citekey order="19">feedbackAlg</bcf:citekey>
+    <bcf:citekey order="20">initNN</bcf:citekey>
+    <bcf:citekey order="21">deepNN</bcf:citekey>
     <bcf:citekey order="22">adam</bcf:citekey>
     <bcf:citekey order="23">adam</bcf:citekey>
-    <bcf:citekey order="24">cnn</bcf:citekey>
-    <bcf:citekey order="25">capsNet</bcf:citekey>
+    <bcf:citekey order="24">adam</bcf:citekey>
+    <bcf:citekey order="25">adam</bcf:citekey>
+    <bcf:citekey order="26">cnn</bcf:citekey>
+    <bcf:citekey order="27">cnnExp1</bcf:citekey>
+    <bcf:citekey order="28">cnnExp1</bcf:citekey>
+    <bcf:citekey order="29">cnnExp1</bcf:citekey>
+    <bcf:citekey order="30">vggM</bcf:citekey>
+    <bcf:citekey order="31">cnnExp2</bcf:citekey>
+    <bcf:citekey order="32">cnnExp2</bcf:citekey>
+    <bcf:citekey order="33">vgg11</bcf:citekey>
+    <bcf:citekey order="34">capsNet</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

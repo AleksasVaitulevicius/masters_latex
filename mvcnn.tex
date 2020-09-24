@@ -1,7 +1,12 @@
 \subsubsection{Daugiavaizdis konvoliucinis neuroninis tinklas}
 
-% kas yra mvcnn  in general
-% kokia architektura buvo naudota tyrime
-% naudoti sv cnn - vggnet11
+Daugiavaizdis konvoliucinis neuroninis tinklas yra aprašytas darbe \cite{cnnExp1}. Daugiavaizdis konvoliucinis neuroninis tinklas - tai konvoliucinis neuroninis tinklas, turintis vieną vaizdų sujungimo sluoksnį (angl. view pooling layer). Vaizdų sujungimo sluoksnis - tai sluoksnis, kuriame kiekvieno duomenų rinkinio požymių žemėlapių rinkiniai, vadinami vaizdais, yra apjungiami. Vaizdų apjungimas yra atliekamas padalinant visus vaizdus į grupes su nurodytu tuo pačiu dydžiu, ir išsirenkant iš kiekvienos grupės po tiksliausią požymių žemėlapių rinkinį.
 
-% Note: gali buti kad reiks daugiau poskyriu
+Daugiavaizdžio konvoliucinio neuroninio tinklo apmokymas vyksta dviejais etapais. Pirmasis etapas yra pasirinkto konvoliucinio neuroninio tinklo apmokymas. Tada antrasis etapas yra vaizdų apjungimo sluoksnio įterpimas ir apmokymo pratęsimas. Šis sluoksnis padalina apmokytą konvoliucinį neuroninį tinklą į du tinklus $C_1$ ir $C_2$. Tęsiant apmokymą, kiekviena 2D nuotrauka atskirai pereis $C_1$ tinklą. Tada vaizdų apjungimo sluoksnyje šios nuotraukos bus apjungiamos. Pabaigoje vaizdų apjungimo sluoksnio rezultatas pereis tinklą $C_2$.
+
+% siulau iterpt paveiksleli
+
+Darbo \cite{cnnExp1} autoriai teigia, kad teoriškai vaizdų apjungimo sluoksnį galima įterpti į bet kurią apmokyto konvoliucinio tinklo vietą. Tačiau šiame darbe atlikti tyrimai parodė, kad didžiausias tikslumas yra pasiekiamas įterpus šį sluoksni šalia paskutinio konvoliucijos sluoksnio.
+
+% naudoti sv cnn - vggnet11
+Darbe \cite{cnnExp1} yra naudojama VGG-M architektūra, kuri yra aprašyta darbe \cite{vggM}. Tačiau darbe \cite{cnnExp2} yra pasirinkta VGG-11 architektūra ir darbe \cite{cnnExp2} atliktas tyrimas parodė, kad ši konfigūracija yra šiek tiek pranašesnė. VGG-11 architektūra yra aprašyta darbe \cite{vgg11}.

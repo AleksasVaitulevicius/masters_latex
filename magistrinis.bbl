@@ -49,6 +49,46 @@
       \field{title}{A similarity-based aspect-graph approach to 3D object recognition}
       \field{year}{2004}
     \endentry
+    \entry{vggM}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=b043babab4dca1e4c97480409abc458e}{%
+           family={Chatfield},
+           familyi={C\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5b5149059c2dab05b9a3f65f48c53618}{%
+           family={Simonyan},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=0ec8712a7d032edd8ddc33c250c0784f}{%
+           family={Vedaldi},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e77fd9dd5d9af3c798867760f8828744}{%
+           family={Zisserman},
+           familyi={Z\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de390c0f333ae56ac166fb1bd7725177}
+      \strng{fullhash}{de390c0f333ae56ac166fb1bd7725177}
+      \strng{bibnamehash}{de390c0f333ae56ac166fb1bd7725177}
+      \strng{authorbibnamehash}{de390c0f333ae56ac166fb1bd7725177}
+      \strng{authornamehash}{de390c0f333ae56ac166fb1bd7725177}
+      \strng{authorfullhash}{de390c0f333ae56ac166fb1bd7725177}
+      \field{labelalpha}{CSV\textsuperscript {+}14}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/1405.3531.pdf}}
+      \field{langid}{english}
+      \field{note}{441 KB, accessed 2020-09-24.}
+      \field{title}{Return of the devil in the details: Delving deep into convolutional nets}
+      \field{year}{2014}
+    \endentry
     \entry{prevWLightFld}{misc}{}
       \name{author}{4}{}{%
         {{hash=80489b75bcde120c9f335f4995d789c2}{%
@@ -231,31 +271,6 @@
       \field{note}{5530 KB, accessed 2020-09-14.}
       \field{title}{Backpropagation Applied to Handwritten Zip Code Recognition}
       \field{year}{1989}
-    \endentry
-    \entry{cnnExp2}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=6d0811bf8221745aee167eb9aa9f8069}{%
-           family={Massa},
-           familyi={M\bibinitperiod},
-           given={F.\bibnamedelimi Vitor\bibnamedelima Suzano},
-           giveni={F\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-      }
-      \strng{namehash}{6d0811bf8221745aee167eb9aa9f8069}
-      \strng{fullhash}{6d0811bf8221745aee167eb9aa9f8069}
-      \strng{bibnamehash}{6d0811bf8221745aee167eb9aa9f8069}
-      \strng{authorbibnamehash}{6d0811bf8221745aee167eb9aa9f8069}
-      \strng{authornamehash}{6d0811bf8221745aee167eb9aa9f8069}
-      \strng{authorfullhash}{6d0811bf8221745aee167eb9aa9f8069}
-      \field{labelalpha}{Mas18}
-      \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://pastel.archives-ouvertes.fr/tel-01762533/document}}
-      \field{langid}{english}
-      \field{note}{7.917 KB, accessed 2020-05-23.}
-      \field{title}{Relating images and 3D models with convolutional neural networks}
-      \field{year}{2018}
     \endentry
     \entry{capsCNN}{misc}{}
       \name{author}{2}{}{%
@@ -451,6 +466,46 @@
       \field{title}{Dynamic Routing Between Capsules}
       \field{year}{2017}
     \endentry
+    \entry{cnnExp2}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=64ad59df020f368330529579cd385474}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={J.C.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cc42999e4a2ef4bdc5d8c63c04cd03ac}{%
+           family={Gadelha},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=95c40ddfdd2cb0ac5a1ef74bb71692f3}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b1fb544937854da3ec8ec4f8109e846d}{%
+           family={Maji},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d716a5ad789dc6c0cab66aba9e5c27ce}
+      \strng{fullhash}{d716a5ad789dc6c0cab66aba9e5c27ce}
+      \strng{bibnamehash}{d716a5ad789dc6c0cab66aba9e5c27ce}
+      \strng{authorbibnamehash}{d716a5ad789dc6c0cab66aba9e5c27ce}
+      \strng{authornamehash}{d716a5ad789dc6c0cab66aba9e5c27ce}
+      \strng{authorfullhash}{d716a5ad789dc6c0cab66aba9e5c27ce}
+      \field{labelalpha}{SGW\textsuperscript {+}18}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://openaccess.thecvf.com/content_ECCVW_2018/papers/11131/Su_A_Deeper_Look_at_3D_Shape_Classifiers_ECCVW_2018_paper.pdf}}
+      \field{langid}{english}
+      \field{note}{1.658 KB, accessed 2020-09-24.}
+      \field{title}{A Deeper Look at 3D Shape Classifiers}
+      \field{year}{2018}
+    \endentry
     \entry{cnnExp1}{misc}{}
       \name{author}{4}{}{%
         {{hash=6e01ea27993d7bf118b61b083fcf92ff}{%
@@ -490,6 +545,36 @@
       \field{note}{1.439 KB, accessed 2020-05-23.}
       \field{title}{Multi-view Convolutional Neural Networks for 3D Shape Recognition}
       \field{year}{2015}
+    \endentry
+    \entry{vgg11}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=5b5149059c2dab05b9a3f65f48c53618}{%
+           family={Simonyan},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e77fd9dd5d9af3c798867760f8828744}{%
+           family={Zisserman},
+           familyi={Z\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{237002a7525c88b3d398eb2b8869e1ab}
+      \strng{fullhash}{237002a7525c88b3d398eb2b8869e1ab}
+      \strng{bibnamehash}{237002a7525c88b3d398eb2b8869e1ab}
+      \strng{authorbibnamehash}{237002a7525c88b3d398eb2b8869e1ab}
+      \strng{authornamehash}{237002a7525c88b3d398eb2b8869e1ab}
+      \strng{authorfullhash}{237002a7525c88b3d398eb2b8869e1ab}
+      \field{labelalpha}{SZ14}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/1409.1556.pdf}}
+      \field{langid}{english}
+      \field{note}{196 KB, accessed 2020-09-24.}
+      \field{title}{Very deep convolutional networks for large-scale image recognition}
+      \field{year}{2014}
     \endentry
     \entry{dbnExp}{misc}{}
       \name{author}{7}{}{%
