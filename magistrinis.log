@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  25 SEP 2020 21:48
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  1 OCT 2020 00:13
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1216,11 +1216,16 @@ LaTeX Warning: Reference `label' on page 21 undefined on input line 5.
 
 [21]) [22] [23
 
-] (experiments.tex) [24
+] (research_data.tex) (experiments.tex) [24
 
-] (conclusion.tex) [25
+] (conclusion.tex)
+[25
 
 ]
+
+Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
 
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
@@ -1355,10 +1360,10 @@ Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26632 strings out of 427272
- 528143 string characters out of 3146596
- 1063319 words of memory out of 3000000
- 30817 multiletter control sequences out of 15000+200000
+ 26638 strings out of 427272
+ 528289 string characters out of 3146596
+ 1064369 words of memory out of 3000000
+ 30820 multiletter control sequences out of 15000+200000
  546857 words of font info for 100 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,17n,104p,1516b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s

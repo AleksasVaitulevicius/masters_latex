@@ -332,6 +332,28 @@
       \field{title}{Visual Learning and Recognition of 3-D Objects from Appearance}
       \field{year}{1995}
     \endentry
+    \entry{dataRepo}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9acc853ae0ef58951da5c15a3497448c}{%
+           family={ModelNet},
+           familyi={M\bibinitperiod},
+           given={The\bibnamedelima Princeton},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9acc853ae0ef58951da5c15a3497448c}
+      \strng{fullhash}{9acc853ae0ef58951da5c15a3497448c}
+      \strng{bibnamehash}{9acc853ae0ef58951da5c15a3497448c}
+      \strng{authorbibnamehash}{9acc853ae0ef58951da5c15a3497448c}
+      \strng{authornamehash}{9acc853ae0ef58951da5c15a3497448c}
+      \strng{authorfullhash}{9acc853ae0ef58951da5c15a3497448c}
+      \field{labelalpha}{Mod}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{howpublished}{\url{http://modelnet.cs.princeton.edu}}
+      \field{langid}{english}
+      \field{note}{accessed 2020-09-27.}
+    \endentry
     \entry{prevWShockGraph}{misc}{}
       \name{author}{5}{}{%
         {{hash=57ef2ae2f8835f57f99d637a0cdb8e01}{%
