@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  1 OCT 2020 00:13
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  2 OCT 2020 23:29
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1201,7 +1201,7 @@ File: img/sparsity.png Graphic file (type bmp)
 <img/sparsity.png>
 ) (cnn_layers.tex [16]
 
-LaTeX Warning: Command \textasciitilde invalid in math mode on input line 16.
+LaTeX Warning: Command \textasciitilde invalid in math mode on input line 15.
 
 [17] [18]) (mvcnn.tex
 File: img/mvcnn.png Graphic file (type bmp)
@@ -1210,16 +1210,12 @@ File: img/mvcnn.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (capsnet.tex [20]
+) (capsnet.tex [20] [21]) [22] [23
 
-LaTeX Warning: Reference `label' on page 21 undefined on input line 5.
+] (research_data.tex) (experiments.tex)
+[24
 
-[21]) [22] [23
-
-] (research_data.tex) (experiments.tex) [24
-
-] (conclusion.tex)
-[25
+] (conclusion.tex) [25
 
 ]
 
@@ -1352,20 +1348,17 @@ braces):
  [30
 
 ] (magistrinis.aux)
-
-LaTeX Warning: There were undefined references.
-
 Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 \openout1 = `magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26638 strings out of 427272
- 528289 string characters out of 3146596
+ 26637 strings out of 427272
+ 528282 string characters out of 3146596
  1064369 words of memory out of 3000000
- 30820 multiletter control sequences out of 15000+200000
+ 30819 multiletter control sequences out of 15000+200000
  546857 words of font info for 100 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,17n,104p,1516b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,17n,104p,1564b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on magistrinis.pdf (31 pages).
