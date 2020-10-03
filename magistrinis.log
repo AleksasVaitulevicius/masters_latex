@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  2 OCT 2020 23:29
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  3 OCT 2020 21:09
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1192,11 +1192,11 @@ Package biblatex Info: Reference segment=0 on input line 30.
 ]) (perceptron.tex
 File: img/perceptron.png Graphic file (type bmp)
 <img/perceptron.png>
- [8] [9]) (ann.tex
+ [8] [9]) (ann.tex [10]
 File: img/neural_network.png Graphic file (type bmp)
 <img/neural_network.png>
- [10] [11]) (deep_learning.tex [12]
-[13]) (convolution.tex [14] [15]
+ [11]) (deep_learning.tex [12]
+[13]) [14] (convolution.tex [15]
 File: img/sparsity.png Graphic file (type bmp)
 <img/sparsity.png>
 ) (cnn_layers.tex [16]
