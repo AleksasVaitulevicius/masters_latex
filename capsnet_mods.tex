@@ -1,0 +1,40 @@
+
+\subsection{Tiriamo kapsulinio neuroninio tinklo architektūra}
+
+Šiame darbe viena iš tiriamų kapsulinio neuroninio tinklo architektūrų yra aprašyta darbe \cite{capsNet}. Šios architektūros konfigūracija yra atvaizduota lentelėje \ref{tbl:capsNet}. Paskutinis sluoksnis $ed$ yra skirtas konvertuoti paskutinio kapsulinio sluoksnio išėjimų vektorius į skaliarines reikšmes, kurias lengviau interpretuoti kaip tikimybes, kad paveikslėlyje pavaizduotas 3D objekto modelis priklauso vienai iš klasių. Konvertavimas vyksta apskaičiuojant euklidinį atstumą nuo nulinio taško iki vektoriaus taško.
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|}
+\hline
+Sluoksnio žymėjimas & Sluoksnio tipas                     & Parametrai                                                                                                                                                 \\ \hline
+                    & Įėjimo sluoksnis                    & Įėjimo matmenys = 150x150 RGB matrica                                                                                                                      \\ \hline
+conv1               & Konvoliucijos sluoksnis             & \begin{tabular}[c]{@{}l@{}}Branduolių skaičius = 256\\ Branduolių dydis = 9x9\\ Lango žingsnis  = 1\end{tabular}                                           \\ \hline
+relu1               & Netiesiškumo ir ištaisymo sluoksnis & aktyvacijos funkcija - ReLu                                                                                                                                 \\ \hline
+conv2               & Konvoliucijos sluoksnis             & \begin{tabular}[c]{@{}l@{}}Branduolių skaičius = 256\\ Branduolių dydis = 9x9\\ Lango žingsnis  = 1\end{tabular}                                           \\ \hline
+pc                  & Pirminių kapsulių sluoksnis         & Kapsulių išėjimų vektorių dimensijų skaičius = 8                                                                                                           \\ \hline
+c                   & Kapsulinis sluoksnis                & \begin{tabular}[c]{@{}l@{}}Kapsulių skaičius = 40\\ Kapsulių išėjimų vektorių dimensijų skaičius = 16\\ Maršrutizavimo iteracijų skaičius = 3\end{tabular} \\ \hline
+ed                  & Euklidinis atstumas                 &                                                                                                                                                            \\ \hline
+\end{tabular}
+\caption{Tiriamo kapsulinio neuroninio tinklo architektūra}
+\label{tbl:capsNet}
+\end{table}
+
+Šio tinklo naudojamas rekonstrukcijos tinklas yra atvaizduotas lentelėje \ref{tbl:capsNetRecon}. Šio tinklo įėjimo sluoksnis yra kapsulinio neuroninio tinklo sluoksnis $c$. Pirmasis rekonstrukcijos tinklo sluoksnis $r\_m$ apmokymo metu palieka tik kapsulės, kuri reprezentuoja klasę, kuriai priklauso paveikslėlyje pavaizduotas 3D modelis, išėjimo vektorių, visos kitos reikšmės yra padauginamos iš 0. Klasifikavimo atveju, šis sluoksnis palieka kapsulės išėjimo vektorių, kurio euklidinis atstumas nuo nulinio taško yra didžiausias, visos kitos reikšmės taip pat yra padauginamos iš 0. Šio sluoksnio išėjimas yra transformuota kapsulių išėjimų vektorių aibė į vieną vektorių. Sluoksnio $r\_t$ išėjimas yra rekonstruota 2D nuotrauka.
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|}
+\hline
+Sluoksnio žymėjimas & Sluoksnio tipas            & Parametrai                                                                                           \\ \hline
+r\_m                & Maskavimo sluoksnis        & Išėjimo matmenys = 640                                                                               \\ \hline
+r\_fc               & Pilnai sujungtas sluoksnis & \begin{tabular}[c]{@{}l@{}}Neuronų skaičius = 512\\ Aktyvacijos funkcija - ReLu\end{tabular}         \\ \hline
+r\_fc               & Pilnai sujungtas sluoksnis & \begin{tabular}[c]{@{}l@{}}Neuronų skaičius = 1024\\ Aktyvacijos funkcija - ReLu\end{tabular}        \\ \hline
+r\_fc               & Pilnai sujungtas sluoksnis & \begin{tabular}[c]{@{}l@{}}Neuronų skaičius = 22500\\ Aktyvacijos funkcija - sigmoidinė\end{tabular} \\ \hline
+r\_t                & Transformacijos sluoksnis  & Išėjimo matmenys = 150x150 RGB matrica                                                               \\ \hline
+\end{tabular}
+\caption{Tiriamo kapsulinio neuroninio tinklo rekonstrukcijos tinklo architektūra}
+\label{tbl:capsNetRecon}
+\end{table}
+
+\subsection{Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra}
+
+Taip pat šiame darbe buvo nuspręsta pritaikyti daugiavaizdį sluoksnį, kuris darbe \cite{cnnExp1} yra naudojamas konvoliuciniame neuroniniame tinkle, kapsuliniui neuroniniui tinklui. Šis sluoksnis yra modifikuotas, kad sluoksnio įėjimas, vietoje požymių žemėlapių rinkinių, būtų kapsulių išėjimo vektorių rinkiniai. Pirmame etape yra naudojama architektūra atvaizduota lentelėje \ref{tbl:capsNet}. Antrame etape daugiavaizdis sluoksnis yra įterpiamas po sluoksnio $ed$.
