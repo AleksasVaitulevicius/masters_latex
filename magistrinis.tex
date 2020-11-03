@@ -30,19 +30,22 @@
 \begin{document}
 \maketitle
 
-\sectionnonumnocontent{Santrauka}
-Glaustai aprašomas darbo turinys, pristatoma nagrinėta problema ir padarytos
-išvados. Santraukos apimtis ne didesnė nei 0,5 puslapio. Santraukų gale
-nurodomi darbo raktiniai žodžiai. 
+% \sectionnonumnocontent{Santrauka}
+% Glaustai aprašomas darbo turinys, pristatoma nagrinėta problema ir padarytos
+% išvados. Santraukos apimtis ne didesnė nei 0,5 puslapio. Santraukų gale
+% nurodomi darbo raktiniai žodžiai. 
 % Nurodomi iki 5 svarbiausių temos raktinių žodžių (terminų).
 % Vienas terminas gali susidėti iš kelių žodžių.
-\raktiniaizodziai{Klasifikavimo uždavinys, 3D objektai, dirbtiniai neuroniniai tinklai, kapsuliniai neuroniniai tinklai, tiesioginio sklidimo neuroniniai tinklai}   
+% \raktiniaizodziai{Klasifikavimo uždavinys, 3D objektai, dirbtiniai neuroniniai tinklai, kapsuliniai neuroniniai tinklai, tiesioginio sklidimo neuroniniai tinklai}   
 
-\sectionnonumnocontent{Summary}
-Santrauka anglų kalba.
-\keywords{classification, 3D objects, artificial neural networks, CapsNet neural networks, convolutional neural networks}
+% \sectionnonumnocontent{Summary}
+% Santrauka anglų kalba.
+% \keywords{classification, 3D objects, artificial neural networks, CapsNet neural networks, convolutional neural networks}
 
 \tableofcontents
+
+\sectionnonum{Santrumpos ir Terminai}
+\input{definitions.tex}
 
 \sectionnonum{Įvadas}
 \input{intro.tex}
@@ -90,31 +93,10 @@ akcentuojamos naujovės).
 % bibliografiniai aprašai (šiuo punktu pasirūpina LaTeX). Aprašai pateikiami
 % netransliteruoti.
 
-% \sectionnonum{Sąvokų apibrėžimai}
-\sectionnonum{Santrumpos}
-Sąvokų apibrėžimai ir santrumpų sąrašas sudaromas tada, kai darbo tekste
-vartojami specialūs terminai, reikalaujantys paaiškinimo, ir rečiau sutinkamos
-santrumpos.
-
 \appendix  % Priedai
 % Prieduose gali būti pateikiama pagalbinė, ypač darbo autoriaus savarankiškai
 % parengta, medžiaga. Savarankiški priedai gali būti pateikiami kompiuterio
 % diskelyje ar kompaktiniame diske. Priedai taip pat vadinami ir numeruojami.
 % Tekstas su priedais siejamas nuorodomis.
-
-\section{Eksperimentinio palyginimo rezultatai}
-% tablesgenerator.com - converts calculators (e.g. excel) tables to LaTeX
-\begin{table}[H]\footnotesize
-  \centering
-  \caption{Lentelės pavyzdys}
-  {\begin{tabular}{|l|c|c|} \hline
-    Algoritmas & $\bar{x}$ & $\sigma^{2}$ \\
-    \hline
-    Algoritmas A  & 1.6335    & 0.5584       \\
-    Algoritmas B  & 1.7395    & 0.5647       \\
-    \hline
-  \end{tabular}}
-  \label{tab:table example}
-\end{table}
 
 \end{document}
