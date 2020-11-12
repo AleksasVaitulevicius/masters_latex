@@ -2,13 +2,15 @@
 \defcounter {refsection}{0}\relax 
 \selectlanguage *{lithuanian}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{Santrumpos ir Terminai}{2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{Įvadas}{4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.}Literatūros analizė}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.}3D objektų atpažinimo iš 2D nuotraukų uždavinys}{7}%
+\contentsline {subsection}{\numberline {1.1.}3D objektų klasifikavimo naudojantis 2D nuotraukomis uždavinys}{7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.}3D objektų atpažinimo iš 2D nuotraukų uždavinio sprendinių pavyzdžiai}{7}%
+\contentsline {subsection}{\numberline {1.2.}3D objektų klasifikavimo naudojantis 2D nuotraukomis uždavinio sprendinių pavyzdžiai}{7}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.3.}Dirbtinių neuroninių tinklų bendrieji principai}{8}%
 \defcounter {refsection}{0}\relax 
@@ -30,25 +32,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.}Kapsulinių neuroninių tinklų modifikacijos ir parametrai}{23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.}Eksperimentiniai tyrimai}{24}%
+\contentsline {subsection}{\numberline {2.1.}Tiriamo kapsulinio neuroninio tinklo architektūra}{23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.}Tyrimams naudoti duomenys}{24}%
+\contentsline {subsection}{\numberline {2.2.}Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra}{23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Kapsulinių neuroninių tinklų modifikacijų ir parametrų eksperimentiniai tyrimai}{24}%
+\contentsline {section}{\numberline {3.}Eksperimentiniai tyrimai}{25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.}Kapsulinių ir daugiavaizdžių konvoliucinių neuroninių tinklų eksperimentiniai tyrimai}{24}%
+\contentsline {subsection}{\numberline {3.1.}Tyrimams naudoti duomenys}{25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{25}%
+\contentsline {subsection}{\numberline {3.2.}Tyrimų aprašymai}{25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{26}%
+\contentsline {section}{Rezultatai ir išvados}{26}%
 \defcounter {refsection}{0}\relax 
-\bgroup 
-\defcounter {refsection}{0}\relax 
-\selectlanguage *{english}
-\defcounter {refsection}{0}\relax 
-\egroup 
-\defcounter {refsection}{0}\relax 
-\selectlanguage *{lithuanian}
+\contentsline {section}{Literatūra}{27}%
 \defcounter {refsection}{0}\relax 
 \bgroup 
 \defcounter {refsection}{0}\relax 
@@ -186,10 +182,12 @@
 \defcounter {refsection}{0}\relax 
 \selectlanguage *{lithuanian}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos}{28}%
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
 \defcounter {refsection}{0}\relax 
 \def \@dotsep {1000}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Priedas Nr.1}{}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Priedas Nr.2}{}
