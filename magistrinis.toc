@@ -36,7 +36,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.}Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų sujungimo sluoksniu}{24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.}Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų kapsuliniu sluoksniu ir 2 etapų apmokymu}{25}%
+\contentsline {subsection}{\numberline {2.3.}Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų kapsuliniu sluoksniu}{25}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.}Eksperimentiniai tyrimai}{26}%
 \defcounter {refsection}{0}\relax 
@@ -44,9 +44,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.}Tyrimų aprašymai}{26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{28}%
+\contentsline {section}{Rezultatai ir išvados}{29}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{29}%
+\contentsline {section}{Literatūra}{30}%
 \defcounter {refsection}{0}\relax 
 \bgroup 
 \defcounter {refsection}{0}\relax 
