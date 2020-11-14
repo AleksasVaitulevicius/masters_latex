@@ -44,9 +44,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.}Tyrimų aprašymai}{26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{29}%
+\contentsline {section}{Rezultatai ir išvados}{30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{30}%
+\contentsline {section}{Literatūra}{31}%
+\defcounter {refsection}{0}\relax 
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
 \defcounter {refsection}{0}\relax 
 \bgroup 
 \defcounter {refsection}{0}\relax 

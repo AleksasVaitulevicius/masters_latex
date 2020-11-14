@@ -19,6 +19,46 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{bayes}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=2511d079391eab5f7e64c8891df7f997}{%
+           family={Bergstra},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=52ec9ddf9e94c4ff69245a3f0f94cee9}{%
+           family={Bardenet},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=419350ebbeb4eba5351469f378dee007}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e2a969ad62e16f7814f1cadceef725b9}{%
+           family={Kegl},
+           familyi={K\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{63c9d8fcdb4405f69aad42f5e2d3f3e0}
+      \strng{fullhash}{63c9d8fcdb4405f69aad42f5e2d3f3e0}
+      \strng{bibnamehash}{63c9d8fcdb4405f69aad42f5e2d3f3e0}
+      \strng{authorbibnamehash}{63c9d8fcdb4405f69aad42f5e2d3f3e0}
+      \strng{authornamehash}{63c9d8fcdb4405f69aad42f5e2d3f3e0}
+      \strng{authorfullhash}{63c9d8fcdb4405f69aad42f5e2d3f3e0}
+      \field{labelalpha}{BBB\textsuperscript {+}14}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://papers.nips.cc/paper/2011/file/86e8f7ab32cfd12577bc2619bc635690-Paper.pdf}}
+      \field{langid}{english}
+      \field{note}{477 KB, accessed 2020-11-13.}
+      \field{title}{Algorithms for Hyper-Parameter Optimization}
+      \field{year}{2014}
+    \endentry
     \entry{prevWSimMet}{misc}{}
       \name{author}{2}{}{%
         {{hash=d956ed24f759e6ff5a0b4edcb20a74d0}{%
