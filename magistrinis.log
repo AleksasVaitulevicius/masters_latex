@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  14 NOV 2020 10:28
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  15 NOV 2020 13:37
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1245,24 +1245,24 @@ Overfull \hbox (3.40157pt too wide) in paragraph at lines 25--34
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 8.
+               Default added (so using `tbp') on input line 9.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 30.
 
-File: img/validated.png Graphic file (type bmp)
-<img/validated.png>
+File: img/trained.png Graphic file (type bmp)
+<img/trained.png>
 
-Overfull \hbox (36.52827pt too wide) in paragraph at lines 54--57
+Overfull \hbox (36.52827pt too wide) in paragraph at lines 53--56
  [][] 
  []
 
 [27]
-File: img/trained.png Graphic file (type bmp)
-<img/trained.png>
+File: img/validated.png Graphic file (type bmp)
+<img/validated.png>
 
-Overfull \hbox (36.52827pt too wide) in paragraph at lines 63--66
+Overfull \hbox (36.52827pt too wide) in paragraph at lines 62--65
  [][] 
  []
 
@@ -1274,7 +1274,7 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 89--89
+Underfull \hbox (badness 2245) in paragraph at lines 85--85
 \TU/texgyretermes(0)/m/n/12 optimization. $[][][][][] [] [] [] [][][][][][] [] 
 [][][][] [] [][] [] [][][][][] [] [][][][] [] [][][][] []
  []
@@ -1409,10 +1409,10 @@ Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 Here is how much of TeX's memory you used:
  26650 strings out of 427272
  528533 string characters out of 3146596
- 1066451 words of memory out of 3000000
+ 1066483 words of memory out of 3000000
  30830 multiletter control sequences out of 15000+200000
  545288 words of font info for 93 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,17n,104p,1567b,7729s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,17n,104p,1567b,7731s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on magistrinis.pdf (33 pages).
