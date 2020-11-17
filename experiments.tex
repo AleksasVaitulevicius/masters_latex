@@ -4,7 +4,7 @@
 Šiame magistro baigiamame darbe bandoma optimizuoti kapsulinių neuroninių tinklų modifikacijų konfigūracijas. Pirmiausia bandoma optimizuoti šiuos tinklus naudojantis Bajeso hiperparametrų optimizavimo algoritmu, kuris yra aprašytas darbe \cite{bayes}. Toliau bandomos kitos konfigūracijos nei konfigūracijos aprašytos darbe \cite{capsNet}. Tačiau, dėl Kaggle sistemos apribojimų, nei vienas metodas neaptiko geresnių kapsulinių neuroninių tinklų modifikacijų konfigūracijų. Taip pat bandoma 
 keisti mokymosi greitį. Tačiau skirtumai tarp rezultatų yra nereikšmingi.
 
-Po kiekvienos epochos yra renkamos tikslumo metrikos: tikslumas klasifikuojant apmokymo duomenis, ši informacija pavaizduota lentelėje \ref{tbl:train} ir grafe \ref{img:train_plot}, ir tikslumas klasifikuojant testavimo duomenis, ši informacija atvaizduota lentelėje \ref{tbl:valid} ir grafe \ref{img:val_plot}. Tikslumas yra teisingai suklasifikuotų įrašų dalis klasifikuotų duomenų aibėje. Lentelių \ref{tbl:train}, \ref{tbl:valid} stulpelio pavaidinimas ir grafų \ref{img:train_plot}, \ref{img:val_plot} kreivių pavadinimas mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas, capsnet - kapsulinio neuroninio tinklo tikslumas, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu tikslumas, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais tikslumas. Brūkšninė vertikali linija grafuose \ref{img:train_plot} ir \ref{img:val_plot} nurodo antrojo apmokymo etapo pirmąją epochą.
+Po kiekvienos epochos yra renkamos tikslumo metrikos: tikslumas klasifikuojant apmokymo duomenis, ši informacija pavaizduota lentelėje \ref{tbl:train} ir grafe \ref{img:train_plot}, ir tikslumas klasifikuojant testavimo duomenis, ši informacija atvaizduota lentelėje \ref{tbl:valid} ir grafe \ref{img:val_plot}. Tikslumas yra teisingai suklasifikuotų įrašų dalis klasifikuotų duomenų aibėje. Lentelių \ref{tbl:train}, \ref{tbl:valid} stulpelio pavaidinimas ir grafų \ref{img:train_plot}, \ref{img:val_plot} kreivės pavadinimas mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas, capsnet - kapsulinio neuroninio tinklo tikslumas, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu tikslumas, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais tikslumas. Brūkšninė vertikali linija grafuose \ref{img:train_plot} ir \ref{img:val_plot} nurodo antrojo apmokymo etapo pirmąją epochą.
 
 \begin{table}[]
 \begin{tabular}{l|l|l|l|l|l}
@@ -65,3 +65,69 @@ Po kiekvienos epochos yra renkamos tikslumo metrikos: tikslumas klasifikuojant a
 	}
 	\label{img:val_plot}
 \end{figure}
+
+Darbe \cite{capsNet} yra teigiama, kad kapsuliniai neuroniniai tinklai reikalauja mažesnės apmokymo duomenų imties nei konvoliuciniai neuroniniai tinklai. Todėl šiame magistro baigiamame darbe yra atliekami tyrimai su tyrimų duomenų poaibiais. Tiriami tik daugiavaizdis neuroninis tinklas ir daugiavaizdis kapsulinis neuroninis tinklas su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu. Lentelėje \ref{tbl:less_datav1} ir grafe \ref{img:less_datav1} pavaizduoti tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4.904 3D objektų modelių, ir testavimo 1.232. Lentelėje \ref{tbl:less_datav2} ir grafe \ref{img:less_datav2} pavaizduoti tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3.264 3D objektų modelių, ir testavimo 2.464. Šių lentelių stulpelio pavadinimas ir grafų kreivės pavadinimas mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis. Brūkšninė vertikali linija grafuose nurodo antrojo apmokymo etapo pirmąją epochą.
+
+\begin{table}[]
+	\begin{tabular}{l|l|l|l|l}
+		epocha &     mvcnn & val\_mvcnn & mv\_cap\_capsnet & val\_mv\_cap\_capsnet \\ \hline
+		0 &  0.593971 &  0.751759 &       0.063825 &           0.040584 \\
+		1 &  0.821098 &  0.792073 &       0.218597 &           0.532468 \\
+		2 &  0.875204 &  0.815679 &       0.706362 &           0.741883 \\
+		3 &  0.910277 &  0.824067 &       0.813418 &           0.801136 \\
+		4 &  0.930057 &  0.818926 &       0.878059 &           0.810065 \\
+		5 &  0.921901 &  0.836039 &       0.910481 &           0.826299 \\
+		6 &  0.928018 &  0.846591 &       0.930465 &           0.827922 \\
+		7 &  0.948409 &  0.862013 &       0.944127 &           0.831169 \\
+		8 &  0.955139 &  0.867695 &       0.955546 &           0.828734 \\
+		9 &  0.960644 &  0.847403 &       0.964111 &           0.831981 \\
+		
+	\end{tabular}
+	\caption{
+		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4.904 3D objektų modelių, ir testavimo 1.232, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis.
+	}
+	\label{tbl:less_datav1}
+\end{table}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/less_data_v1.png}
+	\caption{
+		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4.904 3D objektų modelių, ir testavimo 1.232, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis.	Brūkšninė vertikali linija grafuose nurodo antrojo apmokymo etapo pirmąją epochą.
+	}
+	\label{img:less_datav1}
+\end{figure}
+
+\begin{table}[]
+	\begin{tabular}{l|l|l|l|l}
+		epocha &     mvcnn & val\_mvcnn & mv\_cap\_capsnet & val\_mv\_cap\_capsnet \\ \hline
+		0 &  0.511489 &  0.705966 &       0.065257 &           0.040584 \\
+		1 &  0.774510 &  0.766504 &       0.379902 &           0.570617 \\
+		2 &  0.850158 &  0.798262 &       0.726716 &           0.696429 \\
+		3 &  0.889476 &  0.804958 &       0.817402 &           0.739042 \\
+		4 &  0.915799 &  0.812737 &       0.874387 &           0.762175 \\
+		5 &  0.909620 &  0.832386 &       0.906556 &           0.772321 \\
+		6 &  0.915441 &  0.808036 &       0.929228 &           0.781250 \\
+		7 &  0.935662 &  0.821834 &       0.946385 &           0.806818 \\
+		8 &  0.942708 &  0.851461 &       0.957414 &           0.808442 \\
+		9 &  0.950674 &  0.852679 &       0.965074 &           0.816153 \\
+		
+	\end{tabular}
+	\caption{
+		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3.264 3D objektų modelių, ir testavimo 2.464, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis.
+	}
+	\label{tbl:less_datav2}
+\end{table}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{img/less_data_v2.png}
+	\caption{
+		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3.264 3D objektų modelių, ir testavimo 2.464, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis.	Brūkšninė vertikali linija grafuose nurodo antrojo apmokymo etapo pirmąją epochą.
+	}
+	\label{img:less_datav2}
+\end{figure}
+
+

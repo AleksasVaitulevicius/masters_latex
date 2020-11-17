@@ -2185,6 +2185,7 @@
     <bcf:citekey order="49">dbnExp</bcf:citekey>
     <bcf:citekey order="50">bayes</bcf:citekey>
     <bcf:citekey order="51">capsNet</bcf:citekey>
+    <bcf:citekey order="52">capsNet</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
