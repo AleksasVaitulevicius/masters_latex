@@ -9,11 +9,11 @@
 	\label{img:perceptron}
 \end{figure}
 
-Formulė ((\ref{eqn:activ_arg}) yra aktyvacijos funkcijos argumentas.
+Formulė (\ref{eqn:activ_arg}) yra aktyvacijos funkcijos argumentas.
 
 \begin{equation}
 	\label{eqn:activ_arg}
-	a = \sum_{k = 1}^{p} w_{k}x_k
+	a = \sum_{k = 0}^{p} w_{k}x_k
 \end{equation}
 
 Dažniausiai perceptronui yra naudojamos šios aktyvacijos funkcijos: slenkstinė (angl. unit step) (\ref{eqn:unitStep}), sigmoidinė (angl. sigmoid) (\ref{eqn:sigmoid}), gabalais tiesinė (angl. piecewise linear) (\ref{eqn:pieceLinear}), Gauso (angl. Gaussian) (\ref{eqn:gaussian}) ir tiesinė (angl. linear) (\ref{eqn:linear}), kur $\beta$, $m$, $a_{min}$, $a_{max}$ yra konstantos priklausančios realiųjų skaičių aibei bei $a_{min} < a_{max}$.
@@ -22,14 +22,14 @@ Dažniausiai perceptronui yra naudojamos šios aktyvacijos funkcijos: slenkstin�
 	\label{eqn:unitStep}
 	f(a) =
 	\begin{cases}
-		0, & \mbox{jei } \beta > a \\
-		1, & \mbox{jei } \beta \leq a
+		0, & \mbox{jei } 0 > a \\
+		1, & \mbox{jei } 0 \leq a
 	\end{cases}
 \end{equation}
 
 \begin{equation}
 	\label{eqn:sigmoid}
-	f(a) = \dfrac{1}{1 + \exp^{-\beta }}
+	f(a) = \dfrac{1}{1 + \exp^{-a }}
 \end{equation}
 
 \begin{equation}
@@ -52,7 +52,7 @@ Dažniausiai perceptronui yra naudojamos šios aktyvacijos funkcijos: slenkstin�
 	f(a) = ma + b
 \end{equation}
 
-Perceptronas yra skirtas spręsti klasifikavimo uždavinius. Tam kad perceptronas spręstų konkretų klasifikavimo uždavinį, jis turi būti apmokytas. Perceptrono apmokymas yra iteratyvus procesas, kuriame randami svoriai $W = \{w_{0}, w_{1}, w_{2}, ..., w_{n}\}$, su kuriais funkcijos (\ref{eqn:mse}) rezultatas įgyja kiek galima mažiausią reikšmę. Funkcijoje (\ref{eqn:mse}) $y_i$ yra perceptrono i-tasis išėjimas, $t_i$ - i-tojo įėjimo norima klasė ir $n$ - apmokymo duomenų vektorių skaičius.
+Perceptronas yra skirtas spręsti klasifikavimo uždavinius. Tam kad perceptronas spręstų konkretų klasifikavimo uždavinį, jis turi būti apmokytas. Perceptrono apmokymas yra iteratyvus procesas, kuriame randami svoriai $W = \{w_{0}, w_{1}, w_{2}, ..., w_{p}\}$, su kuriais funkcijos (\ref{eqn:mse}) rezultatas įgyja kiek galima mažiausią reikšmę. Funkcijoje (\ref{eqn:mse}) $y_i$ yra perceptrono \textit{i}-tasis išėjimas, $t_i$ - \textit{i}-tojo įėjimo norima klasė ir $n$ - apmokymo duomenų vektorių skaičius.
 
 \begin{equation}
 	\label{eqn:mse}
@@ -71,7 +71,7 @@ Apmokymo pradžioje pradiniai svoriai yra parenkami atsitiktinai. Toliau gradien
 	\Delta w_k(t) = - \eta \dfrac{\partial e(w)}{\partial w_k}
 \end{equation}
 % išsivedamas bendras atvejis ------------------------------------------------------------------------------------------------------------------------
-Pakeitus, kai kurių kintamųjų žymėjimą, iš formulės (\ref{eqn:activ_arg}) gaunama formulė (\ref{eqn:activ_arg_per_i}), kur $a_i$ yra i-tojo įėjimo vektoriaus aktyvacijos funkcijos argumentas, $x_{ik}$ yra \textit{i}-tojo įėjimo vektoriaus \textit{k}-atoji komponentė.
+Pritaikius formulę (\ref{eqn:activ_arg}) \textit{i}-tojo įėjimo vektoriaus aktyvacijos funkcijos argumento apskaičiavimui gaunama formulė (\ref{eqn:activ_arg_per_i}), kur $a_i$ yra i-tojo įėjimo vektoriaus aktyvacijos funkcijos argumentas, $x_{ik}$ yra \textit{i}-tojo įėjimo vektoriaus \textit{k}-atoji komponentė.
 
 \begin{equation}
 	\label{eqn:activ_arg_per_i}
