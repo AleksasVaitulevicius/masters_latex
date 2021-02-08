@@ -195,7 +195,7 @@
 
 % Skyriaus pavadinimas, neturintis numerio bei neįeinantis į turinį
 \newcommand{\sectionnonumnocontent}[1]{%
-    \section*{#1}%   Sugadina pirmojo šio tipo skyriaus numeravimą puslapiais
+    \subsection*{#1}%   Sugadina pirmojo šio tipo skyriaus numeravimą puslapiais
 }
 
 \renewcommand\tableofcontents{%
