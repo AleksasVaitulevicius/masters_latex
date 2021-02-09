@@ -568,6 +568,31 @@
       \field{title}{A Deeper Look at 3D Shape Classifiers}
       \field{year}{2018}
     \endentry
+    \entry{survey}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6ac05c3e47f6ad0b0b5e793cc1797f80}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ac05c3e47f6ad0b0b5e793cc1797f80}
+      \strng{fullhash}{6ac05c3e47f6ad0b0b5e793cc1797f80}
+      \strng{bibnamehash}{6ac05c3e47f6ad0b0b5e793cc1797f80}
+      \strng{authorbibnamehash}{6ac05c3e47f6ad0b0b5e793cc1797f80}
+      \strng{authornamehash}{6ac05c3e47f6ad0b0b5e793cc1797f80}
+      \strng{authorfullhash}{6ac05c3e47f6ad0b0b5e793cc1797f80}
+      \field{labelalpha}{She19}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/1905.12683.pdf}}
+      \field{langid}{english}
+      \field{note}{9117 KB, accessed 2021-02-09.}
+      \field{title}{A survey of Object Classification and Detection based on 2D/3D data}
+      \field{year}{2019}
+    \endentry
     \entry{cnnExp1}{misc}{}
       \name{author}{4}{}{%
         {{hash=6e01ea27993d7bf118b61b083fcf92ff}{%
@@ -637,6 +662,41 @@
       \field{note}{196 KB, accessed 2020-09-24.}
       \field{title}{Very deep convolutional networks for large-scale image recognition}
       \field{year}{2014}
+    \endentry
+    \entry{MVGCN}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=3bdb7d28a8ce130c0bff74f4c5ed81af}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=05ed76149e148fca98e6c03495426736}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2d21a4c5b1b7b1da5165b2f8f62e700c}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba152e5f88e945ebfae57d2c441fa12f}
+      \strng{fullhash}{ba152e5f88e945ebfae57d2c441fa12f}
+      \strng{bibnamehash}{ba152e5f88e945ebfae57d2c441fa12f}
+      \strng{authorbibnamehash}{ba152e5f88e945ebfae57d2c441fa12f}
+      \strng{authornamehash}{ba152e5f88e945ebfae57d2c441fa12f}
+      \strng{authorfullhash}{ba152e5f88e945ebfae57d2c441fa12f}
+      \field{labelalpha}{WYS20}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://openaccess.thecvf.com/content_CVPR_2020/papers/Wei_View-GCN_View-Based_Graph_Convolutional_Network_for_3D_Shape_Analysis_CVPR_2020_paper.pdf}}
+      \field{langid}{english}
+      \field{note}{2421 KB, accessed 2021-02-09.}
+      \field{title}{View-GCN: View-based Graph Convolutional Network for 3D Shape Analysis}
+      \field{year}{2020}
     \endentry
     \entry{dbnExp}{misc}{}
       \name{author}{7}{}{%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  8 FEB 2021 20:05
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  9 FEB 2021 19:44
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1205,7 +1205,7 @@ File: img/perceptron.png Graphic file (type bmp)
 File: img/neural_network.png Graphic file (type bmp)
 <img/neural_network.png>
  [13]) (deep_learning.tex [14]
-[15]) [16] (convolution.tex [17]
+[15] [16]) (convolution.tex [17]
 File: img/sparsity.png Graphic file (type bmp)
 <img/sparsity.png>
 ) (cnn_layers.tex [18]
@@ -1219,7 +1219,7 @@ File: img/mvcnn.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (capsnet.tex [22] [23]) [24] (capsnet_mods.tex
+) (capsnet.tex [22] [23] [24]) [25] (capsnet_mods.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 6.
@@ -1238,12 +1238,12 @@ Overfull \hbox (3.40157pt too wide) in paragraph at lines 25--34
 [][] 
  []
 
-[25
+[26
 
-]) [26] (research_data.tex
+]) [27] (research_data.tex
 File: img/data_example.png Graphic file (type bmp)
 <img/data_example.png>
-) (experiments.tex [27
+) (experiments.tex [28
 
 ]
 
@@ -1261,7 +1261,7 @@ Overfull \hbox (36.52827pt too wide) in paragraph at lines 55--58
  [][] 
  []
 
-[28] [29]
+[29] [30]
 File: img/validated.png Graphic file (type bmp)
 <img/validated.png>
 
@@ -1269,7 +1269,7 @@ Overfull \hbox (36.52827pt too wide) in paragraph at lines 64--67
  [][] 
  []
 
-[30]
+[31]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 73.
@@ -1281,7 +1281,7 @@ Overfull \hbox (36.52827pt too wide) in paragraph at lines 97--100
  [][] 
  []
 
-[31]
+[32]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 104.
@@ -1293,7 +1293,7 @@ Overfull \hbox (36.52827pt too wide) in paragraph at lines 128--131
  [][] 
  []
 
-[32]) [33] (conclusion.tex) [34
+[33]) [34] (conclusion.tex) [35
 
 ]
 
@@ -1354,9 +1354,17 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[35
+[36
 
 ]
+
+Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
+
+Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
 
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
@@ -1428,18 +1436,18 @@ braces):
 >  {english/babelname}  =>  {english}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[36] (magistrinis.aux)
+[37] (magistrinis.aux)
 Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 \openout1 = `magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26673 strings out of 427272
- 529003 string characters out of 3146596
- 1069515 words of memory out of 3000000
- 30850 multiletter control sequences out of 15000+200000
+ 26677 strings out of 427272
+ 529157 string characters out of 3146596
+ 1069605 words of memory out of 3000000
+ 30854 multiletter control sequences out of 15000+200000
  545288 words of font info for 93 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,17n,104p,1567b,7731s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on magistrinis.pdf (37 pages).
+Output written on magistrinis.pdf (38 pages).

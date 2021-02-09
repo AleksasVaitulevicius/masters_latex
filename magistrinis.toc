@@ -24,29 +24,45 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.4.1.}Konvoliucija}{17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {1.4.2.}Konvoliucinio neuroninio tinklo sluoksnių tipai}{18}%
+\contentsline {subsubsection}{\numberline {1.4.2.}Konvoliucinio neuroninio tinklo sluoksnių tipai}{19}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {1.4.3.}Daugiavaizdis konvoliucinis neuroninis tinklas}{21}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5.}Kapsulinių neuroninių tinklų apžvalga}{22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Kapsulinių neuroninių tinklų modifikacijos ir parametrai}{25}%
+\contentsline {section}{\numberline {2.}Kapsulinių neuroninių tinklų modifikacijos ir parametrai}{26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.}Tiriamo kapsulinio neuroninio tinklo architektūra}{25}%
+\contentsline {subsection}{\numberline {2.1.}Tiriamo kapsulinio neuroninio tinklo architektūra}{26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų sujungimo sluoksniu}{25}%
+\contentsline {subsection}{\numberline {2.2.}Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų sujungimo sluoksniu}{26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.}Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų kapsuliniu sluoksniu}{26}%
+\contentsline {subsection}{\numberline {2.3.}Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų kapsuliniu sluoksniu}{27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.}Eksperimentiniai tyrimai}{27}%
+\contentsline {section}{\numberline {3.}Eksperimentiniai tyrimai}{28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.}Tyrimams naudoti duomenys}{27}%
+\contentsline {subsection}{\numberline {3.1.}Tyrimams naudoti duomenys}{28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.}Tyrimų aprašymai}{27}%
+\contentsline {subsection}{\numberline {3.2.}Tyrimų aprašymai}{28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{34}%
+\contentsline {section}{Rezultatai ir išvados}{35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{35}%
+\contentsline {section}{Literatūra}{36}%
+\defcounter {refsection}{0}\relax 
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
+\defcounter {refsection}{0}\relax 
+\bgroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{english}
+\defcounter {refsection}{0}\relax 
+\egroup 
+\defcounter {refsection}{0}\relax 
+\selectlanguage *{lithuanian}
 \defcounter {refsection}{0}\relax 
 \bgroup 
 \defcounter {refsection}{0}\relax 
