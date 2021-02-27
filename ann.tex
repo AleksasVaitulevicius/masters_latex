@@ -30,7 +30,7 @@ Išėjimo perceptronų paklaidos randamos naudojant formulę (\ref{eqn:mse}). Ta
 
 \begin{equation}
 \label{eqn:general_with_loc_grad}
-	w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} \xi^j_i(\sum_{k = 1}^{p} x_{ik}))
+	w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} \xi^j_i(\sum_{k = 0}^{p} x_{ik}))
 \end{equation}
 
 Remiantis darbu \cite{feedbackAlg}, lokalus gradientas $\xi^j$ yra apskaičiuojamas pagal formulę (\ref{eqn:loc_grad_calc}), kur $P_j$ yra aibė perceptronų, prijungtų prie \textit{j}-tojo perceptrono išėjimo, $w_{bj}$ - \textit{b}-tojo ir \textit{j}-tojo perceptronų jungties svoris.
@@ -44,7 +44,7 @@ Tad bendru atveju daugiasluoksnio perceptrono svoriai yra keičiami naudojantis 
 
 \begin{equation}
 \label{eqn:general_mlp}
-w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} (f'(a_{ij})(\sum_{b \in P_j}\xi^b_i w_{bj})(\sum_{k = 1}^{p} x_{ik}))
+w_j(t + 1) = w_j(t) - \eta \dfrac{2}{n}\sum_{i = 1}^{n} (f'(a_{ij})(\sum_{b \in P_j}\xi^b_i w_{bj})(\sum_{k = 0}^{p} x_{ik}))
 \end{equation}
 
 Egzistuoja įvairūs metodai naudojami pradinių svorių parinkimui. Tačiau analizuoto šaltinio \cite{initNN} tyrimai neįrodė, kad vienas iš jų būtų pranašesnis už kitus. Todėl šio magistro baigiamojo darbo tyrimams pradiniai svoriai yra parenkami atsitiktinai.

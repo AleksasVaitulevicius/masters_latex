@@ -227,6 +227,51 @@
       \field{title}{Cybernetic Predicting Devices}
       \field{year}{1965}
     \endentry
+    \entry{self_supervised}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=d8b448a412d6982f82c2ac8a20c44036}{%
+           family={Jing},
+           familyi={J\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ff38b98d2dc65002f66d028a85b9d58d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6d96d6fbd106e2ffd88ad23ce0119654}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f2725a91bdb251fcdc22e6d51bb8bf8a}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=55014134b0a3c9c678f7044c5c602948}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{43f247de97ca10c1b64fbcd48ea5237a}
+      \strng{fullhash}{43f247de97ca10c1b64fbcd48ea5237a}
+      \strng{bibnamehash}{43f247de97ca10c1b64fbcd48ea5237a}
+      \strng{authorbibnamehash}{43f247de97ca10c1b64fbcd48ea5237a}
+      \strng{authornamehash}{43f247de97ca10c1b64fbcd48ea5237a}
+      \strng{authorfullhash}{43f247de97ca10c1b64fbcd48ea5237a}
+      \field{labelalpha}{JCZ\textsuperscript {+}20}
+      \field{sortinit}{J}
+      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/2004.05749.pdf}}
+      \field{langid}{english}
+      \field{note}{KB, accessed 2021-02-09.}
+      \field{title}{Self-supervised Feature Learning by Cross-modality and Cross-view Correspondences}
+      \field{year}{2020}
+    \endentry
     \entry{adam}{misc}{}
       \name{author}{2}{}{%
         {{hash=d09e09d2cd56777abc7316017cc5b054}{%
@@ -492,6 +537,53 @@
       \field{title}{Initialising Neural Networks with Prior Knowledge}
       \field{type}{phdthesis}
       \field{year}{2006}
+    \endentry
+    \entry{depth_images}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=c24c007f6f99b313a0819f063375cd69}{%
+           family={Rahman},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c911542ec7848301806a29e06086a1ef}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2bbf103cec43ebf5e4cf1c95e2abf06f}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=48c4137787c5b24283171148ab2cc78b}{%
+           family={Shao},
+           familyi={S\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=59b65bba8a6ce01a33cf6c42127c6e1b}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Information Sciences}%
+      }
+      \strng{namehash}{3f293e7e0e842a8a841778f4ce3a37f4}
+      \strng{fullhash}{3f293e7e0e842a8a841778f4ce3a37f4}
+      \strng{bibnamehash}{3f293e7e0e842a8a841778f4ce3a37f4}
+      \strng{authorbibnamehash}{3f293e7e0e842a8a841778f4ce3a37f4}
+      \strng{authornamehash}{3f293e7e0e842a8a841778f4ce3a37f4}
+      \strng{authorfullhash}{3f293e7e0e842a8a841778f4ce3a37f4}
+      \field{labelalpha}{RTX\textsuperscript {+}20}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{note}{476:147–158}
+      \field{title}{3d object detection: Learning 3d bounding boxes from scaled down 2d bounding boxes in rgb-d images}
+      \field{year}{2020}
     \endentry
     \entry{capsNet}{misc}{}
       \name{author}{3}{}{%

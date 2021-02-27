@@ -75,7 +75,7 @@ Pritaikius formulę (\ref{eqn:activ_arg}) \textit{i}-tojo įėjimo vektoriaus ak
 
 \begin{equation}
 	\label{eqn:activ_arg_per_i}
-	a_i = \sum_{k = 1}^{p} w_{k}x_{ik}
+	a_i = \sum_{k = 0}^{p} w_{k}x_{ik}
 \end{equation}
 
 Tad \textit{i}-tasis perceptrono išėjimas $y_i$ yra $y_i = f(a_i)$. Tada funkcijos (\ref{eqn:mse}) išvestinė yra formulė~(\ref{eqn:expanded}).
@@ -91,7 +91,7 @@ Tada bendru atveju perceptrono mokymo taisyklė (\ref{eqn:w_recalc}) yra funkcij
 
 \begin{equation}
 	\label{eqn:general}
-	w_k(t + 1) = w_k(t) - \eta \dfrac{2}{n}\sum_{i=1}^{n} ((y_i - t_i)(f'(a_i))(\sum_{k = 1}^{p} x_{ik}))
+	w_k(t + 1) = w_k(t) - \eta \dfrac{2}{n}\sum_{i=1}^{n} ((y_i - t_i)(f'(a_i))(\sum_{k = 0}^{p} x_{ik}))
 \end{equation}
 
 % išsivedamas bendras atvejis ------------------------------------------------------------------------------------------------------------------------
