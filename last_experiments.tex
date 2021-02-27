@@ -1,0 +1,65 @@
+Buvo nustatyta, kad testavimo duomenyse egzistuoja klasių išsibalansavimas, kuris matosi iš lentelės \ref{tbl:class_imbalance}. Tad tikslumo matas gali nekorektiškai įvertinti dirbtinius neuroninius tinklus. Todėl vietoje tikslumo mato tolimesniuose tyrimuose yra renkamas mikro, makro ir svertinis F1 įverčio (angl. F1 score) matai, kurie geriau įvertina dirbtinius neuroninius tinklus esant klasių išsibalansavimui nei tikslumo matas. F1 įvertis yra apskaičiuojamas kiekvienai klasei atskirai naudojant formulę \ref{eqn:f1}, kur:
+
+\begin{itemize}
+	\item $TP$ - teisingų teigiamų (angl. true positives) kiekis. Teisingi teigiami yra 3D objektai, kuriems dirbtinis neuroninis tinklas teisingai priskyrė klasę, kuriai yra skaičiuojamas F1.
+	\item $FP$ - klaidingų teigiamų (angl. false positives) kiekis. Klaidingi teigiami yra 3D objektai, kuriems dirbtinis neuroninis tinklas klaidingai priskyrė klasę, kuriai yra skaičiuojamas F1.
+	\item $FN$ - klaidingų neigiamų (angl. false negatives) kiekis. Klaidingi neigiami yra 3D objektai, kuriems dirbtinis neuroninis tinklas klaidingai nepriskyrė klasės, kuriai yra skaičiuojamas F1.
+\end{itemize}
+
+Jų vidurkis yra lygus makro F1 įverčiui. Toliau yra apskaičiuojamas svertinis vidurkis (angl. weighted average), kur svoriai yra 3D objektų su priskirta klase, kuriai yra apskaičiuotas F1, dalis testavimo duomenyse. Šis vidurkis yra lygus svertiniui F1 įverčiui. Galiausiai yra apskaičiuojamas mikro F1 įvertis. Mikro F1 įvertis yra apskaičiuojamas naudojant formulę \ref{eqn:f1}, kur $TP$ yra teisingų teigiamų suma, $FP$ - klaidingų teigiamų suma ir $FN$ - klaidingų neigiamų suma.
+
+\begin{equation}
+\label{eqn:f1}
+	F1 = \dfrac{TP}{TP + \dfrac{1}{2}(FP + FN)}
+\end{equation}
+
+Taip pat pastebėta iš grafiko \ref{img:val_plot}, kad kapsulinio ir daugiavaizdžių kapsulinių neuroninių tinklų tikslumas netampa stabilus po 10 epochų. Tačiau, dėl Kaggle sistemos kodo apdorojimo laiko limito, kuris yra 9 valandos, didesnis epochų skaičius nei 12 yra negalimas, nes 1 tyrimas su 12 epochų trunka apytiksliai 8,5 valandos. Tad visi tolimesni tyrimai yra  atlikti su 12 apmokymo epochų.
+
+\begin{table}[]
+\begin{tabular}{lr}
+	klasė       &   3D objektų skaičius \\
+	\hline
+	airplane    &                    99 \\
+	bathtub     &                    50 \\
+	bed         &                   100 \\
+	bench       &                    20 \\
+	bookshelf   &                   100 \\
+	bottle      &                   100 \\
+	bowl        &                    20 \\
+	car         &                    99 \\
+	chair       &                    99 \\
+	cone        &                    20 \\
+	cup         &                    20 \\
+	curtain     &                    20 \\
+	desk        &                    86 \\
+	door        &                    20 \\
+	dresser     &                    86 \\
+	flower\_pot  &                    20 \\
+	glass\_box   &                   100 \\
+	guitar      &                    99 \\
+	keyboard    &                    20 \\
+	lamp        &                    20 \\
+	laptop      &                    20 \\
+	mantel      &                   100 \\
+	monitor     &                   100 \\
+	night\_stand &                    86 \\
+	person      &                    20 \\
+	piano       &                   100 \\
+	plant       &                   100 \\
+	radio       &                    20 \\
+	range\_hood  &                   100 \\
+	sink        &                    20 \\
+	sofa        &                   100 \\
+	stairs      &                    20 \\
+	stool       &                    20 \\
+	table       &                   100 \\
+	tent        &                    20 \\
+	toilet      &                   100 \\
+	tv\_stand    &                   100 \\
+	vase        &                   100 \\
+	wardrobe    &                    20 \\
+	xbox        &                    20 \\
+\end{tabular}
+\caption{3D objektų skaičius kiekvienai klasei testavimo duomenyse}
+\label{tbl:class_imbalance}
+\end{table}
