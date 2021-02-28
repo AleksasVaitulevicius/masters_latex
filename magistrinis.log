@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  27 FEB 2021 20:01
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  28 FEB 2021 12:06
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1248,12 +1248,12 @@ LaTeX Warning: No positions in optional float specifier.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 32.
+               Default added (so using `tbp') on input line 31.
 
 File: img/trained.png Graphic file (type bmp)
 <img/trained.png>
 
-Overfull \hbox (36.52827pt too wide) in paragraph at lines 55--58
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 53--56
  [][] 
  []
 
@@ -1261,31 +1261,31 @@ Overfull \hbox (36.52827pt too wide) in paragraph at lines 55--58
 File: img/validated.png Graphic file (type bmp)
 <img/validated.png>
 
-Overfull \hbox (36.52827pt too wide) in paragraph at lines 64--67
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 62--65
  [][] 
  []
 
 [31]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 73.
+               Default added (so using `tbp') on input line 71.
 
 File: img/less_data_v1.png Graphic file (type bmp)
 <img/less_data_v1.png>
 
-Overfull \hbox (36.52827pt too wide) in paragraph at lines 97--100
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 94--97
  [][] 
  []
 
 [32]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 104.
+               Default added (so using `tbp') on input line 101.
 
 File: img/less_data_v2.png Graphic file (type bmp)
 <img/less_data_v2.png>
 
-Overfull \hbox (36.52827pt too wide) in paragraph at lines 128--131
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 124--127
  [][] 
  []
 
