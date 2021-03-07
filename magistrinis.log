@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  28 FEB 2021 12:06
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  7 MAR 2021 17:56
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1239,7 +1239,7 @@ Overfull \hbox (3.40157pt too wide) in paragraph at lines 25--34
 ]) [27] (research_data.tex
 File: img/data_example.png Graphic file (type bmp)
 <img/data_example.png>
-) (experiments.tex [28
+) (acc_experiments.tex [28
 
 ]
 
@@ -1289,12 +1289,64 @@ Overfull \hbox (36.02827pt too wide) in paragraph at lines 124--127
  [][] 
  []
 
-[33]) (last_experiments.tex [34]
+[33]) (f1_experiments.tex [34]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 18.
+               Default added (so using `tbp') on input line 16.
 
-) [35] [36] (conclusion.tex) [37
+[35] [36]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 78.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 101.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 124.
+
+File: img/weighted.png Graphic file (type bmp)
+<img/weighted.png>
+[37] [38]
+File: img/micro.png Graphic file (type bmp)
+<img/micro.png>
+File: img/micro.png Graphic file (type bmp)
+<img/micro.png>
+ [39]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 176.
+
+
+Overfull \hbox (12.4977pt too wide) in paragraph at lines 177--200
+[][] 
+ []
+
+File: img/half_sample_f1.png Graphic file (type bmp)
+<img/half_sample_f1.png>
+[40]
+Overfull \vbox (14.8598pt too high) has occurred while \output is active []
+
+
+[41]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 220.
+
+
+Overfull \hbox (12.4977pt too wide) in paragraph at lines 221--244
+[][] 
+ []
+
+File: img/3rd_sample_f1.png Graphic file (type bmp)
+<img/3rd_sample_f1.png>
+
+Overfull \vbox (14.8598pt too high) has occurred while \output is active []
+
+
+[42]) (conclusion.tex) [43
 
 ]
 
@@ -1355,7 +1407,7 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[38
+[44
 
 ]
 
@@ -1445,18 +1497,18 @@ braces):
 >  {english/babelname}  =>  {english}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[39] (magistrinis.aux)
+[45] (magistrinis.aux)
 Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 \openout1 = `magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26687 strings out of 427272
- 529448 string characters out of 3146596
- 1069746 words of memory out of 3000000
- 30861 multiletter control sequences out of 15000+200000
+ 26721 strings out of 427272
+ 530088 string characters out of 3146596
+ 1074845 words of memory out of 3000000
+ 30891 multiletter control sequences out of 15000+200000
  545288 words of font info for 93 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,17n,104p,1567b,7731s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on magistrinis.pdf (40 pages).
+Output written on magistrinis.pdf (46 pages).

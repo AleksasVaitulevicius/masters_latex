@@ -44,9 +44,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.}Tyrimų aprašymai}{28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{37}%
+\contentsline {section}{Rezultatai ir išvados}{43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{38}%
+\contentsline {section}{Literatūra}{44}%
 \defcounter {refsection}{0}\relax 
 \bgroup 
 \defcounter {refsection}{0}\relax 
