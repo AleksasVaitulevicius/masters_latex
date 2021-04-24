@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  7 MAR 2021 18:03
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  24 APR 2021 14:42
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1312,8 +1312,8 @@ File: img/weighted.png Graphic file (type bmp)
 [37] [38]
 File: img/micro.png Graphic file (type bmp)
 <img/micro.png>
-File: img/micro.png Graphic file (type bmp)
-<img/micro.png>
+File: img/macro.png Graphic file (type bmp)
+<img/macro.png>
  [39]
 
 LaTeX Warning: No positions in optional float specifier.
@@ -1346,7 +1346,15 @@ File: img/3rd_sample_f1.png Graphic file (type bmp)
 Overfull \vbox (14.8598pt too high) has occurred while \output is active []
 
 
-[42]) (conclusion.tex) [43
+[42]) (quantitative_f1_experimets.tex
+File: img/boxplot_f1_weighted.png Graphic file (type bmp)
+<img/boxplot_f1_weighted.png>
+File: img/boxplot_f1_micro.png Graphic file (type bmp)
+<img/boxplot_f1_micro.png>
+ [43]
+File: img/boxplot_f1_macro.png Graphic file (type bmp)
+<img/boxplot_f1_macro.png>
+) [44] (conclusion.tex) [45
 
 ]
 
@@ -1354,7 +1362,7 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 90--90
+Underfull \hbox (badness 2245) in paragraph at lines 97--97
 \TU/texgyretermes(0)/m/n/12 optimization. $[][][][][] [] [] [] [][][][][][] [] 
 [][][][] [] [][] [] [][][][][] [] [][][][] [] [][][][] []
  []
@@ -1407,7 +1415,7 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[44
+[46
 
 ]
 
@@ -1497,18 +1505,18 @@ braces):
 >  {english/babelname}  =>  {english}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[45] (magistrinis.aux)
+[47] (magistrinis.aux)
 Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 \openout1 = `magistrinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26721 strings out of 427272
- 530088 string characters out of 3146596
- 1074845 words of memory out of 3000000
- 30891 multiletter control sequences out of 15000+200000
+ 26751 strings out of 427272
+ 530816 string characters out of 3146596
+ 1074875 words of memory out of 3000000
+ 30915 multiletter control sequences out of 15000+200000
  545288 words of font info for 93 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,17n,104p,1567b,7731s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on magistrinis.pdf (46 pages).
+Output written on magistrinis.pdf (48 pages).

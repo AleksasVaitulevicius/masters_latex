@@ -1,0 +1,32 @@
+Dirbtiniai neuroniniai tinklai yra apmokomi naudojantis stochastiniu metodu. Tad kiekvieną kartą apmokant tą patį dirbtinį neuroninį tinklą naudojant tuos pačius hiperparametrus, rezultatai skiriasi. Tad kuo daugiau kartų yra pakartotas tas apts tyrimas, tuo tiksliau yra indikuojamas palyginimo rezultatas. Šiame magistro baigiamame darbe yra 10 kartų kartojami tyrimai renkant f1 įverčius su pilnomis apmokymo ir testavimo duomenų imtimis. Šiuose tyrimuose nebuvo tiriamas daugiavaizdis kapsulinis neuroninis tinklas su vaizdų sujungimo sluoksniu, nes praeiti tyrimai neindikavo reikšmingumo. Šiame kiekybiniame tyrime buvo renkami testavimo duomenų f1 įverčiai po kiekvieno pilno apmokymo.
+
+
+Šio kiekybinio tyrimo rezultatai yra atvaizduoti blokinėse diagramose (angl. box plot), kurios atvaizduotos paveikslėlyje \ref{img:box_weighted_f1}, paveikslėlyje \ref{img:box_micro_f1} ir  paveikslėlyje \ref{img:box_macro_f1}, kur
+mvcnn yra daugiavaizdžio neuroninio tinklo f1 įverčiai, capsnet - kapsulinio neuroninio tinklo f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais f1 įverčiai.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{img/boxplot_f1_weighted.png}
+	\caption{
+		Testavimo duomenų klasifikavimo svertiniai f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo f1 įverčiai, capsnet - kapsulinio neuroninio tinklo f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais f1 įverčiai.
+	}
+	\label{img:box_weighted_f1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{img/boxplot_f1_micro.png}
+	\caption{
+		Testavimo duomenų klasifikavimo mikro f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo f1 įverčiai, capsnet - kapsulinio neuroninio tinklo f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais f1 įverčiai.
+	}
+	\label{img:box_micro_f1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{img/boxplot_f1_macro.png}
+	\caption{
+		Testavimo duomenų klasifikavimo makro f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo f1 įverčiai, capsnet - kapsulinio neuroninio tinklo f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais f1 įverčiai.
+	}
+	\label{img:box_macro_f1}
+\end{figure}
