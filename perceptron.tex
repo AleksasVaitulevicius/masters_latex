@@ -16,7 +16,7 @@ Formulė (\ref{eqn:activ_arg}) yra aktyvacijos funkcijos argumentas.
 	a = \sum_{k = 0}^{p} w_{k}x_k
 \end{equation}
 
-Dažniausiai perceptronui yra naudojamos šios aktyvacijos funkcijos: slenkstinė (angl. unit step) (\ref{eqn:unitStep}), sigmoidinė (angl. sigmoid) (\ref{eqn:sigmoid}), gabalais tiesinė (angl. piecewise linear) (\ref{eqn:pieceLinear}), Gauso (angl. Gaussian) (\ref{eqn:gaussian}) ir tiesinė (angl. linear) (\ref{eqn:linear}), kur $\beta$, $m$, $a_{min}$, $a_{max}$ yra konstantos priklausančios realiųjų skaičių aibei bei $a_{min} < a_{max}$.
+Dažniausiai perceptronui yra naudojamos šios aktyvacijos funkcijos: slenkstinė (angl. unit step) (\ref{eqn:unitStep}), sigmoidinė (angl. sigmoid) (\ref{eqn:sigmoid}), gabalais tiesinė (angl. piecewise linear) (\ref{eqn:pieceLinear}), Gauso (angl. Gaussian) (\ref{eqn:gaussian}) ir tiesinė (angl. linear) (\ref{eqn:linear}), kur $\beta$, $\mu$, $\sigma$, $m$, $a_{min}$, $a_{max}$ yra konstantos priklausančios realiųjų skaičių aibei bei $a_{min} < a_{max}$.
 
 \begin{equation}
 	\label{eqn:unitStep}
@@ -29,14 +29,14 @@ Dažniausiai perceptronui yra naudojamos šios aktyvacijos funkcijos: slenkstin�
 
 \begin{equation}
 	\label{eqn:sigmoid}
-	f(a) = \dfrac{1}{1 + \exp^{-a }}
+	f(a) = \dfrac{1}{1 + \exp(-a)}
 \end{equation}
 
 \begin{equation}
 	\label{eqn:pieceLinear}
 	f(a) =
 	\begin{cases}
-		0, & \mbox{jei } a_{min} \geq  \\
+		0, & \mbox{jei } a_{min} \geq a \\
 		ma + b, & \mbox{jei } a_{min} < a < a_{max} \\
 		1, & \mbox{jei } a_{max} \leq a
 	\end{cases}
@@ -44,7 +44,7 @@ Dažniausiai perceptronui yra naudojamos šios aktyvacijos funkcijos: slenkstin�
 
 \begin{equation}
 	\label{eqn:gaussian}
-	f(a) = \dfrac{1}{\sqrt{2\pi\sigma}} \exp^{\dfrac{-(a - \mu)^2}{2\sigma^2}}
+	f(a) = \dfrac{1}{\sqrt{2\pi\sigma}} \exp(\dfrac{-(a - \mu)^2}{2\sigma^2})
 \end{equation}
 
 \begin{equation}
@@ -59,7 +59,7 @@ Perceptronas yra skirtas spręsti klasifikavimo uždavinius. Tam kad perceptrona
 	e(w) = \dfrac{1}{n}\sum_{i=1}^{n}(y_i - t_i)^2
 \end{equation}
 
-Apmokymo pradžioje pradiniai svoriai yra parenkami atsitiktinai. Toliau gradientinio nusileidimo algoritmu judant antigradiento kryptimi, svorių reikšmės perskaičiuojamos naudojantis formule (\ref{eqn:w_recalc}), kur \textit{k}-tojo svorio gradientas $\Delta w_k(t)$ yra formulė (\ref{eqn:w_change}), $t$ - iteracijos numeris, $\eta \in [0, +\infty]$ - parinktas mokymo greitis (angl. learning rate). Vienoje iteracijoje yra naudojamas tik vienas įėjimo vektorius iš duomenų aibės. Svoriai yra perskaičiuojami norima skaičių kartų.
+Apmokymo pradžioje pradiniai svoriai yra parenkami atsitiktinai. Toliau gradientinio nusileidimo algoritmu judant antigradiento kryptimi, svorių reikšmės perskaičiuojamos naudojantis formule (\ref{eqn:w_recalc}), kur \textit{k}-tojo svorio gradientas $\Delta w_k(t)$ apskaičiuojamas pagal formulę (\ref{eqn:w_change}), $t$ - iteracijos numeris, $\eta \in [0, +\infty]$ - parinktas mokymo greitis (angl. learning rate). Vienoje iteracijoje yra naudojamas tik vienas įėjimo vektorius iš duomenų aibės. Svoriai yra perskaičiuojami norima skaičių kartų.
 
 \begin{equation}
 	\label{eqn:w_recalc}
@@ -78,7 +78,7 @@ Pritaikius formulę (\ref{eqn:activ_arg}) \textit{i}-tojo įėjimo vektoriaus ak
 	a_i = \sum_{k = 0}^{p} w_{k}x_{ik}
 \end{equation}
 
-Tad \textit{i}-tasis perceptrono išėjimas $y_i$ yra $y_i = f(a_i)$. Tada funkcijos (\ref{eqn:mse}) išvestinė yra formulė~(\ref{eqn:expanded}).
+Tad \textit{i}-tasis perceptrono išėjimas $y_i$ yra $y_i = f(a_i)$. Tada funkcijos (\ref{eqn:mse}) išvestinė yra paskaičiuojama pagal formulę (\ref{eqn:expanded}).
 
 \begin{equation}
 	\label{eqn:expanded}

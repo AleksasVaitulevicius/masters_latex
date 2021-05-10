@@ -1,14 +1,17 @@
 
-Šiame magistro baigiamame darbe yra palyginami 4 neuroninių tinklų architektūros: daugiavaizdis neuroninis tinklas, aprašytas poskyryje "Daugiavaizdis konvoliucinis neuroninis tinklas", kapsulinis neuroninis tinklas, aprašytas poskyryje "Tiriamo kapsulinio neuroninio tinklo architektūra", ir 2 daugiavaizdžiai kapsuliniai neuroniniai tinklai, aprašyti poskyriuose "Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų sujungimo sluoksniu" ir "Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų kapsuliniu sluoksniu". Kiekvienas tiriamas dirbtinis neuroninis tinklas yra apmokomas naudojantis visais duomenimis, aprašytais poskyryje Tyrimams naudoti duomenys. Šie duomenys apmokymo metu yra padalinami į duomenų rinkinius, iš kurių kiekvienas yra sudarytas iš 96 2D nuotraukų. Daugiavaizdžio konvoliucinio ir kapsulinio neuroninių tinklų apmokymų antram etapui duomenų rinkiniai sudaryti iš nuotraukų grupių, kuriose yra visos konkretaus 3D objekto modelio nuotraukos. Kiekvienas dirbtinis neuroninis tinklas yra apmokomas per 10 epochų. Daugiavaizdžio konvoliucinio ir kapsulinio neuroninių tinklų abu apmokymo etapai yra apmokomi po 5 epochas.
+Šiame magistro baigiamajame darbe yra palyginami 4 neuroninių tinklų architektūros: daugiavaizdis neuroninis tinklas, aprašytas poskyryje "1.4.3. Daugiavaizdis konvoliucinis neuroninis tinklas", kapsulinis neuroninis tinklas, aprašytas poskyryje "Tiriamo kapsulinio neuroninio tinklo architektūra", ir 2 daugiavaizdžiai kapsuliniai neuroniniai tinklai, aprašyti poskyriuose "Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų sujungimo sluoksniu" ir "Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų kapsuliniu sluoksniu". Kiekvienas tiriamas dirbtinis neuroninis tinklas yra apmokomas naudojantis visais duomenimis, aprašytais poskyryje "3.1. Tyrimams naudoti duomenys". Šie duomenys apmokymo metu yra padalinami į duomenų rinkinius, iš kurių kiekvienas yra sudarytas iš 96 2D nuotraukų. Daugiavaizdžio konvoliucinio ir kapsulinio neuroninių tinklų apmokymų antram etapui duomenų rinkiniai sudaryti iš nuotraukų grupių, kuriose yra visos konkretaus 3D objekto modelio nuotraukos. Kiekvienas dirbtinis neuroninis tinklas yra apmokomas per 10 epochų. Daugiavaizdžio konvoliucinio ir kapsulinio neuroninių tinklų abu apmokymo etapai yra apmokomi po 5 epochas.
 
-Visų šiame magistro baigiamame darbe tiriamų dirbtinių neuroninių tinklų apmokymai trunka po 6-7 valandas naudojantis Kaggle sistema. Šioje sistemoje vartotojui yra išskiriama viena Nvidia Tesla P100 vaizdo plokštė, kuri turi 3584 CUDA branduolių ir 16 GB RAM atminties. Taip pat šioje sistemoje vartotojui yra suteikiamas Intel(R) Xeon(R) CPU, kuris turi vieną branduolį, 39,424 MB spartinančiosios atminties ir kurio dažnis yra 2000,176 MHz. Galiausiai ši sistema vartotojui išskiria 16,4 GB RAM atminties.
+Visų šiame magistro baigiamajame darbe tiriamų dirbtinių neuroninių tinklų apmokymai trunka po 6-7 valandas naudojantis Kaggle sistema. Šioje sistemoje vartotojui yra išskiriama viena Nvidia Tesla P100 vaizdo plokštė, kuri turi 3584 CUDA branduolių ir 16 GB RAM atminties. Taip pat šioje sistemoje vartotojui yra suteikiamas Intel(R) Xeon(R) CPU, kuris turi vieną branduolį, 39,424 MB spartinančiosios atminties ir kurio dažnis yra 2000,176 MHz. Galiausiai ši sistema vartotojui išskiria 16,4 GB RAM atminties.
 
-Šiame magistro baigiamame darbe bandoma optimizuoti kapsulinių neuroninių tinklų modifikacijų konfigūracijas. Pirmiausia bandoma optimizuoti šiuos tinklus naudojantis Bajeso hiperparametrų optimizavimo algoritmu, kuris yra aprašytas darbe \cite{bayes}. Toliau bandomos kitos konfigūracijos nei konfigūracijos aprašytos darbe \cite{capsNet}. Tačiau, dėl Kaggle sistemos apribojimų, nei vienas metodas neaptiko geresnių kapsulinių neuroninių tinklų modifikacijų konfigūracijų. Taip pat bandoma 
+Šiame magistro baigiamajame darbe bandoma optimizuoti kapsulinių neuroninių tinklų modifikacijų konfigūracijas. Pirmiausia bandoma optimizuoti šiuos tinklus naudojantis Bajeso hiperparametrų optimizavimo algoritmu, kuris yra aprašytas darbe \cite{bayes}. Toliau bandomos kitos konfigūracijos nei konfigūracijos aprašytos darbe \cite{capsNet}. Tačiau, dėl Kaggle sistemos apribojimų, nei vienas metodas neaptiko geresnių kapsulinių neuroninių tinklų modifikacijų konfigūracijų. Taip pat bandoma 
 keisti mokymosi greitį. Tačiau skirtumai tarp rezultatų yra nereikšmingi.
 
 Po kiekvienos epochos yra renkamos tikslumo metrikos: tikslumas klasifikuojant apmokymo duomenis, ši informacija pavaizduota \ref{tbl:train} lentelėje ir \ref{img:train_plot} paveikslėlyje, ir tikslumas klasifikuojant testavimo duomenis, ši informacija atvaizduota \ref{tbl:valid} lentelėje ir \ref{img:val_plot} paveikslėlyje. Tikslumas yra teisingai suklasifikuotų įrašų dalis klasifikuotų duomenų aibėje. \ref{tbl:train}, \ref{tbl:valid} lentelių stulpelio pavaidinimas ir \ref{img:train_plot}, \ref{img:val_plot} grafikų kreivių pavadinimas mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas, capsnet - kapsulinio neuroninio tinklo tikslumas, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu tikslumas, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais tikslumas. Brūkšninė vertikali linija \ref{img:train_plot} ir \ref{img:val_plot} grafikuose nurodo antrojo apmokymo etapo pirmąją epochą.
 
 \begin{table}[]
+\caption{
+	Apmokymo duomenų klasifikavimo tikslumas, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas, capsnet - kapsulinio neuroninio tinklo tikslumas, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu tikslumas, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais tikslumas. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+}
 \begin{tabular}{l|l|l|l|l|l}
 	epocha &     mvcnn &   capsnet & mv\_capsnet & mv\_cap\_capsnet1 & mv\_cap\_capsnet2 \\ \hline
 	1 & 0,688 &   0,119 &      0,517 &           0,281 &           0,218 \\
@@ -22,13 +25,13 @@ Po kiekvienos epochos yra renkamos tikslumo metrikos: tikslumas klasifikuojant a
 	9 & 0,961 &   0,835 &      0,966 &           0,970 &           0,962 \\
 	10 & \textbf{0,972} &   \textbf{0,847} &      \textbf{0,972} &           \textbf{0,975} &           \textbf{0,970} \\
 \end{tabular}
-\caption{
-	Apmokymo duomenų klasifikavimo tikslumas, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas, capsnet - kapsulinio neuroninio tinklo tikslumas, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu tikslumas, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais tikslumas. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-}
 \label{tbl:train}
 \end{table}
 
 \begin{table}[]
+\caption{
+	Testavimo duomenų klasifikavimo tikslumas, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas, capsnet - kapsulinio neuroninio tinklo tikslumas, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu tikslumas, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais tikslumas. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+}
 \begin{tabular}{l|l|l|l|l|l}
 	epocha &     mvcnn &   capsnet & mv\_capsnet & mv\_cap\_capsnet1 & mv\_cap\_capsnet2 \\ \hline
 	1 & 0,792 &   0,302 &      0,718 &           0,692 &           0,480 \\
@@ -42,9 +45,6 @@ Po kiekvienos epochos yra renkamos tikslumo metrikos: tikslumas klasifikuojant a
 	9 & 0,896 &   \textbf{0,723} &      0,808 &           0,861 &           0,841 \\
 	10 & \textbf{0,901} &   0,710 &      \textbf{0,853} &           0,856 &           0,828 \\
 \end{tabular}
-\caption{
-	Testavimo duomenų klasifikavimo tikslumas, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas, capsnet - kapsulinio neuroninio tinklo tikslumas, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu tikslumas, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais tikslumas. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-}
 \label{tbl:valid}
 \end{table}
 
@@ -66,9 +66,12 @@ Po kiekvienos epochos yra renkamos tikslumo metrikos: tikslumas klasifikuojant a
 	\label{img:val_plot}
 \end{figure}
 
-Darbe \cite{capsNet} yra teigiama, kad kapsuliniai neuroniniai tinklai reikalauja mažesnės apmokymo duomenų imties nei konvoliuciniai neuroniniai tinklai. Todėl šiame magistro baigiamame darbe yra atliekami tyrimai su tyrimų duomenų poaibiais. Tiriami tik daugiavaizdis neuroninis tinklas ir daugiavaizdis kapsulinis neuroninis tinklas su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu. Lentelėje \ref{tbl:less_datav1} ir grafike \ref{img:less_datav1} pavaizduoti tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4904 3D objektų modelių, ir testavimo 1232. Lentelėje \ref{tbl:less_datav2} ir grafike \ref{img:less_datav2} pavaizduoti tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3264 3D objektų modelių, ir testavimo 2464. Šių lentelių stulpelio pavadinimas ir grafikų kreivės pavadinimas mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis. Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją epochą.
+Darbe \cite{capsNet} yra teigiama, kad kapsuliniai neuroniniai tinklai reikalauja mažesnės apmokymo duomenų imties nei konvoliuciniai neuroniniai tinklai. Todėl šiame magistro baigiamajame darbe yra atliekami tyrimai su tyrimų duomenų poaibiais. Tiriami tik daugiavaizdis neuroninis tinklas ir daugiavaizdis kapsulinis neuroninis tinklas su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu. Lentelėje \ref{tbl:less_datav1} ir grafike \ref{img:less_datav1} pavaizduoti tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4904 3D objektų modelių, ir testavimo 1232. Lentelėje \ref{tbl:less_datav2} ir grafike \ref{img:less_datav2} pavaizduoti tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3264 3D objektų modelių, ir testavimo 2464. Šių lentelių stulpelio pavadinimas ir grafikų kreivės pavadinimas mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis. Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją epochą.
 
 \begin{table}[]
+	\caption{
+		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4904 3D objektų modelių, ir testavimo 1232, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+	}
 	\begin{tabular}{l|l|l|l|l}
 		epocha &     mvcnn & val\_mvcnn & mv\_cap\_capsnet & val\_mv\_cap\_capsnet \\ \hline
 		 1 & 0,594 &     0,752 &          0,064 &              0,041 \\
@@ -82,9 +85,6 @@ Darbe \cite{capsNet} yra teigiama, kad kapsuliniai neuroniniai tinklai reikalauj
 		9 & 0,955 &     \textbf{0,868} &          0,956 &              0,829 \\
 		10 & \textbf{0,961} &     0,847 &          \textbf{0,964} &              \textbf{0,832} \\
 	\end{tabular}
-	\caption{
-		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4904 3D objektų modelių, ir testavimo 1232, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-	}
 	\label{tbl:less_datav1}
 \end{table}
 
@@ -99,6 +99,9 @@ Darbe \cite{capsNet} yra teigiama, kad kapsuliniai neuroniniai tinklai reikalauj
 \end{figure}
 
 \begin{table}[]
+	\caption{
+		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3264 3D objektų modelių, ir testavimo 2464, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+	}
 	\begin{tabular}{l|l|l|l|l}
 		epocha &     mvcnn & val\_mvcnn & mv\_cap\_capsnet & val\_mv\_cap\_capsnet \\ \hline
 		1 & 0,511 &     0,706 &          0,065 &              0,041 \\
@@ -112,9 +115,6 @@ Darbe \cite{capsNet} yra teigiama, kad kapsuliniai neuroniniai tinklai reikalauj
 		9 & 0,943 &     0,851 &          0,957 &              0,808 \\
 		10 & \textbf{0,951} &     \textbf{0,853} &         \textbf{0,965} &              \textbf{0,816} \\
 	\end{tabular}
-	\caption{
-		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3264 3D objektų modelių, ir testavimo 2464, kur mvcnn yra daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant apmokymo duomenis, val\_mvcnn - daugiavaizdžio neuroninio tinklo tikslumas klasifikuojant testavimo duomenis, mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant apmokymo duomenis, val\_mv\_cap\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu tikslumas klasifikuojant testavimo duomenis. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-	}
 	\label{tbl:less_datav2}
 \end{table}
 

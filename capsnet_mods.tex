@@ -4,6 +4,7 @@
 Šiame darbe viena iš tiriamų kapsulinio neuroninio tinklo architektūrų yra aprašyta darbe \cite{capsNet}. Šios architektūros konfigūracija yra atvaizduota \ref{tbl:capsNet} lentelėje. Paskutinis sluoksnis $ed$ yra skirtas konvertuoti paskutinio kapsulinio sluoksnio išėjimų vektorius į skaliarines reikšmes, kurias lengviau interpretuoti kaip tikimybes, kad paveikslėlyje pavaizduotas 3D objekto modelis priklauso vienai iš klasių. Konvertavimas vyksta apskaičiuojant euklidinį atstumą nuo nulinio taško iki vektoriaus taško.
 
 \begin{table}[]
+\caption{Tiriamo kapsulinio neuroninio tinklo architektūra}
 \begin{tabular}{|l|l|l|}
 \hline
 Sluoksnio žymėjimas & Sluoksnio tipas                     & Parametrai                                                                                                                                                 \\ \hline
@@ -15,13 +16,13 @@ pc                  & Pirminių kapsulių sluoksnis         & Išėjimo vektori�
 c                   & Kapsulinis sluoksnis                & \begin{tabular}[c]{@{}l@{}}Kapsulių skaičius = 40\\ Išėjimų vektorių dimensijų skaičius = 16\\ Maršrutizavimo iteracijų skaičius = 3\end{tabular} \\ \hline
 ed                  & Euklidinis atstumas                 &                                                                                                                                                            \\ \hline
 \end{tabular}
-\caption{Tiriamo kapsulinio neuroninio tinklo architektūra}
 \label{tbl:capsNet}
 \end{table}
 
 Šio tinklo naudojamas rekonstrukcijos tinklas yra atvaizduotas \ref{tbl:capsNetRecon} lentelėje. Šio tinklo įėjimo sluoksnis yra kapsulinio neuroninio tinklo sluoksnis $c$. Pirmasis rekonstrukcijos tinklo sluoksnis $r\_m$ apmokymo metu palieka tik kapsulės, kuri reprezentuoja klasę, kuriai priklauso paveikslėlyje pavaizduotas 3D modelis, išėjimo vektorių, visos kitos reikšmės yra padauginamos iš 0. Klasifikavimo atveju, šis sluoksnis palieka kapsulės išėjimo vektorių, kurio euklidinis atstumas nuo nulinio taško yra didžiausias, visos kitos reikšmės taip pat yra padauginamos iš 0. Šio sluoksnio išėjimas yra transformuota kapsulių išėjimų vektorių aibė į vieną vektorių. Sluoksnio $r\_t$ išėjimas yra rekonstruota 2D nuotrauka.
 
 \begin{table}[]
+\caption{Tiriamo kapsulinio neuroninio tinklo rekonstrukcijos tinklo architektūra}
 \begin{tabular}{|l|l|l|}
 \hline
 Sluoksnio žymėjimas & Sluoksnio tipas            & Parametrai                                                                                           \\ \hline
@@ -31,21 +32,20 @@ r\_fc               & Pilnai sujungtas sluoksnis & \begin{tabular}[c]{@{}l@{}}Ne
 r\_fc               & Pilnai sujungtas sluoksnis & \begin{tabular}[c]{@{}l@{}}Neuronų skaičius = 22500\\ Aktyvacijos funkcija - sigmoidinė\end{tabular} \\ \hline
 r\_t                & Transformacijos sluoksnis  & Išėjimo matmenys = 150x150 RGB matrica                                                               \\ \hline
 \end{tabular}
-\caption{Tiriamo kapsulinio neuroninio tinklo rekonstrukcijos tinklo architektūra}
 \label{tbl:capsNetRecon}
 \end{table}
 
 \subsection{Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų sujungimo sluoksniu}
 
-Taip pat šiame magistro baigiamame darbe yra pritaikomas vaizdų sujungimo sluoksnio, kuris darbe \cite{cnnExp1} yra naudojamas konvoliuciniame neuroniniame tinkle, idėja kapsuliniam neuroniniui tinklui. Ši modifikacija yra vadinama daugiavaizdžiu kapsuliniu neuroniniu tinklu. Vaizdų sujungimo sluoksnis yra modifikuojamas taip, kad sluoksnio įėjimas, vietoje požymių žemėlapių rinkinių, būtų kapsulių išėjimo vektorių rinkiniai. Pirmame etape yra naudojama architektūra atvaizduota \ref{tbl:capsNet} lentelėje. Antrame etape vaizdų sujungimo sluoksnis yra įterpiamas po sluoksnio $ed$.
+Taip pat šiame magistro baigiamajame darbe yra pritaikomas vaizdų sujungimo sluoksnio, kuris darbe \cite{cnnExp1} yra naudojamas konvoliuciniame neuroniniame tinkle, idėja kapsuliniam neuroniniui tinklui. Ši modifikacija yra vadinama daugiavaizdžiu kapsuliniu neuroniniu tinklu. Vaizdų sujungimo sluoksnis yra modifikuojamas taip, kad sluoksnio įėjimas, vietoje požymių žemėlapių rinkinių, būtų kapsulių išėjimo vektorių rinkiniai. Pirmame etape yra naudojama architektūra atvaizduota \ref{tbl:capsNet} lentelėje. Antrame etape vaizdų sujungimo sluoksnis yra įterpiamas po sluoksnio $ed$.
 
 \subsection{Tiriamo daugiavaizdžio kapsulinio neuroninio tinklo architektūra su vaizdų kapsuliniu sluoksniu}
 
 Vaizdų sujungimo sluoksnis yra pagrįstas maksimalaus sujungimo sluoksnio veikimo principu. Tačiau darbo \cite{capsNet} autorius teigia, kad šis sluoksnis praranda daug informacijos apie galimus požymius, nes šio sluoksnio išėjimas yra tik didžiausią tikimybę turintis požymis iš kiekvienos lango pozicijos. Tuo metu jo pasiūlytų kapsulinių sluoksnių viena iš paskirčių atitinka sujungimo sluoksnio paskirtį ir šios ydos neturi arba jos įtaka yra mažesnė.
 
-Tad paskutinė šiame magistro baigiamame darbe tiriama kapsulinio neuroninio tinklo modifikacija yra daugiavaizdis kapsulinis neuroninis tinklas, kuris vietoje vaizdų sujungimo sluoksnio naudoja modifikuotą kapsulinį sluoksnį. Šis sluoksnis vadinamas vaizdų kapsuliniu sluoksniu. Šiame sluoksnyje įėjimo vektorių rinkiniai, vadinami vaizdais, yra sugrupuojami į grupes su nurodytu tuo pačiu dydžiu. Tada toje pačioje grupėje esantys vaizdai yra sujungiami į vieną įėjimo vektorių rinkinį. Galiausiai tas rinkinys yra naudojamas kaip įvestis maršrutizavimo algoritmui.
+Tad paskutinė šiame magistro baigiamajame darbe tiriama kapsulinio neuroninio tinklo modifikacija yra daugiavaizdis kapsulinis neuroninis tinklas, kuris vietoje vaizdų sujungimo sluoksnio naudoja modifikuotą kapsulinį sluoksnį. Šis sluoksnis vadinamas vaizdų kapsuliniu sluoksniu. Šiame sluoksnyje įėjimo vektorių rinkiniai, vadinami vaizdais, yra sugrupuojami į grupes su nurodytu tuo pačiu dydžiu. Tada toje pačioje grupėje esantys vaizdai yra sujungiami į vieną įėjimo vektorių rinkinį. Galiausiai tas rinkinys yra naudojamas kaip įvestis maršrutizavimo algoritmui.
 
 Šio daugiavaizdžio kapsulinio neuroninio tinklo apmokymas taip pat gali būti padalintas į du etapus. Pirmame etape šis tinklas yra apmokomas be vaizdų kapsulinio sluoksnio. Antrame etape įterpiamas vaizdų kapsulinis sluoksnis ir apmokymas pratęsiamas.
 
-Šiame magistro baigiamame darbe ši modifikacija yra apmokoma įprastu ir dviejų etapų metodu. Įterpiamo vaizdų kapsulinio sluoksnio parametrai yra kapsulių skaičius - 40, išėjimų vektorių dimensijų skaičius - 32 ir maršrutizavimo iteracijų skaičius - 3. Šis sluoksnis yra įterpiamas tarp sluoksnių $c$ ir $ed$.
+Šiame magistro baigiamajame darbe ši modifikacija yra apmokoma įprastu ir dviejų etapų metodu. Įterpiamo vaizdų kapsulinio sluoksnio parametrai yra kapsulių skaičius - 40, išėjimų vektorių dimensijų skaičius - 32 ir maršrutizavimo iteracijų skaičius - 3. Šis sluoksnis yra įterpiamas tarp sluoksnių $c$ ir $ed$.
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  9 MAY 2021 11:45
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  10 MAY 2021 21:45
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1208,11 +1208,11 @@ File: img/neural_network.png Graphic file (type bmp)
 [15] [16]) (convolution.tex [17]
 File: img/sparsity.png Graphic file (type bmp)
 <img/sparsity.png>
- [18]) (cnn_layers.tex
+ [18]) (cnn_layers.tex [19]
 
 LaTeX Warning: Command \textasciitilde invalid in math mode on input line 15.
 
-[19] [20]) (mvcnn.tex [21]
+[20] [21]) (mvcnn.tex
 File: img/mvcnn.png Graphic file (type bmp)
 <img/mvcnn.png>
  [22]) (capsnet.tex [23] [24]) [25] (capsnet_mods.tex
@@ -1221,8 +1221,8 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 6.
 
 
-Overfull \hbox (7.26556pt too wide) in paragraph at lines 7--18
-[][] 
+Overfull \hbox (7.26556pt too wide) in paragraph at lines 8--20
+[][]
  []
 
 
@@ -1230,8 +1230,8 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 24.
 
 
-Overfull \hbox (3.40157pt too wide) in paragraph at lines 25--34
-[][] 
+Overfull \hbox (3.40157pt too wide) in paragraph at lines 26--36
+[][]
  []
 
 [26
@@ -1320,14 +1320,14 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 176.
 
 
-Overfull \hbox (12.4977pt too wide) in paragraph at lines 177--200
-[][] 
+Overfull \hbox (12.4977pt too wide) in paragraph at lines 185--202
+[][]
  []
 
 File: img/half_sample_f1.png Graphic file (type bmp)
 <img/half_sample_f1.png>
 [40]
-Overfull \vbox (14.8598pt too high) has occurred while \output is active []
+Overfull \vbox (15.8598pt too high) has occurred while \output is active []
 
 
 [41]
@@ -1336,14 +1336,14 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 220.
 
 
-Overfull \hbox (12.4977pt too wide) in paragraph at lines 221--244
-[][] 
+Overfull \hbox (12.4977pt too wide) in paragraph at lines 229--246
+[][]
  []
 
 File: img/3rd_sample_f1.png Graphic file (type bmp)
 <img/3rd_sample_f1.png>
 
-Overfull \vbox (14.8598pt too high) has occurred while \output is active []
+Overfull \vbox (15.8598pt too high) has occurred while \output is active []
 
 
 [42]) (quantitative_f1_experimets.tex
@@ -1517,6 +1517,6 @@ Here is how much of TeX's memory you used:
  30915 multiletter control sequences out of 15000+200000
  545288 words of font info for 93 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,17n,104p,1567b,7731s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,17n,104p,1573b,7731s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on magistrinis.pdf (48 pages).

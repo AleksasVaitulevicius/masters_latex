@@ -1,4 +1,4 @@
-Buvo nustatyta, kad testavimo duomenyse egzistuoja klasių išsibalansavimas, kuris matosi iš lentelės \ref{tbl:class_imbalance}. Tad tikslumo matas gali nekorektiškai įvertinti dirbtinius neuroninius tinklus. Todėl vietoje tikslumo mato tolimesniuose tyrimuose yra renkamas mikro, makro ir svertinis F1 įverčio (angl. F1 score) matai, kurie geriau įvertina dirbtinius neuroninius tinklus esant klasių išsibalansavimui nei tikslumo matas. F1 įvertis yra apskaičiuojamas kiekvienai klasei atskirai naudojant formulę \ref{eqn:f1}, kur:
+Buvo nustatyta, kad testavimo duomenyse egzistuoja klasių išsibalansavimas, kuris matosi iš \ref{tbl:class_imbalance} lentelės. Tad tikslumo matas gali nekorektiškai įvertinti dirbtinių neuroninių tinklų rezultatus. Todėl vietoje tikslumo mato tolimesniuose tyrimuose yra renkamas mikro, makro ir svertinis F1 įverčio (angl. F1 score) matai, kurie geriau įvertina dirbtinius neuroninius tinklus esant klasių išsibalansavimui nei tikslumo matas. F1 įvertis yra apskaičiuojamas kiekvienai klasei atskirai naudojant formulę (\ref{eqn:f1}), kur:
 
 \begin{itemize}
 	\item $TP$ - teisingų teigiamų (angl. true positives) kiekis. Teisingi teigiami yra 3D objektai, kuriems dirbtinis neuroninis tinklas teisingai priskyrė klasę, kuriai yra skaičiuojamas F1.
@@ -14,6 +14,7 @@ Jų vidurkis yra lygus makro F1 įverčiui. Toliau yra apskaičiuojamas svertini
 \end{equation}
 
 \begin{table}[]
+\caption{3D objektų skaičius kiekvienai klasei testavimo duomenyse}
 \begin{tabular}{lr}
 	klasė       &   3D objektų skaičius \\
 	\hline
@@ -58,12 +59,11 @@ Jų vidurkis yra lygus makro F1 įverčiui. Toliau yra apskaičiuojamas svertini
 	wardrobe    &                    20 \\
 	xbox        &                    20 \\
 \end{tabular}
-\caption{3D objektų skaičius kiekvienai klasei testavimo duomenyse}
 \label{tbl:class_imbalance}
 \end{table}
 
 
-Taip pat pastebėta iš grafiko \ref{img:val_plot}, kad kapsulinio ir daugiavaizdžių kapsulinių neuroninių tinklų tikslumas netampa stabilus po 10 epochų. Tačiau, dėl Kaggle sistemos kodo apdorojimo laiko limito, kuris yra 9 valandos, didesnis epochų skaičius nei 12 yra negalimas, nes 1 tyrimas su 12 epochų trunka apytiksliai 8,5 valandos. Tad visi tolimesni tyrimai yra  atlikti su 12 apmokymo epochų.
+Taip pat pastebėta iš \ref{img:val_plot} grafiko, kad kapsulinio ir daugiavaizdžių kapsulinių neuroninių tinklų tikslumas netampa stabilus po 10 epochų. Tačiau, dėl Kaggle sistemos kodo apdorojimo laiko limito, kuris yra 9 valandos, didesnis epochų skaičius nei 12 yra negalimas, nes 1 tyrimas su 12 epochų trunka apytiksliai 8,5 valandos. Tad visi tolimesni tyrimai yra  atlikti su 12 apmokymo epochų.
 
 Tyrimų, kuriuose buvo renkamos f1 įverčio metrikos ir naudojama 12 apmokymo epochos, rezultatai yra atvaizduoti: lentelėje \ref{tbl:weighted_f1} ir grafike \ref{img:weighted_f1} - testavimo duomenų svertiniai f1 įverčiai apmokant su visais apmokymo duomenimis, lentelėje \ref{tbl:micro_f1} ir grafike \ref{img:micro_f1} - testavimo duomenų mikro f1 įverčiai apmokant su visais apmokymo duomenimis, lentelėje \ref{tbl:macro_f1} ir grafike \ref{img:macro_f1} - testavimo duomenų makro f1 įverčiai su apmokant visais apmokymo duomenimis, lentelėje \ref{tbl:half_sample_f1} ir grafike \ref{img:half_sample_f1} - testavimo duomenų f1 įverčiai apmokant su apmokymo duomenimis sudarytais iš 4904 3D objektų modelių, lentelėje \ref{tbl:3rd_sample_f1} ir grafike \ref{img:3rd_sample_f1} - testavimo duomenų f1 įverčiai apmokant su apmokymo duomenimis sudarytais iš 3264 3D objektų modelių, kur
 mvcnn yra daugiavaizdžio neuroninio tinklo f1 įverčiai, capsnet - kapsulinio neuroninio tinklo f1 įverčiai, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais f1 įverčiai, 
@@ -76,6 +76,9 @@ mv\_cap\_capsnet\_1\_macro - daugiavaizdžio kapsulinio neuroninio tinklo su vai
 Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją epochą. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
 
 \begin{table}[]
+	\caption{
+		Testavimo duomenų klasifikavimo svertiniai f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo svertiniai f1 įverčiai, capsnet - kapsulinio neuroninio tinklo svertiniai f1 įverčiai, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu svertiniai f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu svertiniai f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais svertiniai f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+	}
 	\begin{tabular}{l|l|l|l|l|l}
 		epocha & mvcnn & capsnet & mv-capsnet & mv-cap-capsnet1 & mv-cap-capsnet2 \\
 		\hline
@@ -92,13 +95,13 @@ Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją
 		11 & 0,897 &   0,827 &      0,818 &           0,854 &           0,880 \\
 		12 & 0,903 &   0,834 &      0,822 &           0,850 &           0,881 \\
 	\end{tabular}
-	\caption{
-		Testavimo duomenų klasifikavimo svertiniai f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo svertiniai f1 įverčiai, capsnet - kapsulinio neuroninio tinklo svertiniai f1 įverčiai, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu svertiniai f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu svertiniai f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais svertiniai f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-	}
 	\label{tbl:weighted_f1}
 \end{table}
 
 \begin{table}[]
+	\caption{
+		Testavimo duomenų klasifikavimo mikro f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo mikro f1 įverčiai, capsnet - kapsulinio neuroninio tinklo mikro f1 įverčiai, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu mikro f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu mikro f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais mikro f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+	}
 	\begin{tabular}{l|l|l|l|l|l}
 		epocha & mvcnn & capsnet & mv-capsnet & mv-cap-capsnet1 & mv-cap-capsnet2 \\
 		\hline
@@ -115,13 +118,13 @@ Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją
 		11 & 0,898 &   0,829 &      0,816 &           0,855 &           0,881 \\
 		12 & 0,903 &   0,836 &      0,819 &           0,849 &           0,880 \\
 	\end{tabular}
-	\caption{
-		Testavimo duomenų klasifikavimo mikro f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo mikro f1 įverčiai, capsnet - kapsulinio neuroninio tinklo mikro f1 įverčiai, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu mikro f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu mikro f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais mikro f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-	}
 	\label{tbl:micro_f1}
 \end{table}
 
 \begin{table}[]
+	\caption{
+		Testavimo duomenų klasifikavimo makro f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo makro f1 įverčiai, capsnet - kapsulinio neuroninio tinklo makro f1 įverčiai, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu makro f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu makro f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais makro f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+	}
 	\begin{tabular}{l|l|l|l|l|l}
 		epocha & mvcnn & capsnet & mv-capsnet & mv-cap-capsnet1 & mv-cap-capsnet2 \\
 		\hline
@@ -138,9 +141,6 @@ Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją
 		11 & 0,860 &   0,783 &      0,774 &           0,799 &           0,827 \\
 		12 & 0,865 &   0,790 &      0,772 &           0,794 &           0,824 \\
 	\end{tabular}
-	\caption{
-		Testavimo duomenų klasifikavimo makro f1 įverčiai, kur mvcnn yra daugiavaizdžio neuroninio tinklo makro f1 įverčiai, capsnet - kapsulinio neuroninio tinklo makro f1 įverčiai, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu makro f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu makro f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais makro f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-	}
 	\label{tbl:macro_f1}
 \end{table}
 
@@ -174,6 +174,14 @@ Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją
 \end{figure}
 
 \begin{table}[]
+	\caption{
+		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4904 3D objektų modelių, kur mvcnn\_weighted -  daugiavaizdžio neuroninio tinklo svertiniai f1 įverčiai, 
+		mvcnn\_micro -  daugiavaizdžio neuroninio tinklo mikro f1 įverčiai, 
+		mvcnn\_macro -  daugiavaizdžio neuroninio tinklo makro f1 įverčiai, 
+		mv\_cap\_capsnet\_1\_weighted - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu svertiniai f1 įverčiai, 
+		mv\_cap\_capsnet\_1\_micro - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu mikro f1 įverčiai ir
+		mv\_cap\_capsnet\_1\_macro - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu makro f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+	}
 	\begin{tabular}{l|l|l|l|l|l|l}
 		epocha & mvcnn\_weighted & mvcnn\_micro & mvcnn\_macro & \begin{tabular}[c]{@{}l@{}}mv\_cap\_1\\capsnet\\weighted\end{tabular} & \begin{tabular}[c]{@{}l@{}}mv\_cap\_1\\capsnet\\micro\end{tabular} & \begin{tabular}[c]{@{}l@{}}mv\_cap\_1\\capsnet\\macro\end{tabular} \\
 		\hline
@@ -190,14 +198,6 @@ Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją
 		11 &          0,876 &       0,875 &       0,833 &                     0,823 &                  0,823 &                  0,756 \\
 		12 &          0,872 &       0,871 &       0,838 &                     0,821 &                  0,822 &                  0,754 \\
 	\end{tabular}
-	\caption{
-		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 4904 3D objektų modelių, kur mvcnn\_weighted -  daugiavaizdžio neuroninio tinklo svertiniai f1 įverčiai, 
-		mvcnn\_micro -  daugiavaizdžio neuroninio tinklo mikro f1 įverčiai, 
-		mvcnn\_macro -  daugiavaizdžio neuroninio tinklo makro f1 įverčiai, 
-		mv\_cap\_capsnet\_1\_weighted - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu svertiniai f1 įverčiai, 
-		mv\_cap\_capsnet\_1\_micro - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu mikro f1 įverčiai ir
-		mv\_cap\_capsnet\_1\_macro - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu makro f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-	}
 	\label{tbl:half_sample_f1}
 \end{table}
 
@@ -218,6 +218,14 @@ Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją
 % -----------------------------------------------------------------------------------------------------------------------
 
 \begin{table}[]
+	\caption{
+		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3264 3D objektų modelių, kur mvcnn\_weighted -  daugiavaizdžio neuroninio tinklo svertiniai f1 įverčiai, 
+		mvcnn\_micro -  daugiavaizdžio neuroninio tinklo mikro f1 įverčiai, 
+		mvcnn\_macro -  daugiavaizdžio neuroninio tinklo makro f1 įverčiai, 
+		mv\_cap\_capsnet\_1\_weighted - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu svertiniai f1 įverčiai, 
+		mv\_cap\_capsnet\_1\_micro - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu mikro f1 įverčiai ir
+		mv\_cap\_capsnet\_1\_macro - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu makro f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
+	}
 	\begin{tabular}{l|l|l|l|l|l|l}
 		epocha & mvcnn\_weighted & mvcnn\_micro & mvcnn\_macro & \begin{tabular}[c]{@{}l@{}}mv\_cap\_1\\capsnet\\weighted\end{tabular} & \begin{tabular}[c]{@{}l@{}}mv\_cap\_1\\capsnet\\micro\end{tabular} & \begin{tabular}[c]{@{}l@{}}mv\_cap\_1\\capsnet\\macro\end{tabular} \\
 		\hline
@@ -234,14 +242,6 @@ Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją
 		11 &          0,834 &       0,836 &       0,778 &                     0,801 &                  0,804 &                  0,734 \\
 		12 &          0,849 &       0,849 &       0,807 &                     0,802 &                  0,806 &                  0,734 \\
 	\end{tabular}
-	\caption{
-		Tyrimų rezultatai su apmokymo duomenimis, sudarytais iš 3264 3D objektų modelių, kur mvcnn\_weighted -  daugiavaizdžio neuroninio tinklo svertiniai f1 įverčiai, 
-		mvcnn\_micro -  daugiavaizdžio neuroninio tinklo mikro f1 įverčiai, 
-		mvcnn\_macro -  daugiavaizdžio neuroninio tinklo makro f1 įverčiai, 
-		mv\_cap\_capsnet\_1\_weighted - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu svertiniai f1 įverčiai, 
-		mv\_cap\_capsnet\_1\_micro - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu mikro f1 įverčiai ir
-		mv\_cap\_capsnet\_1\_macro - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu makro f1 įverčiai. Kiekviename stulpelyje geriausi pasiekti tikslumai yra paryškinti.
-	}
 	\label{tbl:3rd_sample_f1}
 \end{table}
 
