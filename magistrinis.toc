@@ -46,13 +46,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.2.1.}Tyrimai vertinant tikslumo matą}{28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2.}Tyrimai vertinant F1 įverčio matą}{35}%
+\contentsline {paragraph}{\numberline {3.2.1.1.}Tyrimai su mažesne duomenų imtimi}{33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.3.}Kiekybiniai tyrimai vertinant F1 įverčio matą}{43}%
+\contentsline {subsubsection}{\numberline {3.2.2.}Tyrimai vertinant F1 įverčio matą}{36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Rezultatai ir išvados}{45}%
+\contentsline {subsubsection}{\numberline {3.2.3.}Kiekybiniai tyrimai vertinant F1 įverčio matą}{45}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatūra}{46}%
+\contentsline {section}{Rezultatai ir išvados}{49}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Literatūra}{50}%
 \defcounter {refsection}{0}\relax 
 \bgroup 
 \defcounter {refsection}{0}\relax 

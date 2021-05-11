@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  10 MAY 2021 22:10
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  11 MAY 2021 20:54
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1247,8 +1247,20 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 11.
 
 
+Underfull \hbox (badness 2460) in paragraph at lines 14--14
+[]\TU/texgyretermes(0)/m/n/12 4 lentelė. |Apmokymo duomenų klasifikavimo tikslu
+mas, kur mvcnn yra daugiavaizdžio
+ []
+
+
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 31.
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 34--34
+\TU/texgyretermes(0)/m/n/12 voliucinio neuroninio tinklo tikslumas, capsnet - k
+apsulinio neuroninio tinklo tikslumas,
+ []
 
 File: img/trained.png Graphic file (type bmp)
 <img/trained.png>
@@ -1265,36 +1277,36 @@ Overfull \hbox (36.02827pt too wide) in paragraph at lines 62--65
  [][] 
  []
 
-[31]
+[31] [32]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 71.
+               Default added (so using `tbp') on input line 83.
 
 File: img/less_data_v1.png Graphic file (type bmp)
 <img/less_data_v1.png>
 
-Overfull \hbox (36.02827pt too wide) in paragraph at lines 94--97
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 106--109
  [][] 
  []
 
-[32]
+[33]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 101.
+               Default added (so using `tbp') on input line 113.
 
 File: img/less_data_v2.png Graphic file (type bmp)
 <img/less_data_v2.png>
 
-Overfull \hbox (36.02827pt too wide) in paragraph at lines 124--127
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 136--139
  [][] 
  []
 
-[33]) (f1_experiments.tex [34]
+[34]) [35] (f1_experiments.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 16.
 
-[35] [36]
+[36] [37]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 78.
@@ -1309,12 +1321,12 @@ LaTeX Warning: No positions in optional float specifier.
 
 File: img/weighted.png Graphic file (type bmp)
 <img/weighted.png>
-[37] [38]
+[38] [39]
 File: img/micro.png Graphic file (type bmp)
 <img/micro.png>
 File: img/macro.png Graphic file (type bmp)
 <img/macro.png>
- [39]
+ [40]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 176.
@@ -1326,11 +1338,7 @@ Overfull \hbox (12.4977pt too wide) in paragraph at lines 185--202
 
 File: img/half_sample_f1.png Graphic file (type bmp)
 <img/half_sample_f1.png>
-[40]
-Overfull \vbox (15.8598pt too high) has occurred while \output is active []
-
-
-[41]
+[41] [42]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 220.
@@ -1342,19 +1350,15 @@ Overfull \hbox (12.4977pt too wide) in paragraph at lines 229--246
 
 File: img/3rd_sample_f1.png Graphic file (type bmp)
 <img/3rd_sample_f1.png>
-
-Overfull \vbox (15.8598pt too high) has occurred while \output is active []
-
-
-[42]) (quantitative_f1_experimets.tex
+[43] [44]) (quantitative_f1_experimets.tex [45]
 File: img/boxplot_f1_weighted.png Graphic file (type bmp)
 <img/boxplot_f1_weighted.png>
 File: img/boxplot_f1_micro.png Graphic file (type bmp)
 <img/boxplot_f1_micro.png>
- [43]
+ [46]
 File: img/boxplot_f1_macro.png Graphic file (type bmp)
 <img/boxplot_f1_macro.png>
-) [44] (conclusion.tex) [45
+ [47]) [48] (conclusion.tex) [49
 
 ]
 
@@ -1415,7 +1419,7 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[46
+[50
 
 ]
 
@@ -1505,7 +1509,7 @@ braces):
 >  {english/babelname}  =>  {english}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[47] (magistrinis.aux)
+[51] (magistrinis.aux)
 Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 \openout1 = `magistrinis.run.xml'.
 
@@ -1513,10 +1517,10 @@ Package logreq Info: Writing requests to 'magistrinis.run.xml'.
 Here is how much of TeX's memory you used:
  26751 strings out of 427272
  530816 string characters out of 3146596
- 1074875 words of memory out of 3000000
+ 1076875 words of memory out of 3000000
  30915 multiletter control sequences out of 15000+200000
  545288 words of font info for 93 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,17n,104p,1573b,7731s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on magistrinis.pdf (48 pages).
+Output written on magistrinis.pdf (52 pages).
