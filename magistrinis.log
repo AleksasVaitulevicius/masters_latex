@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  12 MAY 2021 20:59
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  12 MAY 2021 21:14
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1329,10 +1329,10 @@ File: img/macro.png Graphic file (type bmp)
  [40]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 176.
+               Default added (so using `tbp') on input line 182.
 
 
-Overfull \hbox (12.4977pt too wide) in paragraph at lines 185--202
+Overfull \hbox (12.4977pt too wide) in paragraph at lines 191--208
 [][]
  []
 
@@ -1341,10 +1341,10 @@ File: img/half_sample_f1.png Graphic file (type bmp)
 [41] [42]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 220.
+               Default added (so using `tbp') on input line 226.
 
 
-Overfull \hbox (12.4977pt too wide) in paragraph at lines 229--246
+Overfull \hbox (12.4977pt too wide) in paragraph at lines 235--252
 [][]
  []
 
