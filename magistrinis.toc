@@ -2,7 +2,7 @@
 \defcounter {refsection}{0}\relax 
 \selectlanguage *{lithuanian}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Santrumpos ir Terminai}{3}%
+\contentsline {section}{Santrumpos ir terminai}{3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Įvadas}{6}%
 \defcounter {refsection}{0}\relax 

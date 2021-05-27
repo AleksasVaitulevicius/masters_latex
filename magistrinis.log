@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  17 MAY 2021 17:25
+This is XeTeX, Version 3.14159265-2.6-0.999991 (MiKTeX 2.9.7250 64-bit) (preloaded format=xelatex 2019.12.7)  27 MAY 2021 21:00
 entering extended mode
 **./magistrinis.tex
 (magistrinis.tex
@@ -1353,12 +1353,27 @@ File: img/3rd_sample_f1.png Graphic file (type bmp)
 [43] [44]) (quantitative_f1_experimets.tex [45]
 File: img/boxplot_f1_weighted.png Graphic file (type bmp)
 <img/boxplot_f1_weighted.png>
+
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 14--18
+ [][] 
+ []
+
 File: img/boxplot_f1_micro.png Graphic file (type bmp)
 <img/boxplot_f1_micro.png>
- [46]
+
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 24--28
+ [][] 
+ []
+
+[46]
 File: img/boxplot_f1_macro.png Graphic file (type bmp)
 <img/boxplot_f1_macro.png>
- [47]) [48] (conclusion.tex) [49
+
+Overfull \hbox (36.02827pt too wide) in paragraph at lines 34--38
+ [][] 
+ []
+
+[47]) [48] (conclusion.tex) [49
 
 ]
 

@@ -63,9 +63,9 @@ Jų vidurkis yra lygus makro F1 įverčiui. Toliau yra apskaičiuojamas svertini
 \end{table}
 
 
-Taip pat pastebėta iš \ref{img:val_plot} grafiko, kad kapsulinio ir daugiavaizdžių kapsulinių neuroninių tinklų tikslumas netampa stabilus po 10 epochų. Tačiau, dėl Kaggle sistemos kodo apdorojimo laiko limito, kuris yra 9 valandos, didesnis epochų skaičius nei 12 yra negalimas, nes 1 tyrimas su 12 epochų trunka apytiksliai 8,5 valandos. Tad visi tolimesni tyrimai yra  atlikti su 12 apmokymo epochų.
+Taip pat pastebėta iš \ref{img:val_plot} paveikslėlyje pavaizduoto grafiko, kad kapsulinio ir daugiavaizdžių kapsulinių neuroninių tinklų tikslumas netampa stabilus po 10 epochų. Tačiau, dėl Kaggle sistemos kodo apdorojimo laiko limito, kuris yra 9 valandos, didesnis epochų skaičius nei 12 yra negalimas, nes 1 tyrimas su 12 epochų trunka apytiksliai 8,5 valandos. Tad visi tolimesni tyrimai yra  atlikti su 12 apmokymo epochų.
 
-Tyrimų, kuriuose buvo renkamos f1 įverčio metrikos ir naudojama 12 apmokymo epochų, rezultatai yra atvaizduoti: lentelėje \ref{tbl:weighted_f1} ir grafike \ref{img:weighted_f1} - testavimo duomenų svertiniai f1 įverčiai apmokant su visais apmokymo duomenimis, lentelėje \ref{tbl:micro_f1} ir grafike \ref{img:micro_f1} - testavimo duomenų mikro f1 įverčiai apmokant su visais apmokymo duomenimis, lentelėje \ref{tbl:macro_f1} ir grafike \ref{img:macro_f1} - testavimo duomenų makro f1 įverčiai su apmokant visais apmokymo duomenimis, lentelėje \ref{tbl:half_sample_f1} ir grafike \ref{img:half_sample_f1} - testavimo duomenų f1 įverčiai apmokant su apmokymo duomenimis sudarytais iš 4904 3D objektų modelių, lentelėje \ref{tbl:3rd_sample_f1} ir grafike \ref{img:3rd_sample_f1} - testavimo duomenų f1 įverčiai apmokant su apmokymo duomenimis sudarytais iš 3264 3D objektų modelių, kur
+Tyrimų, kuriuose buvo renkamos f1 įverčio metrikos ir naudojama 12 apmokymo epochų, rezultatai yra atvaizduoti: lentelėje \ref{tbl:weighted_f1} ir grafike pavaizduotame paveikslėlyje \ref{img:weighted_f1} - testavimo duomenų svertiniai f1 įverčiai apmokant su visais apmokymo duomenimis, lentelėje \ref{tbl:micro_f1} ir grafike pavaizduotame paveikslėlyje \ref{img:micro_f1} - testavimo duomenų mikro f1 įverčiai apmokant su visais apmokymo duomenimis, lentelėje \ref{tbl:macro_f1} ir grafike pavaizduotame paveikslėlyje \ref{img:macro_f1} - testavimo duomenų makro f1 įverčiai su apmokant visais apmokymo duomenimis, lentelėje \ref{tbl:half_sample_f1} ir grafike pavaizduotame paveikslėlyje \ref{img:half_sample_f1} - testavimo duomenų f1 įverčiai apmokant su apmokymo duomenimis sudarytais iš 4904 3D objektų modelių, lentelėje \ref{tbl:3rd_sample_f1} ir grafike pavaizduotame paveikslėlyje \ref{img:3rd_sample_f1} - testavimo duomenų f1 įverčiai apmokant su apmokymo duomenimis sudarytais iš 3264 3D objektų modelių, kur
 mvcnn yra daugiavaizdžio neuroninio tinklo f1 įverčiai, capsnet - kapsulinio neuroninio tinklo f1 įverčiai, mv\_capsnet - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu f1 įverčiai, mv\_cap\_capsnet1 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir vienu mokymosi etapu f1 įverčiai, mv\_cap\_capsnet2 - daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu ir dviem mokymosi etapais f1 įverčiai, 
 mvcnn\_weighted -  daugiavaizdžio konvoliucinio neuroninio tinklo svertiniai f1 įverčiai, 
 mvcnn\_micro -  daugiavaizdžio konvoliucinio neuroninio tinklo mikro f1 įverčiai, 
@@ -173,11 +173,11 @@ Brūkšninė vertikali linija grafikuose nurodo antrojo apmokymo etapo pirmąją
 	\label{img:macro_f1}
 \end{figure}
 
-\ref{img:weighted_f1} grafikas, \ref{img:micro_f1} grafikas ir \ref{img:macro_f1} grafikas paneigia kai kurias įžvalgas padarytas iš \ref{img:train_plot} grafiko ir \ref{img:val_plot} grafiko. Iš šių grafikų matoma, kad daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu apmokymas vienu etapu pasiekia panašų klasifikavimo rezultatų tikslumą kaip ir apmokymas dvejais etapais.
+\ref{img:weighted_f1}, \ref{img:micro_f1} ir \ref{img:macro_f1} paveikslėliuose pavaizduoti grafikai paneigia kai kurias įžvalgas padarytas iš \ref{img:train_plot} ir \ref{img:val_plot} paveikslėliuose pavaizduotų grafikų. Iš šių grafikų matoma, kad daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų kapsuliniu sluoksniu apmokymas vienu etapu pasiekia panašų klasifikavimo rezultatų tikslumą kaip ir apmokymas dvejais etapais.
 
-Taip pat \ref{img:weighted_f1} grafikas, \ref{img:micro_f1} grafikas ir \ref{img:macro_f1} grafikas indikuoja, kad klasifikavimo rezultatų tikslumų skirtumas tarp daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu ir kapsulinio neuroninio tinklo yra nereikšmingas.
+Taip pat \ref{img:weighted_f1}, \ref{img:micro_f1} ir \ref{img:macro_f1} paveikslėliuose pavaizduoti grafikai indikuoja, kad klasifikavimo rezultatų tikslumų skirtumas tarp daugiavaizdžio kapsulinio neuroninio tinklo su vaizdų sujungimo sluoksniu ir kapsulinio neuroninio tinklo yra nereikšmingas.
 
-Visas kitas įžvalgas, kurios yra padarytos iš \ref{img:train_plot} grafiko ir \ref{img:val_plot} grafiko, \ref{img:weighted_f1} grafikas, \ref{img:micro_f1} grafikas ir \ref{img:macro_f1} grafikas patvirtina.
+Visas kitas įžvalgas, kurios yra padarytos iš \ref{img:train_plot} ir \ref{img:val_plot} paveikslėliuose pavaizduotų grafikų, \ref{img:weighted_f1}, \ref{img:micro_f1} ir \ref{img:macro_f1} paveikslėliuose pavaizduoti grafikai patvirtina.
 
 \begin{table}[]
 	\caption{
@@ -265,7 +265,7 @@ Visas kitas įžvalgas, kurios yra padarytos iš \ref{img:train_plot} grafiko ir
 	\label{img:3rd_sample_f1}
 \end{figure}
 
-\ref{img:half_sample_f1} grafikas ir \ref{img:3rd_sample_f1} grafikas patvirtina įžvalgas padarytas iš \ref{img:less_datav1} grafiko ir \ref{img:less_datav2} grafiko. \ref{img:3rd_sample_f1} grafiko pirmų dvejų epochų rezultatai indikuoja prastus pradinius svorius. Tačiau tolimesnis apmokymas nusveria pradinių svorių įtaką.
+\ref{img:half_sample_f1} ir \ref{img:3rd_sample_f1} paveikslėliuose pavaizduoti grafikai patvirtina įžvalgas padarytas iš \ref{img:less_datav1} ir \ref{img:less_datav2} paveikslėliuose pavaizduotų grafikų. \ref{img:3rd_sample_f1} paveikslėlyje pavaizduoto grafiko pirmų dvejų epochų rezultatai indikuoja prastus pradinius svorius. Tačiau tolimesnis apmokymas nusveria pradinių svorių įtaką.
 
 
 % -----------------------------------------------------------------------------------------------------------------------
